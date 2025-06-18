@@ -9,7 +9,23 @@
 
 # ユースケース
 
-![](./images/use_case.png)
+```plantuml
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor manager
+actor employee
+rectangle payroll {
+  manager -- (新しい従業員を追加する)
+  manager -- (従業員を削除する)
+  (タイムカードの処理を要請する) -- employee
+  (売上げレシートの処理を請求する) -- employee
+  (組合サービス料の処理を請求する) -- employee
+  manager -- (従業員レコードの詳細を変更する)
+  manager -- (当日の給与支払い処理を走らせる)
+}
+@enduml
+```
 
 ## ユースケース1:従業員を追加する
 
@@ -28,7 +44,15 @@ AddEmp <EmpID> "<name>" "<address>" C <monthly-salary> <commission-rate>
 
 トランザクションが正しい形式で記述されていない場合は、エラーメッセージを吐き出す。エラーメッセージを出力するだけで、何も処理は行わない。
 
-![](./images/use_case_01.png)
+```plantuml
+@startuml
+
+Employee <|-- HourlyEmployee
+Employee <|-- CommissionedEmployee
+Employee <|-- SalariedEmployee
+
+@enduml
+```
 
 ## ユースケース2:従業員を削除する
 
@@ -60,7 +84,13 @@ TimeCard <EmpId> <date> <hours>
 
 エラーメッセージを出力するだけで、何も処理は行わない。
 
-![](./images/use_case_03.png)
+```plantuml
+@startuml
+
+HourlyEmployee *--> "0..*" TimeCard
+
+@enduml
+```
 
 ## ユースケース4:売上げレシートの処理を要請する
 
@@ -78,7 +108,13 @@ SalesReceipt <EmpID> <date> <amount>
 
 エラーメッセージを出力するだけで、何も処理は行わない。
 
-![](./images/use_case_04.png)
+```plantuml
+@startuml
+
+CommissionedEmployee *-->"0..*" SalesReceipt
+
+@enduml
+```
 
 ## ユースケース5:組合サービス料の処理を要請する
 
@@ -92,7 +128,13 @@ ServiceCharge <memberID> <amount>
 
 このトランザクションが正しい形式で記述されていなかったり、存在しない組合員を<memberID>が参照していたりする場合には、エラーメッセージを吐き出す。
 
-![](./images/use_case_05.png)
+```plantuml
+@startuml
+
+UnionMember *-->"0..*"ServiceCharge
+
+@enduml
+```
 
 ## ユースケース6:従業員レコードの詳細を変更する
 
@@ -122,17 +164,107 @@ Paydayトランザクションは、指定した日が給与日の従業員を�
 Payday <date>
 ```
 
-![](./images/use_case_07_1.png)
+```plantuml
+@startuml
+actor Manager
+
+Manager -> HourlyClassification: CalculatePay
+Manager -> HourlyClassification: Date
+loop for each timecard
+    activate HourlyClassification
+      HourlyClassification -> TimeCard: GetHours
+      HourlyClassification <- TimeCard: hours
+      HourlyClassification -> TimeCard: GetDate
+      HourlyClassification <- TimeCard: date
+    deactivate HourlyClassification
+end
+@enduml
+```
 
 時給の従業員の給与計算
 
-![](./images/use_case_07_2.png)
+```plantuml
+@startuml
+actor Manager
+
+Manager -> CommissionedClassification: CalculatePay
+Manager -> CommissionedClassification: Date
+loop for each sale receipt
+    activate CommissionedClassification
+      CommissionedClassification -> SalesReceipt: GetAmount
+      CommissionedClassification <- SalesReceipt: amount
+      CommissionedClassification -> SalesReceipt: GetDate
+      CommissionedClassification <- SalesReceipt: date
+    deactivate CommissionedClassification
+end
+@enduml
+```
 
 成功報酬のある従業員の給与計算
 
-![](./images/use_case_07_3.png)
+```plantuml
+@startuml
+actor Manager
+
+Manager -> SalariedClassification:Date
+Manager <- SalariedClassification:Pay
+Manager -> SalariedClassification:CalculatePay
+
+@enduml
+```
 
 固定給の従業員の給与計算
 
 # コアモデル
-![](./images/core_model.png)
+```plantuml
+@startuml
+
+interface PaymentMethod
+interface Affiliation
+
+Employee *--> PaymentClassification
+PaymentClassification <|-- SalariedClassification
+PaymentClassification <|-- HourlyClassification
+PaymentClassification <|-- CommissionedClassification
+HourlyClassification *-->"0..*" TimeCard
+HourlyClassification *-->"0..*" SalesRecipt
+
+Employee *--> PaymentMethod
+PaymentMethod <|-- HoldMethod
+PaymentMethod <|-- DirectMethod
+PaymentMethod <|-- MailMethod
+
+Employee *--> Affiliation
+Affiliation <|-- NoAffiliation
+Affiliation <|-- UnionAffiliation
+UnionAffiliation *-->"0..*" ServiceCharge
+
+class SalariedClassification {
+ - Salary
+}
+
+class HourlyClassification {
+- HourlyRate
+}
+
+
+class CommissionedClassification {
+- CommissionRate
+- Salary
+}
+
+class DirectMethod {
+- Bank
+- Account
+}
+
+class MailMethod {
+- Address
+}
+
+class UnionAffiliation {
+- Dues
+}
+
+@enduml
+```

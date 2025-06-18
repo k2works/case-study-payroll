@@ -12,3 +12,130 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+// Task to generate journal entries from Git commit logs
+task generateJournal {
+    description 'Generate journal entries from Git commit logs'
+    group 'Documentation'
+
+    doLast {
+        // Directory to store journal entries
+        def journalDir = new File(project.rootDir, 'docs/journal')
+        if (!journalDir.exists()) {
+            journalDir.mkdirs()
+        }
+
+        // Get all commit dates
+        def dates = []
+        def dateProcess = "git log --format=%ad --date=short".execute()
+        dateProcess.text.eachLine { line ->
+            if (!line.trim().isEmpty() && !dates.contains(line.trim())) {
+                dates.add(line.trim())
+            }
+        }
+
+        dates.each { dateStr ->
+            // Format date as YYYYMMDD
+            def dateObj = Date.parse('yyyy-MM-dd', dateStr)
+            def formattedDate = dateObj.format('yyyyMMdd')
+
+            // File path for this date's journal
+            def journalFile = new File(journalDir, "${formattedDate}.md")
+
+            // Skip if file already exists
+            if (journalFile.exists()) {
+                println "Journal file for ${dateStr} already exists, skipping."
+                return
+            }
+
+            // Get commits for this date
+            def commitsProcess = "git log --since=\"${dateStr} 00:00:00\" --until=\"${dateStr} 23:59:59\" --format=\"%h %s%n%b\"".execute()
+            def commits = commitsProcess.text.trim()
+
+            // Skip if no commits
+            if (commits.isEmpty()) {
+                println "No commits found for ${dateStr}, skipping."
+                return
+            }
+
+            // Get detailed changes for each commit on this date
+            def detailedCommits = []
+            def commitHashesProcess = "git log --since=\"${dateStr} 00:00:00\" --until=\"${dateStr} 23:59:59\" --format=\"%h\"".execute()
+            def commitHashes = []
+            commitHashesProcess.text.eachLine { line ->
+                if (!line.trim().isEmpty()) {
+                    commitHashes.add(line.trim())
+                }
+            }
+
+            commitHashes.each { hash ->
+                // Get commit details
+                def commitMessageProcess = "git show -s --format=\"%s%n%b\" ${hash}".execute()
+                def commitMessage = commitMessageProcess.text.trim()
+
+                // Get files changed
+                def filesChangedProcess = "git show --name-status ${hash}".execute()
+                def filesChanged = []
+                filesChangedProcess.text.eachLine { line ->
+                    if (line.matches('^[AMDRT]\\s.*')) {
+                        filesChanged.add(line.trim())
+                    }
+                }
+
+                // Get code changes (diff)
+                def diffProcess = "git show ${hash} --color=never".execute()
+                def diff = diffProcess.text
+
+                detailedCommits.add([
+                        hash: hash,
+                        message: commitMessage,
+                        filesChanged: filesChanged,
+                        diff: diff
+                ])
+            }
+
+            // Create journal content
+            def content = "# 作業履歴 ${dateStr}\n\n"
+            content += "## 概要\n\n"
+            content += "${dateStr}の作業内容をまとめています。\n\n"
+
+            // Add each commit
+            detailedCommits.each { commit ->
+                content += "## コミット: ${commit.hash}\n\n"
+                content += "### メッセージ\n\n"
+                content += "```\n${commit.message}\n```\n\n"
+
+                content += "### 変更されたファイル\n\n"
+                commit.filesChanged.each { file ->
+                    content += "- ${file}\n"
+                }
+                content += "\n"
+
+                content += "### 変更内容\n\n"
+                content += "```diff\n${commit.diff}\n```\n\n"
+
+                // Add PlantUML diagram placeholder if there are significant structural changes
+                def hasStructuralChanges = commit.filesChanged.any { file ->
+                    file.matches('.*\\.java$') && file.matches('.*(model|controller|service).*')
+                }
+
+                if (hasStructuralChanges) {
+                    content += "### 構造変更\n\n"
+                    content += "```plantuml\n@startuml\n"
+                    content += "' このコミットによる構造変更を表すダイアグラムをここに追加してください\n"
+                    content += "' 例:\n"
+                    content += "' class NewClass\n"
+                    content += "' class ExistingClass\n"
+                    content += "' NewClass --> ExistingClass\n"
+                    content += "@enduml\n```\n\n"
+                }
+            }
+
+            // Write to file
+            journalFile.text = content
+            println "Created journal entry for ${dateStr} at ${journalFile.absolutePath}"
+        }
+
+        println "Journal generation completed."
+    }
+}
