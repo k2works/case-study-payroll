@@ -541,7 +541,402 @@ package "PayrollDB" {
 
 コンポーネント図からわかるように、アプリケーションはトランザクションソースを通じてトランザクションファクトリを使用し、様々なトランザクションを作成します。トランザクションはドメインモデルとデータベースを操作して、システムの機能を実現します。
 
+### シーケンス図
+
+給与システムのアーキテクチャは、トランザクション処理、従業員管理、給与計算の3つの主要なコンポーネントで構成されています。このセクションでは、これらのコンポーネント間の相互作用を示すシーケンス図を提供します。
+
+#### トランザクション処理フロー
+
+以下のシーケンス図は、トランザクションがシステムでどのように処理されるかを示しています：
+
+```plantuml
+@startuml
+actor Client
+participant "TransactionSource" as TS
+participant "TransactionFactory" as TF
+participant "Transaction" as T
+participant "PayrollDatabase" as PDB
+participant "Employee" as E
+
+Client -> TS: GetTransaction()
+activate TS
+TS -> TF: CreateTransaction(transactionData)
+activate TF
+TF --> TS: transaction
+deactivate TF
+TS --> Client: transaction
+deactivate TS
+
+Client -> T: Execute()
+activate T
+T -> PDB: GetEmployee(empId)
+activate PDB
+PDB --> T: employee
+deactivate PDB
+
+alt Employee exists
+  T -> E: Modify employee state
+  activate E
+  E --> T: Success
+  deactivate E
+else Employee does not exist
+  T -> T: Handle error
+end
+
+T --> Client: Result
+deactivate T
+@enduml
+```
+
+このシーケンス図は、クライアント（アプリケーションまたはユーザー）がトランザクションを要求し、実行する方法を示しています。主なステップは次のとおりです：
+
+1. クライアントがTransactionSourceからトランザクションを取得
+2. TransactionSourceがTransactionFactoryを使用して適切なトランザクションオブジェクトを作成
+3. クライアントがトランザクションのExecuteメソッドを呼び出す
+4. トランザクションがPayrollDatabaseから必要な従業員データを取得
+5. トランザクションが従業員の状態を変更（存在する場合）
+6. 結果がクライアントに返される
+
+#### 従業員管理フロー
+
+以下のシーケンス図は、従業員データがどのように管理されるかを示しています：
+
+```plantuml
+@startuml
+actor Client
+participant "PayrollDatabase" as PDB
+participant "Employee" as E
+participant "PaymentClassification" as PC
+participant "PaymentSchedule" as PS
+participant "PaymentMethod" as PM
+participant "Affiliation" as A
+
+Client -> PDB: AddEmployee(empId, employee)
+activate PDB
+PDB -> PDB: Store employee
+PDB --> Client: Success
+deactivate PDB
+
+Client -> PDB: GetEmployee(empId)
+activate PDB
+PDB --> Client: employee
+deactivate PDB
+
+Client -> E: SetClassification(classification)
+activate E
+E -> PC: <<create>>
+E --> Client: Success
+deactivate E
+
+Client -> E: SetSchedule(schedule)
+activate E
+E -> PS: <<create>>
+E --> Client: Success
+deactivate E
+
+Client -> E: SetMethod(method)
+activate E
+E -> PM: <<create>>
+E --> Client: Success
+deactivate E
+
+Client -> E: SetAffiliation(affiliation)
+activate E
+E -> A: <<create>>
+E --> Client: Success
+deactivate E
+@enduml
+```
+
+このシーケンス図は、従業員データがどのように管理されるかを示しています。主なステップは次のとおりです：
+
+1. クライアントがPayrollDatabaseに従業員を追加
+2. クライアントがPayrollDatabaseから従業員を取得
+3. クライアントが従業員の給与計算方法を設定
+4. クライアントが従業員の支払いスケジュールを設定
+5. クライアントが従業員の支払い方法を設定
+6. クライアントが従業員の所属を設定
+
+#### 給与計算フロー
+
+以下のシーケンス図は、給与計算プロセスがどのように機能するかを示しています：
+
+```plantuml
+@startuml
+actor Client
+participant "PaydayTransaction" as PT
+participant "PayrollDatabase" as PDB
+participant "Employee" as E
+participant "PaymentClassification" as PC
+participant "Affiliation" as A
+participant "PaymentMethod" as PM
+participant "Paycheck" as P
+
+Client -> PT: Execute()
+activate PT
+PT -> PDB: GetAllEmployees()
+activate PDB
+PDB --> PT: employees
+deactivate PDB
+
+loop for each employee
+  PT -> E: IsPayDate(date)
+  activate E
+  E --> PT: isPayDate
+  deactivate E
+
+  alt isPayDate == true
+    PT -> P: <<create>>(startDate, endDate)
+    PT -> E: Payday(paycheck)
+    activate E
+
+    E -> PC: CalculatePay(paycheck)
+    activate PC
+    PC --> E: grossPay
+    deactivate PC
+
+    E -> A: CalculateDeductions(paycheck)
+    activate A
+    A --> E: deductions
+    deactivate A
+
+    E -> P: SetGrossPay(grossPay)
+    E -> P: SetDeductions(deductions)
+    E -> P: SetNetPay(grossPay - deductions)
+
+    E -> PM: Pay(paycheck)
+    activate PM
+    PM --> E: Success
+    deactivate PM
+
+    E --> PT: Success
+    deactivate E
+
+    PT -> PT: AddPaycheck(empId, paycheck)
+  end
+end
+
+PT --> Client: Result
+deactivate PT
+@enduml
+```
+
+このシーケンス図は、給与計算プロセスがどのように機能するかを示しています。主なステップは次のとおりです：
+
+1. クライアントがPaydayTransactionのExecuteメソッドを呼び出す
+2. PaydayTransactionがPayrollDatabaseからすべての従業員を取得
+3. 各従業員について、PaydayTransactionが支払い日かどうかを確認
+4. 支払い日の場合、PaydayTransactionが給与小切手を作成
+5. 従業員のPaydayメソッドが呼び出され、以下の処理が行われる：
+    - PaymentClassificationが総支給額を計算
+    - Affiliationが控除額を計算
+    - 純支給額が計算される
+    - PaymentMethodが支払いを実行
+6. 給与小切手がPaydayTransactionに保存される
+7. 結果がクライアントに返される
+
+
 ## ドメインモデル
+
+### クラス図
+
+```plantuml
+@startuml
+class Employee {
+  -itsEmpId: int
+  -itsName: String
+  -itsAddress: String
+  -itsClassification: PaymentClassification
+  -itsSchedule: PaymentSchedule
+  -itsPaymentMethod: PaymentMethod
+  -itsAffiliation: Affiliation
+  +Employee(empId: int, name: String, address: String)
+  +GetName(): String
+  +GetAddress(): String
+  +GetClassification(): PaymentClassification
+  +SetClassification(pc: PaymentClassification): void
+  +GetSchedule(): PaymentSchedule
+  +SetSchedule(ps: PaymentSchedule): void
+  +GetMethod(): PaymentMethod
+  +SetMethod(pm: PaymentMethod): void
+  +GetAffiliation(): Affiliation
+  +SetAffiliation(af: Affiliation): void
+  +Payday(pc: Paycheck): void
+  +IsPayDate(payDate: Calendar): boolean
+  +GetPayPeriodStartDate(payDate: Calendar): Calendar
+}
+
+class Paycheck {
+  -itsPayPeriodStartDate: Calendar
+  -itsPayPeriodEndDate: Calendar
+  -itsGrossPay: double
+  -itsDeductions: double
+  -itsNetPay: double
+  +Paycheck(payPeriodStartDate: Calendar, payPeriodEndDate: Calendar)
+  +GetPayPeriodEndDate(): Calendar
+  +GetPayPeriodStartDate(): Calendar
+  +SetGrossPay(grossPay: double): void
+  +GetGrossPay(): double
+  +SetDeductions(deductions: double): void
+  +GetDeductions(): double
+  +GetNetPay(): double
+  +SetNetPay(netPay: double): void
+}
+
+interface PaymentClassification {
+  +CalculatePay(pc: Paycheck): double
+  +IsInPayPeriod(date: Calendar, pc: Paycheck): boolean
+}
+
+class HourlyClassification {
+  -itsRate: double
+  -itsTimeCards: Map<Date, TimeCard>
+  +HourlyClassification(hourlyRate: double)
+  +AddTimeCard(tc: TimeCard): void
+  +GetTimeCard(date: Calendar): TimeCard
+  +CalculatePay(pc: Paycheck): double
+}
+
+class SalariedClassification {
+  -itsSalary: double
+  +SalariedClassification(salary: double)
+  +GetSalary(): double
+  +CalculatePay(pc: Paycheck): double
+}
+
+class CommissionedClassification {
+  -itsSalary: double
+  -itsCommissionRate: double
+  -itsReceipts: Map<Date, SalesReceipt>
+  +CommissionedClassification(salary: double, commissionRate: double)
+  +AddSalesReceipt(sr: SalesReceipt): void
+  +GetSalesReceipt(date: Calendar): SalesReceipt
+  +GetSalary(): double
+  +GetRate(): double
+  +CalculatePay(pc: Paycheck): double
+}
+
+class TimeCard {
+  -itsDate: Calendar
+  -itsHours: double
+  +TimeCard(date: Calendar, hours: double)
+  +GetDate(): Calendar
+  +GetHours(): double
+}
+
+class SalesReceipt {
+  -itsDate: Calendar
+  -itsAmount: double
+  +SalesReceipt(date: Calendar, amount: double)
+  +GetDate(): Calendar
+  +GetAmount(): double
+}
+
+interface PaymentSchedule {
+  +IsPayDate(payDate: Calendar): boolean
+  +GetPayPeriodStartDate(payDate: Calendar): Calendar
+}
+
+class MonthlySchedule {
+  +IsPayDate(payDate: Calendar): boolean
+  +GetPayPeriodStartDate(payDate: Calendar): Calendar
+}
+
+class WeeklySchedule {
+  +IsPayDate(payDate: Calendar): boolean
+  +GetPayPeriodStartDate(payDate: Calendar): Calendar
+}
+
+class BiweeklySchedule {
+  +IsPayDate(payDate: Calendar): boolean
+  +GetPayPeriodStartDate(payDate: Calendar): Calendar
+}
+
+interface PaymentMethod {
+  +Pay(pc: Paycheck): void
+}
+
+class HoldMethod {
+  +Pay(pc: Paycheck): void
+}
+
+class DirectMethod {
+  -itsBank: String
+  -itsAccount: String
+  +DirectMethod(bank: String, account: String)
+  +GetBank(): String
+  +GetAccount(): String
+  +Pay(pc: Paycheck): void
+}
+
+class MailMethod {
+  -itsAddress: String
+  +MailMethod(address: String)
+  +GetAddress(): String
+  +Pay(pc: Paycheck): void
+}
+
+interface Affiliation {
+  +CalculateDeductions(pc: Paycheck): double
+}
+
+class NoAffiliation {
+  +CalculateDeductions(pc: Paycheck): double
+}
+
+class UnionAffiliation {
+  -itsMemberId: int
+  -itsDues: double
+  -itsServiceCharges: Map<Date, ServiceCharge>
+  +UnionAffiliation(memberId: int, dues: double)
+  +GetDues(): double
+  +AddServiceCharge(sc: ServiceCharge): void
+  +GetServiceCharge(date: Calendar): ServiceCharge
+  +CalculateDeductions(pc: Paycheck): double
+}
+
+class ServiceCharge {
+  -itsDate: Calendar
+  -itsAmount: double
+  +ServiceCharge(date: Calendar, amount: double)
+  +GetDate(): Calendar
+  +GetAmount(): double
+}
+
+Employee *--> PaymentClassification
+Employee *--> PaymentSchedule
+Employee *--> PaymentMethod
+Employee *--> Affiliation
+
+PaymentClassification <|.. HourlyClassification
+PaymentClassification <|.. SalariedClassification
+PaymentClassification <|.. CommissionedClassification
+
+HourlyClassification *--> "0..*" TimeCard
+CommissionedClassification *--> "0..*" SalesReceipt
+
+PaymentSchedule <|.. MonthlySchedule
+PaymentSchedule <|.. WeeklySchedule
+PaymentSchedule <|.. BiweeklySchedule
+
+PaymentMethod <|.. HoldMethod
+PaymentMethod <|.. DirectMethod
+PaymentMethod <|.. MailMethod
+
+Affiliation <|.. NoAffiliation
+Affiliation <|.. UnionAffiliation
+UnionAffiliation *--> "0..*" ServiceCharge
+@enduml
+```
+
+ドメインモデルは、給与システムの中核となるエンティティとその関係を表しています。主要なコンポーネントは以下の通りです：
+
+- **Employee**: 従業員の基本情報と給与計算に関連する情報を保持します
+- **PaymentClassification**: 給与計算方法を定義するインターフェース（時給、固定給、成功報酬付き）
+- **PaymentSchedule**: 支払いスケジュールを定義するインターフェース（週次、隔週、月次）
+- **PaymentMethod**: 支払い方法を定義するインターフェース（直接渡し、銀行振込、郵送）
+- **Affiliation**: 所属を定義するインターフェース（組合所属、無所属）
+- **Paycheck**: 給与小切手の情報を保持するクラス
 
 ### Employee（従業員）
 
@@ -985,6 +1380,216 @@ public class Paycheck {
 
 トランザクションは、システムの操作を表すクラスです。各トランザクションは、特定の操作（従業員の追加、タイムカードの処理など）を実行します。
 
+### クラス図
+
+```plantuml
+@startuml
+interface Transaction {
+  +Execute(): void
+}
+
+abstract class AddEmployeeTransaction {
+  #itsEmpId: int
+  #itsName: String
+  #itsAddress: String
+  +AddEmployeeTransaction(empId: int, name: String, address: String)
+  +Execute(): void
+  +{abstract} GetSchedule(): PaymentSchedule
+  +{abstract} GetClassification(): PaymentClassification
+}
+
+class AddSalariedEmployee {
+  -itsSalary: double
+  +AddSalariedEmployee(empId: int, name: String, address: String, salary: double)
+  +GetSchedule(): PaymentSchedule
+  +GetClassification(): PaymentClassification
+}
+
+class AddHourlyEmployee {
+  -itsHourlyRate: double
+  +AddHourlyEmployee(empId: int, name: String, address: String, hourlyRate: double)
+  +GetSchedule(): PaymentSchedule
+  +GetClassification(): PaymentClassification
+}
+
+class AddCommissionedEmployee {
+  -itsSalary: double
+  -itsCommissionRate: double
+  +AddCommissionedEmployee(empId: int, name: String, address: String, salary: double, commissionRate: double)
+  +GetSchedule(): PaymentSchedule
+  +GetClassification(): PaymentClassification
+}
+
+class DeleteEmployeeTransaction {
+  -itsEmpId: int
+  +DeleteEmployeeTransaction(empId: int)
+  +Execute(): void
+}
+
+class TimeCardTransaction {
+  -itsDate: Calendar
+  -itsHours: double
+  -itsEmpId: int
+  +TimeCardTransaction(date: Calendar, hours: double, empId: int)
+  +Execute(): void
+}
+
+class SalesReceiptTransaction {
+  -itsDate: Calendar
+  -itsAmount: double
+  -itsEmpId: int
+  +SalesReceiptTransaction(date: Calendar, amount: double, empId: int)
+  +Execute(): void
+}
+
+class ServiceChargeTransaction {
+  -itsMemberId: int
+  -itsDate: Calendar
+  -itsAmount: double
+  +ServiceChargeTransaction(memberId: int, date: Calendar, amount: double)
+  +Execute(): void
+}
+
+abstract class ChangeEmployeeTransaction {
+  #itsEmpId: int
+  +ChangeEmployeeTransaction(empId: int)
+  +Execute(): void
+  +{abstract} Change(e: Employee): void
+}
+
+class ChangeNameTransaction {
+  -itsName: String
+  +ChangeNameTransaction(empId: int, name: String)
+  +Change(e: Employee): void
+}
+
+class ChangeAddressTransaction {
+  -itsAddress: String
+  +ChangeAddressTransaction(empId: int, address: String)
+  +Change(e: Employee): void
+}
+
+abstract class ChangeClassificationTransaction {
+  +Change(e: Employee): void
+  +{abstract} GetSchedule(): PaymentSchedule
+  +{abstract} GetClassification(): PaymentClassification
+}
+
+class ChangeHourlyTransaction {
+  -itsRate: double
+  +ChangeHourlyTransaction(empId: int, rate: double)
+  +GetSchedule(): PaymentSchedule
+  +GetClassification(): PaymentClassification
+}
+
+class ChangeSalariedTransaction {
+  -itsSalary: double
+  +ChangeSalariedTransaction(empId: int, salary: double)
+  +GetSchedule(): PaymentSchedule
+  +GetClassification(): PaymentClassification
+}
+
+class ChangeCommissionedTransaction {
+  -itsSalary: double
+  -itsRate: double
+  +ChangeCommissionedTransaction(empId: int, salary: double, rate: double)
+  +GetSchedule(): PaymentSchedule
+  +GetClassification(): PaymentClassification
+}
+
+abstract class ChangeAffiliationTransaction {
+  +Change(e: Employee): void
+  +{abstract} RecordMembership(e: Employee): void
+  +{abstract} GetAffiliation(): Affiliation
+}
+
+class ChangeMemberTransaction {
+  -itsMemberId: int
+  -itsDues: double
+  +ChangeMemberTransaction(empId: int, memberId: int, dues: double)
+  +RecordMembership(e: Employee): void
+  +GetAffiliation(): Affiliation
+}
+
+class ChangeUnaffiliatedTransaction {
+  +ChangeUnaffiliatedTransaction(empId: int)
+  +RecordMembership(e: Employee): void
+  +GetAffiliation(): Affiliation
+}
+
+abstract class ChangeMethodTransaction {
+  +Change(e: Employee): void
+  +{abstract} GetMethod(): PaymentMethod
+}
+
+class ChangeDirectTransaction {
+  -itsBank: String
+  -itsAccount: String
+  +ChangeDirectTransaction(empId: int, bank: String, account: String)
+  +GetMethod(): PaymentMethod
+}
+
+class ChangeMailTransaction {
+  -itsAddress: String
+  +ChangeMailTransaction(empId: int, address: String)
+  +GetMethod(): PaymentMethod
+}
+
+class ChangeHoldTransaction {
+  +ChangeHoldTransaction(empId: int)
+  +GetMethod(): PaymentMethod
+}
+
+class PaydayTransaction {
+  -itsPayDate: Calendar
+  -itsPaychecks: Map<Integer, Paycheck>
+  +PaydayTransaction(payDate: Calendar)
+  +Execute(): void
+  +GetPaycheck(empId: int): Paycheck
+}
+
+Transaction <|.. AddEmployeeTransaction
+Transaction <|.. DeleteEmployeeTransaction
+Transaction <|.. TimeCardTransaction
+Transaction <|.. SalesReceiptTransaction
+Transaction <|.. ServiceChargeTransaction
+Transaction <|.. ChangeEmployeeTransaction
+Transaction <|.. PaydayTransaction
+
+AddEmployeeTransaction <|-- AddSalariedEmployee
+AddEmployeeTransaction <|-- AddHourlyEmployee
+AddEmployeeTransaction <|-- AddCommissionedEmployee
+
+ChangeEmployeeTransaction <|-- ChangeNameTransaction
+ChangeEmployeeTransaction <|-- ChangeAddressTransaction
+ChangeEmployeeTransaction <|-- ChangeClassificationTransaction
+ChangeEmployeeTransaction <|-- ChangeAffiliationTransaction
+ChangeEmployeeTransaction <|-- ChangeMethodTransaction
+
+ChangeClassificationTransaction <|-- ChangeHourlyTransaction
+ChangeClassificationTransaction <|-- ChangeSalariedTransaction
+ChangeClassificationTransaction <|-- ChangeCommissionedTransaction
+
+ChangeAffiliationTransaction <|-- ChangeMemberTransaction
+ChangeAffiliationTransaction <|-- ChangeUnaffiliatedTransaction
+
+ChangeMethodTransaction <|-- ChangeDirectTransaction
+ChangeMethodTransaction <|-- ChangeMailTransaction
+ChangeMethodTransaction <|-- ChangeHoldTransaction
+@enduml
+```
+
+トランザクションクラスは、給与システムの操作を表現するコマンドパターンの実装です。主要なコンポーネントは以下の通りです：
+
+- **Transaction**: すべてのトランザクションの基本インターフェース
+- **AddEmployeeTransaction**: 従業員追加の基底クラス（AddSalariedEmployee, AddHourlyEmployee, AddCommissionedEmployeeのスーパークラス）
+- **DeleteEmployeeTransaction**: 従業員削除トランザクション
+- **TimeCardTransaction**: タイムカード処理トランザクション
+- **SalesReceiptTransaction**: 売上レシート処理トランザクション
+- **ServiceChargeTransaction**: 組合サービス料処理トランザクション
+- **ChangeEmployeeTransaction**: 従業員情報変更の基底クラス（各種変更トランザクションのスーパークラス）
+- **PaydayTransaction**: 給与支払い処理トランザクション
+
 ### Transaction（トランザクション）
 
 ```java
@@ -1233,6 +1838,58 @@ public class PaydayTransaction implements Transaction {
 
 データベースは、従業員データの永続化を担当します。
 
+### クラス図
+
+```plantuml
+@startuml
+interface PayrollDatabase {
+  +AddEmployee(empId: int, e: Employee): void
+  +GetEmployee(empId: int): Employee
+  +DeleteEmployee(empId: int): void
+  +AddUnionMember(memberId: int, e: Employee): void
+  +GetUnionMember(memberId: int): Employee
+  +RemoveUnionMember(memberId: int): void
+  +GetAllEmployeeIds(): List<Integer>
+}
+
+class PayrollDatabaseImplementation {
+  -itsEmployees: Map<Integer, Employee>
+  -itsUnionMembers: Map<Integer, Employee>
+  +AddEmployee(empId: int, e: Employee): void
+  +GetEmployee(empId: int): Employee
+  +DeleteEmployee(empId: int): void
+  +AddUnionMember(memberId: int, e: Employee): void
+  +GetUnionMember(memberId: int): Employee
+  +RemoveUnionMember(memberId: int): void
+  +GetAllEmployeeIds(): List<Integer>
+}
+
+class GlobalDatabase {
+  +{static} payrollDB: PayrollDatabase
+}
+
+class Employee {
+  -itsEmpId: int
+  -itsName: String
+  -itsAddress: String
+  -itsClassification: PaymentClassification
+  -itsSchedule: PaymentSchedule
+  -itsPaymentMethod: PaymentMethod
+  -itsAffiliation: Affiliation
+}
+
+PayrollDatabase <|.. PayrollDatabaseImplementation
+GlobalDatabase --> PayrollDatabase
+PayrollDatabase --> Employee
+@enduml
+```
+
+データベースコンポーネントは、従業員データの永続化と検索を担当します。主要なコンポーネントは以下の通りです：
+
+- **PayrollDatabase**: データベース操作のインターフェース
+- **PayrollDatabaseImplementation**: インメモリデータベースの実装
+- **GlobalDatabase**: データベースへのグローバルアクセスを提供するシングルトン
+
 ### PayrollDatabase（給与データベース）
 
 ```java
@@ -1480,33 +2137,42 @@ public PaymentSchedule GetSchedule() {
 #### 使用例
 
 ```java
-// 固定給従業員の追加
-int empId = 1;
-String name = "Bob";
-String address = "Home";
-double salary = 1000.00;
+// 以下は使用例を示すコードフラグメントです
+// 実際のアプリケーションでは、これらのコードはメソッド内に記述されます
 
-AddSalariedEmployee t = new AddSalariedEmployee(empId, name, address, salary, payrollFactory);
-t.Execute();
+// 固定給従業員の追加
+void addSalariedEmployeeExample() {
+    int empId = 1;
+    String name = "Bob";
+    String address = "Home";
+    double salary = 1000.00;
+
+    AddSalariedEmployee t = new AddSalariedEmployee(empId, name, address, salary, payrollFactory);
+    t.Execute();
+}
 
 // 時給従業員の追加
-int empId = 2;
-String name = "Bill";
-String address = "Home";
-double hourlyRate = 15.25;
+void addHourlyEmployeeExample() {
+    int empId = 2;
+    String name = "Bill";
+    String address = "Home";
+    double hourlyRate = 15.25;
 
-AddHourlyEmployee t = new AddHourlyEmployee(empId, name, address, hourlyRate, payrollFactory);
-t.Execute();
+    AddHourlyEmployee t = new AddHourlyEmployee(empId, name, address, hourlyRate, payrollFactory);
+    t.Execute();
+}
 
 // 成功報酬付き従業員の追加
-int empId = 3;
-String name = "Lance";
-String address = "Home";
-double salary = 2500.0;
-double commissionRate = 0.032;
+void addCommissionedEmployeeExample() {
+    int empId = 3;
+    String name = "Lance";
+    String address = "Home";
+    double salary = 2500.0;
+    double commissionRate = 0.032;
 
-AddCommissionedEmployee t = new AddCommissionedEmployee(empId, name, address, salary, commissionRate, payrollFactory);
-t.Execute();
+    AddCommissionedEmployee t = new AddCommissionedEmployee(empId, name, address, salary, commissionRate, payrollFactory);
+    t.Execute();
+}
 ```
 
 #### 設計の考察
@@ -1590,11 +2256,16 @@ public void DeleteEmployee(int empId) {
 #### 使用例
 
 ```java
-// 従業員の削除
-int empId = 3;
+// 以下は使用例を示すコードフラグメントです
+// 実際のアプリケーションでは、これらのコードはメソッド内に記述されます
 
-DeleteEmployeeTransaction dt = new DeleteEmployeeTransaction(empId);
-dt.Execute();
+// 従業員の削除
+void deleteEmployeeExample() {
+    int empId = 3;
+
+    DeleteEmployeeTransaction dt = new DeleteEmployeeTransaction(empId);
+    dt.Execute();
+}
 ```
 
 #### 設計の考察
@@ -1747,13 +2418,17 @@ public TimeCard GetTimeCard(Calendar date) {
 #### 使用例
 
 ```java
-// タイムカードの追加
-int empId = 2;
-Calendar date = new GregorianCalendar(2017, Calendar.APRIL, 6);
-double hours = 8.0;
+// 以下は使用例を示すコードフラグメントです
+// 実際のアプリケーションでは、これらのコードはメソッド内に記述されます
 
-TimeCardTransaction t = new TimeCardTransaction(date, hours, empId);
-t.Execute();
+void timeCardExample() {
+    int empId = 2;
+    Calendar date = new GregorianCalendar(2017, Calendar.APRIL, 6);
+    double hours = 8.0;
+
+    TimeCardTransaction t = new TimeCardTransaction(date, hours, empId);
+    t.Execute();
+}
 ```
 
 #### 設計の考察
@@ -1920,13 +2595,17 @@ public double CalculatePay(Paycheck pc) {
 #### 使用例
 
 ```java
-// 売上げレシートの追加
-int empId = 3;
-Calendar date = new GregorianCalendar(2017, Calendar.APRIL, 6);
-double amount = 1000.0;
+// 以下は使用例を示すコードフラグメントです
+// 実際のアプリケーションでは、これらのコードはメソッド内に記述されます
 
-SalesReceiptTransaction t = new SalesReceiptTransaction(date, amount, empId);
-t.Execute();
+void salesReceiptExample() {
+    int empId = 3;
+    Calendar date = new GregorianCalendar(2017, Calendar.APRIL, 6);
+    double amount = 1000.0;
+
+    SalesReceiptTransaction t = new SalesReceiptTransaction(date, amount, empId);
+    t.Execute();
+}
 ```
 
 #### 設計の考察
@@ -2129,13 +2808,17 @@ public class UnionAffiliation implements Affiliation {
 #### 使用例
 
 ```java
-// サービス料の追加
-int memberId = 86;
-Calendar date = new GregorianCalendar(2017, Calendar.APRIL, 6);
-double amount = 12.95;
+// 以下は使用例を示すコードフラグメントです
+// 実際のアプリケーションでは、これらのコードはメソッド内に記述されます
 
-ServiceChargeTransaction t = new ServiceChargeTransaction(memberId, date, amount);
-t.Execute();
+void serviceChargeExample() {
+    int memberId = 86;
+    Calendar date = new GregorianCalendar(2017, Calendar.APRIL, 6);
+    double amount = 12.95;
+
+    ServiceChargeTransaction t = new ServiceChargeTransaction(memberId, date, amount);
+    t.Execute();
+}
 ```
 
 #### 設計の考察
@@ -2364,19 +3047,26 @@ public class ChangeHourlyTransaction extends ChangeClassificationTransaction {
 #### 使用例
 
 ```java
-// 従業員の名前を変更する
-int empId = 2;
-String newName = "Bob";
+// 以下は使用例を示すコードフラグメントです
+// 実際のアプリケーションでは、これらのコードはメソッド内に記述されます
 
-ChangeNameTransaction t = new ChangeNameTransaction(empId, newName);
-t.Execute();
+// 従業員の名前を変更する
+void changeEmployeeNameExample() {
+    int empId = 2;
+    String newName = "Bob";
+
+    ChangeNameTransaction t = new ChangeNameTransaction(empId, newName);
+    t.Execute();
+}
 
 // 従業員の給与計算方法を時給に変更する
-int empId = 3;
-double hourlyRate = 20.0;
+void changeEmployeeToHourlyExample() {
+    int empId = 3;
+    double hourlyRate = 20.0;
 
-ChangeHourlyTransaction t = new ChangeHourlyTransaction(empId, hourlyRate, payrollFactory);
-t.Execute();
+    ChangeHourlyTransaction t = new ChangeHourlyTransaction(empId, hourlyRate, payrollFactory);
+    t.Execute();
+}
 ```
 
 #### 設計の考察
@@ -2612,20 +3302,26 @@ public Calendar GetPayPeriodStartDate(Calendar payDate) {
 #### 使用例
 
 ```java
-// 給与支払い処理
-Calendar payDate = new GregorianCalendar(2017, Calendar.APRIL, 7);
+// 以下は使用例を示すコードフラグメントです
+// 実際のアプリケーションでは、これらのコードはメソッド内に記述されます
 
-PaydayTransaction t = new PaydayTransaction(payDate, payrollFactory);
-t.Execute();
+void paydayExample() {
+    // 給与支払い処理
+    int empId = 1; // 例として従業員ID 1を使用
+    Calendar payDate = new GregorianCalendar(2017, Calendar.APRIL, 7);
 
-// 給与小切手の取得
-Paycheck pc = t.GetPaycheck(empId);
-if (pc != null) {
-    System.out.println("Employee ID: " + empId);
-    System.out.println("Pay Period: " + pc.GetPayPeriodStartDate() + " - " + pc.GetPayPeriodEndDate());
-    System.out.println("Gross Pay: " + pc.GetGrossPay());
-    System.out.println("Deductions: " + pc.GetDeductions());
-    System.out.println("Net Pay: " + pc.GetNetPay());
+    PaydayTransaction t = new PaydayTransaction(payDate, payrollFactory);
+    t.Execute();
+
+    // 給与小切手の取得
+    Paycheck pc = t.GetPaycheck(empId);
+    if (pc != null) {
+        System.out.println("Employee ID: " + empId);
+        System.out.println("Pay Period: " + pc.GetPayPeriodStartDate() + " - " + pc.GetPayPeriodEndDate());
+        System.out.println("Gross Pay: " + pc.GetGrossPay());
+        System.out.println("Deductions: " + pc.GetDeductions());
+        System.out.println("Net Pay: " + pc.GetNetPay());
+    }
 }
 ```
 
@@ -2730,37 +3426,319 @@ public void testPaySingleHourlyEmployeeOneTimeCard() {
 
 ## リファクタリング
 
-給与システムの実装過程では、以下のようなリファクタリングが行われました：
+給与システムの実装過程では、コードの品質と保守性を高めるために複数のリファクタリングが行われました。このセクションでは、2017年4月10日と11日に実施された主要なリファクタリングの詳細を説明します。
+
+### リファクタリングの目的
+
+リファクタリングの主な目的は以下の通りです：
+
+1. **コードの整理**: 関連するクラスを論理的なパッケージにグループ化
+2. **責任の明確化**: 各クラスの責任を明確にし、単一責任の原則に従う
+3. **拡張性の向上**: インターフェースを活用して将来の拡張を容易にする
+4. **コード重複の削減**: 共通機能を抽象クラスに移動して重複を排除
+5. **テスト容易性の向上**: 依存関係を明確にし、モックオブジェクトの使用を容易にする
 
 ### パッケージの整理
 
-2017年4月10日と11日に行われたリファクタリングでは、クラスを論理的なパッケージに整理しました：
+#### 問題点
 
-1. **PayrollDomain**：ドメインモデルのクラス
-2. **PayrollDatabase**：データベース関連のクラス
-3. **AbstractTransacions**：トランザクションの抽象クラス
-4. **TransactionImplementation**：トランザクションの実装クラス
-5. **Application**：アプリケーションのエントリーポイント
+初期の実装では、すべてのクラスがデフォルトパッケージに配置されていました。これにより以下の問題が生じていました：
+
+- クラス間の関係が不明確
+- 関連するクラスの特定が困難
+- 名前空間の衝突リスク
+- コードの保守が困難
+
+#### リファクタリングのステップ
+
+1. **クラスの分析と分類**:
+   - 各クラスの責任と関連性を分析
+   - 論理的なグループに分類
+
+2. **パッケージ構造の設計**:
+   - ドメインモデル、データアクセス、トランザクション処理などの主要な責任領域を特定
+   - 各領域に対応するパッケージを設計
+
+3. **クラスの移動**:
+   - 各クラスを適切なパッケージに移動
+   - import文の更新
+   - パッケージ宣言の追加
+
+4. **アクセス修飾子の調整**:
+   - パッケージ間の依存関係に基づいてアクセス修飾子を調整
+   - 必要に応じてメソッドをpublicに変更
+
+#### 実装例
+
+以下は、`ChangeAffiliationTransaction`クラスをデフォルトパッケージから`AbstractTransacions`パッケージに移動した例です：
+
+```diff
+-package AffiliationTransactions;
++package AbstractTransacions;
+
+-import GeneralTransactions.ChangeEmployeeTransaction;
+ import PayrollDomain.Affiliation;
+ import PayrollDomain.Employee;
+
+@@ -17,7 +16,7 @@ public abstract class ChangeAffiliationTransaction extends ChangeEmployeeTransac
+     e.SetAffiliation(GetAffiliation());
+ }
+
+-abstract void RecordMembership(Employee e);
++public abstract void RecordMembership(Employee e);
+
+-abstract Affiliation GetAffiliation();
++public abstract Affiliation GetAffiliation();
+```
+
+#### 最終的なパッケージ構造
+
+リファクタリング後、システムは以下の論理的なパッケージに整理されました：
+
+1. **PayrollDomain**: ドメインモデルのクラス
+   - `Employee`
+   - `Paycheck`
+   - `TimeCard`
+   - `SalesReceipt`
+   - `ServiceCharge`
+
+2. **PayrollDatabase**: データベース関連のクラス
+   - `PayrollDatabase`（インターフェース）
+   - `InMemoryPayrollDatabase`（実装）
+   - `GlobalDatabase`（シングルトンアクセサ）
+
+3. **AbstractTransacions**: トランザクションの抽象クラス
+   - `AddEmployeeTransaction`
+   - `ChangeEmployeeTransaction`
+   - `ChangeAffiliationTransaction`
+   - `ChangeClassificationTransaction`
+
+4. **TransactionImplementation**: トランザクションの実装クラス
+   - `AddHourlyEmployee`
+   - `AddSalariedEmployee`
+   - `AddCommissionedEmployee`
+   - `DeleteEmployeeTransaction`
+   - `TimeCardTransaction`
+   - `SalesReceiptTransaction`
+   - `ServiceChargeTransaction`
+   - `PaydayTransaction`
+
+5. **Application**: アプリケーションのエントリーポイント
+   - `PayrollApplication`
+   - `TransactionApplication`
 
 ### 継承階層の整理
 
-トランザクションクラスの継承階層を整理し、共通の機能を抽象クラスに移動しました：
+#### 問題点
 
-- `AddEmployeeTransaction`：従業員追加トランザクションの基底クラス
-- `ChangeEmployeeTransaction`：従業員変更トランザクションの基底クラス
-- `ChangeAffiliationTransaction`：所属変更トランザクションの基底クラス
-- `ChangeClassificationTransaction`：給与計算方法変更トランザクションの基底クラス
+初期の実装では、トランザクションクラス間で多くのコード重複がありました。例えば：
+
+- 各種従業員追加トランザクションで重複するコード
+- 従業員変更トランザクションで重複する検証ロジック
+- 所属変更や給与計算方法変更で重複するコード
+
+#### リファクタリングのステップ
+
+1. **共通機能の特定**:
+   - 各トランザクションタイプで共通する機能を特定
+   - 抽象化できる部分を特定
+
+2. **抽象基底クラスの作成**:
+   - 共通機能を含む抽象基底クラスを設計
+   - テンプレートメソッドパターンを適用
+
+3. **サブクラスの実装**:
+   - 具体的なトランザクションクラスを抽象基底クラスから派生
+   - 抽象メソッドをオーバーライドして特定の動作を実装
+
+4. **メソッドの可視性調整**:
+   - 継承階層で必要なメソッドの可視性を調整
+   - 必要に応じてprotectedやpublicに変更
+
+#### 実装例
+
+以下は、`AddEmployeeTransaction`抽象クラスの例です：
+
+```java
+package AbstractTransacions;
+
+import PayrollImplementation.HoldMethod;
+import PayrollDatabase.GlobalDatabase;
+import PayrollDomain.Employee;
+import PayrollDomain.PaymentClassification;
+import PayrollDomain.PaymentMethod;
+import PayrollDomain.PaymentSchedule;
+
+/**
+ * 従業員追加トランザクションの基底クラス
+ */
+public abstract class AddEmployeeTransaction implements Transaction {
+    private int itsEmpId;
+    private String itsName;
+    private String itsAddress;
+
+    public AddEmployeeTransaction(int empId, String name, String address) {
+        itsEmpId = empId;
+        itsName = name;
+        itsAddress = address;
+    }
+
+    public void Execute() {
+        PaymentClassification pc = GetClassification();
+        PaymentSchedule ps = GetSchedule();
+        PaymentMethod pm = new HoldMethod();
+
+        Employee e = new Employee(itsEmpId, itsName, itsAddress);
+        e.SetClassification(pc);
+        e.SetSchedule(ps);
+        e.SetMethod(pm);
+        GlobalDatabase.payrollDB.AddEmployee(itsEmpId, e);
+    }
+
+    public abstract PaymentSchedule GetSchedule();
+    public abstract PaymentClassification GetClassification();
+}
+```
+
+#### 最終的な継承階層
+
+リファクタリング後、トランザクションクラスは以下の継承階層に整理されました：
+
+- `Transaction`（インターフェース）
+  - `AddEmployeeTransaction`（抽象クラス）
+    - `AddHourlyEmployee`
+    - `AddSalariedEmployee`
+    - `AddCommissionedEmployee`
+  - `ChangeEmployeeTransaction`（抽象クラス）
+    - `ChangeNameTransaction`
+    - `ChangeAddressTransaction`
+    - `ChangeClassificationTransaction`（抽象クラス）
+      - `ChangeHourlyTransaction`
+      - `ChangeSalariedTransaction`
+      - `ChangeCommissionedTransaction`
+    - `ChangeMethodTransaction`（抽象クラス）
+      - `ChangeDirectTransaction`
+      - `ChangeMailTransaction`
+      - `ChangeHoldTransaction`
+    - `ChangeAffiliationTransaction`（抽象クラス）
+      - `ChangeMemberTransaction`
+      - `ChangeUnaffiliatedTransaction`
+  - `DeleteEmployeeTransaction`
+  - `TimeCardTransaction`
+  - `SalesReceiptTransaction`
+  - `ServiceChargeTransaction`
+  - `PaydayTransaction`
 
 ### インターフェースの抽出
 
-システムの拡張性を高めるために、以下のようなインターフェースを抽出しました：
+#### 問題点
 
-- `PaymentClassification`：給与計算方法のインターフェース
-- `PaymentSchedule`：支払いスケジュールのインターフェース
-- `PaymentMethod`：支払い方法のインターフェース
-- `Affiliation`：所属のインターフェース
-- `Transaction`：トランザクションのインターフェース
-- `PayrollDatabase`：データベースのインターフェース
+初期の実装では、具体的なクラス間の依存関係が強く、以下の問題がありました：
+
+- テストが困難（モックオブジェクトの作成が難しい）
+- 拡張性が低い（新しい実装の追加が困難）
+- 結合度が高い（クラス間の依存関係が強い）
+
+#### リファクタリングのステップ
+
+1. **抽象化可能な責任の特定**:
+   - 異なる実装が可能な責任を特定
+   - インターフェースとして抽出すべき機能を特定
+
+2. **インターフェースの設計**:
+   - 各責任に対応するインターフェースを設計
+   - メソッドシグネチャを定義
+
+3. **実装クラスの調整**:
+   - 既存のクラスをインターフェースの実装として調整
+   - 依存関係をインターフェースに向けるように変更
+
+4. **ファクトリーの導入**:
+   - 具体的な実装の生成を担当するファクトリークラスを導入
+   - 依存性注入を容易にする
+
+#### 実装例
+
+以下は、`PaymentClassification`インターフェースの例です：
+
+```java
+package PayrollDomain;
+
+import java.util.Calendar;
+
+/**
+ * 給与計算方法のインターフェース
+ */
+public interface PaymentClassification {
+    /**
+     * 給与を計算する
+     * @param pc 給与小切手
+     * @return 計算された給与額
+     */
+    double CalculatePay(Paycheck pc);
+
+    /**
+     * 指定された日付が支払い期間内かどうかを判定する
+     * @param date 判定する日付
+     * @param pc 給与小切手
+     * @return 支払い期間内の場合はtrue
+     */
+    boolean IsInPayPeriod(Calendar date, Paycheck pc);
+}
+```
+
+#### 抽出されたインターフェース
+
+リファクタリング後、システムには以下のインターフェースが導入されました：
+
+1. **`PaymentClassification`**: 給与計算方法のインターフェース
+   - `HourlyClassification`（実装）
+   - `SalariedClassification`（実装）
+   - `CommissionedClassification`（実装）
+
+2. **`PaymentSchedule`**: 支払いスケジュールのインターフェース
+   - `WeeklySchedule`（実装）
+   - `BiweeklySchedule`（実装）
+   - `MonthlySchedule`（実装）
+
+3. **`PaymentMethod`**: 支払い方法のインターフェース
+   - `HoldMethod`（実装）
+   - `DirectMethod`（実装）
+   - `MailMethod`（実装）
+
+4. **`Affiliation`**: 所属のインターフェース
+   - `NoAffiliation`（実装）
+   - `UnionAffiliation`（実装）
+
+5. **`Transaction`**: トランザクションのインターフェース
+   - 各種トランザクションクラス（実装）
+
+6. **`PayrollDatabase`**: データベースのインターフェース
+   - `InMemoryPayrollDatabase`（実装）
+
+### リファクタリングの効果
+
+このリファクタリングにより、以下の効果が得られました：
+
+1. **コードの可読性向上**:
+   - 関連するクラスが論理的にグループ化され、コードの理解が容易になった
+   - 命名規則が統一され、コードの意図が明確になった
+
+2. **保守性の向上**:
+   - 変更の影響範囲が限定され、修正が容易になった
+   - 責任が明確に分離され、バグの特定が容易になった
+
+3. **拡張性の向上**:
+   - 新しい給与計算方法、支払いスケジュール、支払い方法などを追加しやすくなった
+   - インターフェースを通じた依存性注入が可能になった
+
+4. **テスト容易性の向上**:
+   - モックオブジェクトを使用したテストが容易になった
+   - 各コンポーネントを独立してテストできるようになった
+
+5. **コード重複の削減**:
+   - 共通機能が抽象クラスに移動され、コード重複が大幅に削減された
+   - 変更が一箇所で行えるようになり、一貫性が向上した
 
 ## まとめ
 
