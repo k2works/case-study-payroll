@@ -1,0 +1,69 @@
+site_name: Payroll Case Study
+site_description: Documentation for the Payroll Case Study project.
+site_author: Project Team
+repo_url: https://github.com/k2works/case-study-payroll
+repo_name: case-study-payroll
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - docs/mkdocs/assets/css/extra.css
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: plantuml
+          class: plantuml
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.emoji
+  - admonition
+  - toc:
+      permalink: true
+  - plantuml_markdown:
+      server: !!python/object/apply:os.getenv
+        - PLANTUML_SERVER_URL
+        - http://www.plantuml.com/plantuml
+      format: svg
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js
+  - docs/assets/js/extra.js
+
+extra:
+  plantuml_url: http://www.plantuml.com/plantuml
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/k2works/case-study-payroll
+      name: GitHub Repository
+
+plugins:
+  - search
+
+nav:
+  - 仕様: specification.md
+  - 実装: implementation.md
+  - 履歴:
+      - 20170210: journal/20170210.md
+      - 20170404: journal/20170404.md
+      - 20170406: journal/20170406.md
+      - 20170407: journal/20170407.md
+      - 20170408: journal/20170408.md
+      - 20170410: journal/20170410.md
+      - 20170411: journal/20170411.md
+      - 20170524: journal/20170524.md
