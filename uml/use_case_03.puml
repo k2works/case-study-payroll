@@ -1,0 +1,4 @@
+@startuml
+
+HourlyEmployee *--> "0..*" TimeCard
+@enduml

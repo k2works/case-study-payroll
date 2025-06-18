@@ -1,0 +1,50 @@
+@startuml
+
+interface PaymentMethod
+interface Affiliation
+
+Employee *--> PaymentClassification
+PaymentClassification <|-- SalariedClassification
+PaymentClassification <|-- HourlyClassification
+PaymentClassification <|-- CommissionedClassification
+HourlyClassification *-->"0..*" TimeCard
+HourlyClassification *-->"0..*" SalesRecipt
+
+Employee *--> PaymentMethod
+PaymentMethod <|-- HoldMethod
+PaymentMethod <|-- DirectMethod
+PaymentMethod <|-- MailMethod
+
+Employee *--> Affiliation
+Affiliation <|-- NoAffiliation
+Affiliation <|-- UnionAffiliation
+UnionAffiliation *-->"0..*" ServiceCharge
+
+class SalariedClassification {
+ - Salary
+}
+
+class HourlyClassification {
+- HourlyRate
+}
+
+
+class CommissionedClassification {
+- CommissionRate
+- Salary
+}
+
+class DirectMethod {
+- Bank
+- Account
+}
+
+class MailMethod {
+- Address
+}
+
+class UnionAffiliation {
+- Dues
+}
+
+@enduml

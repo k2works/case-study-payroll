@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor manager
+actor employee
+rectangle payroll {
+  manager -- (新しい従業員を追加する)
+  manager -- (従業員を削除する)
+  (タイムカードの処理を要請する) -- employee
+  (売上げレシートの処理を請求する) -- employee
+  (組合サービス料の処理を請求する) -- employee
+  manager -- (従業員レコードの詳細を変更する)
+  manager -- (当日の給与支払い処理を走らせる)
+}
+@enduml

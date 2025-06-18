@@ -1,0 +1,7 @@
+@startuml
+
+Employee <|-- HourlyEmployee
+Employee <|-- CommissionedEmployee
+Employee <|-- SalariedEmployee
+
+@enduml

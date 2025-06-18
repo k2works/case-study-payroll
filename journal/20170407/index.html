@@ -1,0 +1,2618 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Payroll Case Study project.">
+      
+      
+        <meta name="author" content="Project Team">
+      
+      
+      
+        <link rel="prev" href="../20170406/">
+      
+      
+        <link rel="next" href="../20170408/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>20170407 - Payroll Case Study</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../docs/mkdocs/assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2017-04-07" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Payroll Case Study" class="md-header__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Payroll Case Study
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20170407
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../specification/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  仕様
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../implementation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  実装
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../20170210/" class="md-tabs__link">
+          
+  
+  
+  履歴
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Payroll Case Study" class="md-nav__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Payroll Case Study
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    仕様
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    履歴
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            履歴
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170210
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170404/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170404
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170406/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    20170407
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170407
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d2ecaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 3d2ecaf
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 3d2ecaf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#317e2f3" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 317e2f3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 317e2f3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3bb014b" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 3bb014b
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 3bb014b">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a531d1b" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: a531d1b
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: a531d1b">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#772d37d" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 772d37d
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 772d37d">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f1c3d1e" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: f1c3d1e
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: f1c3d1e">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#79045d9" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 79045d9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 79045d9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f0b73c9" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: f0b73c9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: f0b73c9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4358a21" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 4358a21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 4358a21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3a95ed3" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 3a95ed3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 3a95ed3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e4797c2" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: e4797c2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: e4797c2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170408/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170408
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170410/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170410
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170411/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170411
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170524/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170524
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2017-04-07">作業履歴 2017-04-07<a class="headerlink" href="#2017-04-07" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>2017-04-07の作業内容をまとめています。</p>
+<h2 id="3d2ecaf">コミット: 3d2ecaf<a class="headerlink" href="#3d2ecaf" title="Permanent link">&para;</a></h2>
+<h3 id="_2">メッセージ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>固定給の従業員の給与
+・TestPaySingleSalariedEmployeeOnWrongDate
+</code></pre></div>
+<h3 id="_3">変更されたファイル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_4">変更内容<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 3d2ecaf060cda236ae46ec4df254689cf2629c13
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 17:42:30 2017 +0900
+
+<span class="w"> </span>   固定給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleSalariedEmployeeOnWrongDate
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 9c029cd..1885821 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -295,6 +295,18 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId, payDate, 1000.0);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleSalariedEmployeeOnWrongDate() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleSalariedEmployeeOnWrongDate&quot;);</span>
+<span class="gi">+        int empId = 1;</span>
+<span class="gi">+        AddSalariedEmployee t = new AddSalariedEmployee(empId,&quot;Bob&quot;,&quot;Home&quot;,1000.0);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER,29);</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNull(pc);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="317e2f3">コミット: 317e2f3<a class="headerlink" href="#317e2f3" title="Permanent link">&para;</a></h2>
+<h3 id="_5">メッセージ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>固定給の従業員の給与
+・TestPaySingleSalariedEmployee
+</code></pre></div>
+<h3 id="_6">変更されたファイル<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/main/java/Affiliation.java</li>
+<li>M src/main/java/BiweeklySchedule.java</li>
+<li>M src/main/java/CommissionedClassification.java</li>
+<li>M src/main/java/DirectMethod.java</li>
+<li>M src/main/java/Employee.java</li>
+<li>M src/main/java/HoldMethod.java</li>
+<li>M src/main/java/HourlyClassification.java</li>
+<li>M src/main/java/MailMethod.java</li>
+<li>M src/main/java/MonthlySchedule.java</li>
+<li>M src/main/java/NoAffiliation.java</li>
+<li>A src/main/java/Paycheck.java</li>
+<li>A src/main/java/PaydayTransaction.java</li>
+<li>M src/main/java/PaymentClassification.java</li>
+<li>M src/main/java/PaymentMethod.java</li>
+<li>M src/main/java/PaymentSchedule.java</li>
+<li>M src/main/java/PayrollDatabase.java</li>
+<li>M src/main/java/SalariedClassification.java</li>
+<li>M src/main/java/UnionAffiliation.java</li>
+<li>M src/main/java/WeeklySchedule.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_7">変更内容<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 317e2f352e8e1f55fa7c1f88cd80c3575cf60725
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 17:39:18 2017 +0900
+
+<span class="w"> </span>   固定給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleSalariedEmployee
+
+<span class="gh">diff --git a/src/main/java/Affiliation.java b/src/main/java/Affiliation.java</span>
+<span class="gh">index 4219855..10834b3 100644</span>
+<span class="gd">--- a/src/main/java/Affiliation.java</span>
+<span class="gi">+++ b/src/main/java/Affiliation.java</span>
+<span class="gu">@@ -3,4 +3,6 @@</span>
+<span class="w"> </span> */
+<span class="w"> </span>public interface Affiliation {
+<span class="w"> </span>    double GetServiceCharge(long date);
+<span class="gi">+</span>
+<span class="gi">+    double CalculateDeductions(Paycheck pc);</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/BiweeklySchedule.java b/src/main/java/BiweeklySchedule.java</span>
+<span class="gh">index 9ee711d..eaaa644 100644</span>
+<span class="gd">--- a/src/main/java/BiweeklySchedule.java</span>
+<span class="gi">+++ b/src/main/java/BiweeklySchedule.java</span>
+<span class="gu">@@ -1,5 +1,14 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class BiweeklySchedule implements PaymentSchedule {
+<span class="gi">+    public boolean IsPayDate(Calendar payDate) {</span>
+<span class="gi">+        return false;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Calendar GetPayPeriodStartDate(Calendar payDate) {</span>
+<span class="gi">+        return null;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/CommissionedClassification.java b/src/main/java/CommissionedClassification.java</span>
+<span class="gh">index 49cc301..081c1a3 100644</span>
+<span class="gd">--- a/src/main/java/CommissionedClassification.java</span>
+<span class="gi">+++ b/src/main/java/CommissionedClassification.java</span>
+<span class="gu">@@ -30,4 +30,8 @@ public class CommissionedClassification implements PaymentClassification {</span>
+<span class="w"> </span>    public SalesReceipt GetReceipt(long date) {
+<span class="w"> </span>        return itsReceipts.get(date);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public double CalculatePay(Paycheck pc) {</span>
+<span class="gi">+        return 0;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/DirectMethod.java b/src/main/java/DirectMethod.java</span>
+<span class="gh">index b8b5e5b..7fba14a 100644</span>
+<span class="gd">--- a/src/main/java/DirectMethod.java</span>
+<span class="gi">+++ b/src/main/java/DirectMethod.java</span>
+<span class="gu">@@ -18,4 +18,8 @@ public class DirectMethod implements PaymentMethod {</span>
+<span class="w"> </span>    public String GetAccount() {
+<span class="w"> </span>        return itsAccount;
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void Pay(Paycheck pc) {</span>
+<span class="gi">+</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/Employee.java b/src/main/java/Employee.java</span>
+<span class="gh">index 9efa332..f15b6e4 100644</span>
+<span class="gd">--- a/src/main/java/Employee.java</span>
+<span class="gi">+++ b/src/main/java/Employee.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gu">@@ -14,6 +16,7 @@ class Employee {</span>
+<span class="w"> </span>        itsEmpId = empId;
+<span class="w"> </span>        itsName = name;
+<span class="w"> </span>        itsAddress = address;
+<span class="gi">+        itsAffiliation = new NoAffiliation();</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public int GetEmpId() {
+<span class="gu">@@ -67,4 +70,22 @@ class Employee {</span>
+<span class="w"> </span>    public void SetAffiliation(Affiliation af) {
+<span class="w"> </span>        itsAffiliation = af;
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public boolean IsPayDate(Calendar payDate) {</span>
+<span class="gi">+        return itsSchedule.IsPayDate(payDate);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Calendar GetPayPeriodStartDate(Calendar payDate) {</span>
+<span class="gi">+        return itsSchedule.GetPayPeriodStartDate(payDate);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Payday(Paycheck pc) {</span>
+<span class="gi">+        double grossPay = itsClassification.CalculatePay(pc);</span>
+<span class="gi">+        double deductions = itsAffiliation.CalculateDeductions(pc);</span>
+<span class="gi">+        double netPay = grossPay - deductions;</span>
+<span class="gi">+        pc.SetGrossPay(grossPay);</span>
+<span class="gi">+        pc.SetDeductions(deductions);</span>
+<span class="gi">+        pc.SetNetPay(netPay);</span>
+<span class="gi">+        itsPaymentMethod.Pay(pc);</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/HoldMethod.java b/src/main/java/HoldMethod.java</span>
+<span class="gh">index 363437e..9bfadc9 100644</span>
+<span class="gd">--- a/src/main/java/HoldMethod.java</span>
+<span class="gi">+++ b/src/main/java/HoldMethod.java</span>
+<span class="gu">@@ -2,4 +2,7 @@</span>
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class HoldMethod implements PaymentMethod {
+<span class="gi">+    public void Pay(Paycheck pc) {</span>
+<span class="gi">+</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/HourlyClassification.java b/src/main/java/HourlyClassification.java</span>
+<span class="gh">index 383c4a5..a2e0678 100644</span>
+<span class="gd">--- a/src/main/java/HourlyClassification.java</span>
+<span class="gi">+++ b/src/main/java/HourlyClassification.java</span>
+<span class="gu">@@ -24,4 +24,8 @@ public class HourlyClassification implements  PaymentClassification {</span>
+<span class="w"> </span>    public void AddTimeCard(TimeCard tc) {
+<span class="w"> </span>        itsTimeCards.put(tc.GetDate(), tc);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public double CalculatePay(Paycheck pc) {</span>
+<span class="gi">+        return 0;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/MailMethod.java b/src/main/java/MailMethod.java</span>
+<span class="gh">index 1814815..842a9a0 100644</span>
+<span class="gd">--- a/src/main/java/MailMethod.java</span>
+<span class="gi">+++ b/src/main/java/MailMethod.java</span>
+<span class="gu">@@ -11,4 +11,8 @@ public class MailMethod implements PaymentMethod {</span>
+<span class="w"> </span>    public String GetAddress() {
+<span class="w"> </span>        return itsAddress;
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void Pay(Paycheck pc) {</span>
+<span class="gi">+</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/MonthlySchedule.java b/src/main/java/MonthlySchedule.java</span>
+<span class="gh">index a07f3c8..f0c3446 100644</span>
+<span class="gd">--- a/src/main/java/MonthlySchedule.java</span>
+<span class="gi">+++ b/src/main/java/MonthlySchedule.java</span>
+<span class="gu">@@ -1,5 +1,23 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class MonthlySchedule implements PaymentSchedule {
+<span class="gi">+    private boolean IsLastDayOfMonth(Calendar date) {</span>
+<span class="gi">+        Calendar cal = Calendar.getInstance();</span>
+<span class="gi">+        cal.setTime(date.getTime());</span>
+<span class="gi">+        return (cal.getActualMaximum(Calendar.DATE) == cal.get(Calendar.DATE));</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public boolean IsPayDate(Calendar payDate) {</span>
+<span class="gi">+        return IsLastDayOfMonth(payDate);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Calendar GetPayPeriodStartDate(Calendar payDate) {</span>
+<span class="gi">+        Calendar payPeriodStartDate = Calendar.getInstance();</span>
+<span class="gi">+        payPeriodStartDate.setTime(payDate.getTime());</span>
+<span class="gi">+        payPeriodStartDate.set(Calendar.DATE,1);</span>
+<span class="gi">+        return payPeriodStartDate;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/NoAffiliation.java b/src/main/java/NoAffiliation.java</span>
+<span class="gh">index 77cb405..c6263b3 100644</span>
+<span class="gd">--- a/src/main/java/NoAffiliation.java</span>
+<span class="gi">+++ b/src/main/java/NoAffiliation.java</span>
+<span class="gu">@@ -5,4 +5,8 @@ public class NoAffiliation implements Affiliation {</span>
+<span class="w"> </span>    public double GetServiceCharge(long date) {
+<span class="w"> </span>        return 0;
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public double CalculateDeductions(Paycheck pc) {</span>
+<span class="gi">+        return 0;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/Paycheck.java b/src/main/java/Paycheck.java</span>
+new file mode 100644
+<span class="gh">index 0000000..c59838d</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/Paycheck.java</span>
+<span class="gu">@@ -0,0 +1,52 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class Paycheck {</span>
+<span class="gi">+    private Calendar itsPayPeriodStartDate;</span>
+<span class="gi">+    private Calendar itsPayPeriodEndDate;</span>
+<span class="gi">+    private double itsGrossPay;</span>
+<span class="gi">+    private double itsDeducations;</span>
+<span class="gi">+    private double itsNetPay;</span>
+<span class="gi">+</span>
+<span class="gi">+    public Paycheck(Calendar payPeriodStartDate, Calendar payPeriodEndDate) {</span>
+<span class="gi">+        itsPayPeriodStartDate = payPeriodStartDate;</span>
+<span class="gi">+        itsPayPeriodEndDate = payPeriodEndDate;</span>
+<span class="gi">+    }</span>
+<span class="gi">+    </span>
+<span class="gi">+    public void SetGrossPay(double grossPay) {</span>
+<span class="gi">+        itsGrossPay = grossPay;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetDeductions(double deductions) {</span>
+<span class="gi">+        itsDeducations = deductions;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetNetPay(double netPay) {</span>
+<span class="gi">+        itsNetPay = netPay;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Calendar GetPayPeriodEndDate() {</span>
+<span class="gi">+        return itsPayPeriodEndDate;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public double GetGrossPay() {</span>
+<span class="gi">+        return itsGrossPay;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public String GetField(String string) {</span>
+<span class="gi">+        if (string.equals(&quot;Disposition&quot;)) {</span>
+<span class="gi">+            return &quot;Hold&quot;;</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return null;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public double GetDeducations() {</span>
+<span class="gi">+        return itsDeducations;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public double GetNetPay() {</span>
+<span class="gi">+        return itsNetPay;</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/PaydayTransaction.java b/src/main/java/PaydayTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..1d6c03a</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/PaydayTransaction.java</span>
+<span class="gu">@@ -0,0 +1,32 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+import java.util.HashMap;</span>
+<span class="gi">+import java.util.List;</span>
+<span class="gi">+import java.util.Map;</span>
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class PaydayTransaction implements Transaction {</span>
+<span class="gi">+    private Calendar itsPayDate;</span>
+<span class="gi">+    private Map&lt;Integer, Paycheck&gt; itsPaychecks = new HashMap&lt;Integer, Paycheck&gt;();</span>
+<span class="gi">+</span>
+<span class="gi">+    public PaydayTransaction(Calendar payDate) {</span>
+<span class="gi">+        itsPayDate = payDate;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Execute() {</span>
+<span class="gi">+        List&lt;Integer&gt; empIds = PayrollDatabase.GetAllEmployeeIds();</span>
+<span class="gi">+        for(int empId : empIds) {</span>
+<span class="gi">+            Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+            if(e.IsPayDate(itsPayDate)) {</span>
+<span class="gi">+                Paycheck pc = new Paycheck(e.GetPayPeriodStartDate(itsPayDate),itsPayDate);</span>
+<span class="gi">+                itsPaychecks.put(empId, pc);</span>
+<span class="gi">+                e.Payday(pc);</span>
+<span class="gi">+            }</span>
+<span class="gi">+        }</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Paycheck GetPaycheck(int empId) {</span>
+<span class="gi">+        return itsPaychecks.get(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/PaymentClassification.java b/src/main/java/PaymentClassification.java</span>
+<span class="gh">index 4250029..116a7cb 100644</span>
+<span class="gd">--- a/src/main/java/PaymentClassification.java</span>
+<span class="gi">+++ b/src/main/java/PaymentClassification.java</span>
+<span class="gu">@@ -2,4 +2,5 @@</span>
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public interface PaymentClassification {
+<span class="gi">+    abstract double CalculatePay(Paycheck pc);</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/PaymentMethod.java b/src/main/java/PaymentMethod.java</span>
+<span class="gh">index 7ad49f3..eccd52e 100644</span>
+<span class="gd">--- a/src/main/java/PaymentMethod.java</span>
+<span class="gi">+++ b/src/main/java/PaymentMethod.java</span>
+<span class="gu">@@ -2,4 +2,5 @@</span>
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public interface PaymentMethod {
+<span class="gi">+    void Pay(Paycheck pc);</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/PaymentSchedule.java b/src/main/java/PaymentSchedule.java</span>
+<span class="gh">index a6c2174..278232e 100644</span>
+<span class="gd">--- a/src/main/java/PaymentSchedule.java</span>
+<span class="gi">+++ b/src/main/java/PaymentSchedule.java</span>
+<span class="gu">@@ -1,5 +1,10 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public interface PaymentSchedule {
+<span class="gi">+    boolean IsPayDate(Calendar payDate);</span>
+<span class="gi">+</span>
+<span class="gi">+    Calendar GetPayPeriodStartDate(Calendar payDate);</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/PayrollDatabase.java b/src/main/java/PayrollDatabase.java</span>
+<span class="gh">index 6ccc6ec..24f3a66 100644</span>
+<span class="gd">--- a/src/main/java/PayrollDatabase.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDatabase.java</span>
+<span class="gu">@@ -1,4 +1,6 @@</span>
+<span class="gi">+import java.util.ArrayList;</span>
+<span class="w"> </span>import java.util.HashMap;
+<span class="gi">+import java.util.List;</span>
+<span class="w"> </span>import java.util.Map;
+
+<span class="w"> </span>/**
+<span class="gu">@@ -31,4 +33,8 @@ class PayrollDatabase {</span>
+<span class="w"> </span>    public static void RemoveUnionMember(int memberId) {
+<span class="w"> </span>        itsUnionMembers.remove(memberId);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public static List&lt;Integer&gt; GetAllEmployeeIds() {</span>
+<span class="gi">+        return new ArrayList&lt;Integer&gt;(itsEmployees.keySet());</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/SalariedClassification.java b/src/main/java/SalariedClassification.java</span>
+<span class="gh">index 38fd158..81a2bbd 100644</span>
+<span class="gd">--- a/src/main/java/SalariedClassification.java</span>
+<span class="gi">+++ b/src/main/java/SalariedClassification.java</span>
+<span class="gu">@@ -12,4 +12,7 @@ public class SalariedClassification implements PaymentClassification {</span>
+<span class="w"> </span>        return itsSalary;
+<span class="w"> </span>    }
+
+<span class="gi">+    public double CalculatePay(Paycheck pc) {</span>
+<span class="gi">+        return itsSalary;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/UnionAffiliation.java b/src/main/java/UnionAffiliation.java</span>
+<span class="gh">index f8ee246..f3d5de1 100644</span>
+<span class="gd">--- a/src/main/java/UnionAffiliation.java</span>
+<span class="gi">+++ b/src/main/java/UnionAffiliation.java</span>
+<span class="gu">@@ -25,6 +25,10 @@ public class UnionAffiliation implements Affiliation {</span>
+<span class="w"> </span>        return itsServiceCharges.get(date).GetAmount();
+<span class="w"> </span>    }
+
+<span class="gi">+    public double CalculateDeductions(Paycheck pc) {</span>
+<span class="gi">+        return 0;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    public void AddServiceCharge(long date, double amount) {
+<span class="w"> </span>        itsServiceCharges.put(date, new ServiceCharge(date, amount));
+<span class="w"> </span>    }
+<span class="gh">diff --git a/src/main/java/WeeklySchedule.java b/src/main/java/WeeklySchedule.java</span>
+<span class="gh">index a03549a..26bec68 100644</span>
+<span class="gd">--- a/src/main/java/WeeklySchedule.java</span>
+<span class="gi">+++ b/src/main/java/WeeklySchedule.java</span>
+<span class="gu">@@ -1,5 +1,14 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class WeeklySchedule implements PaymentSchedule {
+<span class="gi">+    public boolean IsPayDate(Calendar payDate) {</span>
+<span class="gi">+        return false;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Calendar GetPayPeriodStartDate(Calendar payDate) {</span>
+<span class="gi">+        return null;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 31cb460..9c029cd 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -1,5 +1,8 @@</span>
+<span class="w"> </span>import junit.framework.TestCase;
+
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+import java.util.GregorianCalendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gu">@@ -280,4 +283,25 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertNotNull(member);
+<span class="w"> </span>        assertEquals(e,member);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testPaySingleSalariedEmployee() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleSalariedEmployee&quot;);</span>
+<span class="gi">+        int empId = 1;</span>
+<span class="gi">+        AddSalariedEmployee t = new AddSalariedEmployee(empId,&quot;Bob&quot;,&quot;Home&quot;,1000.0);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER,30);</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId, payDate, 1000.0);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        assertEquals(pc.GetPayPeriodEndDate(), payDate);</span>
+<span class="gi">+        assertEquals(pay, pc.GetGrossPay());</span>
+<span class="gi">+        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));</span>
+<span class="gi">+        assertEquals(0.0, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(pay, pc.GetNetPay());</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="3bb014b">コミット: 3bb014b<a class="headerlink" href="#3bb014b" title="Permanent link">&para;</a></h2>
+<h3 id="_8">メッセージ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>何てこった！
+・TestChangeMemberTransaction
+</code></pre></div>
+<h3 id="_9">変更されたファイル<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeAffiliationTransaction.java</li>
+<li>A src/main/java/ChangeMemberTransaction.java</li>
+<li>A src/main/java/ChangeUnaffiliatedTransaction.java</li>
+<li>A src/main/java/NoAffiliation.java</li>
+<li>M src/main/java/PayrollDatabase.java</li>
+<li>M src/main/java/UnionAffiliation.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_10">変更内容<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 3bb014ba7ba72eb2ee9e8e840d4878da1d96fd65
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 16:14:36 2017 +0900
+
+<span class="w"> </span>   何てこった！
+
+<span class="w"> </span>   ・TestChangeMemberTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeAffiliationTransaction.java b/src/main/java/ChangeAffiliationTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..b62169b</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeAffiliationTransaction.java</span>
+<span class="gu">@@ -0,0 +1,17 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public abstract class ChangeAffiliationTransaction extends ChangeEmployeeTransaction {</span>
+<span class="gi">+    public ChangeAffiliationTransaction(int empId) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    void Change(Employee e) {</span>
+<span class="gi">+        RecordMembership(e);</span>
+<span class="gi">+        e.SetAffiliation(GetAffiliation());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    abstract void RecordMembership(Employee e);</span>
+<span class="gi">+</span>
+<span class="gi">+    abstract Affiliation GetAffiliation();</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/ChangeMemberTransaction.java b/src/main/java/ChangeMemberTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..3229e24</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeMemberTransaction.java</span>
+<span class="gu">@@ -0,0 +1,21 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeMemberTransaction extends ChangeAffiliationTransaction {</span>
+<span class="gi">+    private int itsMemberId;</span>
+<span class="gi">+    private double itsDues;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeMemberTransaction(int empId, int memberId, double dues) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsMemberId = memberId;</span>
+<span class="gi">+        itsDues = dues;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    Affiliation GetAffiliation() {</span>
+<span class="gi">+        return new UnionAffiliation(itsMemberId,itsDues);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    void RecordMembership(Employee e) {</span>
+<span class="gi">+        PayrollDatabase.AddUnionMember(itsMemberId, e);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/ChangeUnaffiliatedTransaction.java b/src/main/java/ChangeUnaffiliatedTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..b7f81ea</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeUnaffiliatedTransaction.java</span>
+<span class="gu">@@ -0,0 +1,21 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeUnaffiliatedTransaction extends ChangeAffiliationTransaction {</span>
+<span class="gi">+    public ChangeUnaffiliatedTransaction(int empId) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Affiliation GetAffiliation() {</span>
+<span class="gi">+        return new NoAffiliation();</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void RecordMembership(Employee e) {</span>
+<span class="gi">+        Affiliation af = e.GetAffiliation();</span>
+<span class="gi">+        if (af instanceof UnionAffiliation) {</span>
+<span class="gi">+            UnionAffiliation uf = (UnionAffiliation) af;</span>
+<span class="gi">+            int memberId = uf.GetMemberId();</span>
+<span class="gi">+            PayrollDatabase.RemoveUnionMember(memberId);</span>
+<span class="gi">+        }</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/NoAffiliation.java b/src/main/java/NoAffiliation.java</span>
+new file mode 100644
+<span class="gh">index 0000000..77cb405</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/NoAffiliation.java</span>
+<span class="gu">@@ -0,0 +1,8 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class NoAffiliation implements Affiliation {</span>
+<span class="gi">+    public double GetServiceCharge(long date) {</span>
+<span class="gi">+        return 0;</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/PayrollDatabase.java b/src/main/java/PayrollDatabase.java</span>
+<span class="gh">index dab5b04..6ccc6ec 100644</span>
+<span class="gd">--- a/src/main/java/PayrollDatabase.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDatabase.java</span>
+<span class="gu">@@ -27,4 +27,8 @@ class PayrollDatabase {</span>
+<span class="w"> </span>    public static Employee GetUnionMbember(int memberId) {
+<span class="w"> </span>        return itsUnionMembers.get(memberId);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public static void RemoveUnionMember(int memberId) {</span>
+<span class="gi">+        itsUnionMembers.remove(memberId);</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/UnionAffiliation.java b/src/main/java/UnionAffiliation.java</span>
+<span class="gh">index 2d93912..f8ee246 100644</span>
+<span class="gd">--- a/src/main/java/UnionAffiliation.java</span>
+<span class="gi">+++ b/src/main/java/UnionAffiliation.java</span>
+<span class="gu">@@ -6,8 +6,16 @@ import java.util.Map;</span>
+<span class="w"> </span> */
+<span class="w"> </span>public class UnionAffiliation implements Affiliation {
+<span class="w"> </span>    private Map&lt;Long, ServiceCharge&gt; itsServiceCharges = new HashMap&lt;Long, ServiceCharge&gt;();
+<span class="gi">+    private int itsMemberId;</span>
+<span class="gi">+    private double itsDues;</span>
+
+<span class="gd">-    public UnionAffiliation(double d) {</span>
+<span class="gi">+    public UnionAffiliation(double dues) {</span>
+<span class="gi">+        itsDues = dues;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public UnionAffiliation(int memberId, double dues) {</span>
+<span class="gi">+        itsMemberId = memberId;</span>
+<span class="gi">+        itsDues = dues;</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public double GetServiceCharge(long date) {
+<span class="gu">@@ -20,4 +28,12 @@ public class UnionAffiliation implements Affiliation {</span>
+<span class="w"> </span>    public void AddServiceCharge(long date, double amount) {
+<span class="w"> </span>        itsServiceCharges.put(date, new ServiceCharge(date, amount));
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public int GetMemberId() {</span>
+<span class="gi">+        return itsMemberId;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public double GetDues() {</span>
+<span class="gi">+        return itsDues;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 8e7603d..31cb460 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -260,4 +260,24 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        HoldMethod hm = (HoldMethod) pm;
+<span class="w"> </span>        assertNotNull(hm);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeMemberTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeMemberTransaction&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        int memberId = 7734;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;,&quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeMemberTransaction cmt = new ChangeMemberTransaction(empId, memberId, 99.42);</span>
+<span class="gi">+        cmt.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        Affiliation af = e.GetAffiliation();</span>
+<span class="gi">+        assertNotNull(af);</span>
+<span class="gi">+        UnionAffiliation uf = (UnionAffiliation) af;</span>
+<span class="gi">+        assertNotNull(uf);</span>
+<span class="gi">+        assertEquals(99.42, uf.GetDues());</span>
+<span class="gi">+        Employee member = PayrollDatabase.GetUnionMbember(memberId);</span>
+<span class="gi">+        assertNotNull(member);</span>
+<span class="gi">+        assertEquals(e,member);</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="a531d1b">コミット: a531d1b<a class="headerlink" href="#a531d1b" title="Permanent link">&para;</a></h2>
+<h3 id="_11">メッセージ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与体系を変更するトランザクション
+・TestChangeHoldTransaction
+</code></pre></div>
+<h3 id="_12">変更されたファイル<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeHoldTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_13">変更内容<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit a531d1bd597cff9157c81d4954b9df03fc4aca2b
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 15:49:09 2017 +0900
+
+<span class="w"> </span>   給与体系を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeHoldTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeHoldTransaction.java b/src/main/java/ChangeHoldTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..e8e23f3</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeHoldTransaction.java</span>
+<span class="gu">@@ -0,0 +1,12 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeHoldTransaction extends ChangeMethodTransaction {</span>
+<span class="gi">+    public ChangeHoldTransaction(int empId) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentMethod GetMethod() {</span>
+<span class="gi">+        return new HoldMethod();</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 967154c..8e7603d 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -245,4 +245,19 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(&quot;FirstNational&quot;, dm.GetBank());
+<span class="w"> </span>        assertEquals(&quot;1058209&quot;,dm.GetAccount());
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeHoldTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeHoldTransaction&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeHoldTransaction cht = new ChangeHoldTransaction(empId);</span>
+<span class="gi">+        cht.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        PaymentMethod pm = e.GetMethod();</span>
+<span class="gi">+        assertNotNull(pm);</span>
+<span class="gi">+        HoldMethod hm = (HoldMethod) pm;</span>
+<span class="gi">+        assertNotNull(hm);</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="772d37d">コミット: 772d37d<a class="headerlink" href="#772d37d" title="Permanent link">&para;</a></h2>
+<h3 id="_14">メッセージ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与体系を変更するトランザクション
+・TestChangeDirectTransaction
+</code></pre></div>
+<h3 id="_15">変更されたファイル<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeDirectTransaction.java</li>
+<li>M src/main/java/ChangeMailTransaction.java</li>
+<li>M src/main/java/ChangeMethodTransaction.java</li>
+<li>A src/main/java/DirectMethod.java</li>
+<li>M src/main/java/HoldMethod.java</li>
+<li>M src/main/java/MailMethod.java</li>
+<li>M src/main/java/PaymentMethod.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_16">変更内容<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 772d37d0e6a53111cf1a73e145ccd35786f56cb1
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 15:40:51 2017 +0900
+
+<span class="w"> </span>   給与体系を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeDirectTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeDirectTransaction.java b/src/main/java/ChangeDirectTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..b53f17e</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeDirectTransaction.java</span>
+<span class="gu">@@ -0,0 +1,17 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeDirectTransaction extends ChangeMethodTransaction {</span>
+<span class="gi">+    private String itsBank;</span>
+<span class="gi">+    private String itsAccount;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeDirectTransaction(int empId, String bank, String account) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsBank = bank;</span>
+<span class="gi">+        itsAccount = account;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentMethod GetMethod() {</span>
+<span class="gi">+        return new DirectMethod(itsBank,itsAccount);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/ChangeMailTransaction.java b/src/main/java/ChangeMailTransaction.java</span>
+<span class="gh">index 29317c5..79d835a 100644</span>
+<span class="gd">--- a/src/main/java/ChangeMailTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ChangeMailTransaction.java</span>
+<span class="gu">@@ -9,7 +9,7 @@ public class ChangeMailTransaction extends ChangeMethodTransaction {</span>
+<span class="w"> </span>        itsAddress = address;
+<span class="w"> </span>    }
+
+<span class="gd">-    PaymentMethod GetMthod() {</span>
+<span class="gi">+    PaymentMethod GetMethod() {</span>
+<span class="w"> </span>        return new MailMethod(itsAddress);
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/ChangeMethodTransaction.java b/src/main/java/ChangeMethodTransaction.java</span>
+<span class="gh">index 2909acf..49875d5 100644</span>
+<span class="gd">--- a/src/main/java/ChangeMethodTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ChangeMethodTransaction.java</span>
+<span class="gu">@@ -7,8 +7,8 @@ public abstract class ChangeMethodTransaction extends ChangeEmployeeTransaction</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public void Change(Employee e) {
+<span class="gd">-        e.SetMethod(GetMthod());</span>
+<span class="gi">+        e.SetMethod(GetMethod());</span>
+<span class="w"> </span>    }
+
+<span class="gd">-    abstract PaymentMethod GetMthod();</span>
+<span class="gi">+    abstract PaymentMethod GetMethod();</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/DirectMethod.java b/src/main/java/DirectMethod.java</span>
+new file mode 100644
+<span class="gh">index 0000000..b8b5e5b</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/DirectMethod.java</span>
+<span class="gu">@@ -0,0 +1,21 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+</span>
+<span class="gi">+public class DirectMethod implements PaymentMethod {</span>
+<span class="gi">+    private String itsBank;</span>
+<span class="gi">+    private String itsAccount;</span>
+<span class="gi">+</span>
+<span class="gi">+    public DirectMethod(String bank, String account) {</span>
+<span class="gi">+        itsBank = bank;</span>
+<span class="gi">+        itsAccount = account;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public String GetBank() {</span>
+<span class="gi">+        return itsBank;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public String GetAccount() {</span>
+<span class="gi">+        return itsAccount;</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/HoldMethod.java b/src/main/java/HoldMethod.java</span>
+<span class="gh">index 4d5b09a..363437e 100644</span>
+<span class="gd">--- a/src/main/java/HoldMethod.java</span>
+<span class="gi">+++ b/src/main/java/HoldMethod.java</span>
+<span class="gu">@@ -1,5 +1,5 @@</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gd">-public class HoldMethod extends PaymentMethod {</span>
+<span class="gi">+public class HoldMethod implements PaymentMethod {</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/MailMethod.java b/src/main/java/MailMethod.java</span>
+<span class="gh">index c734787..1814815 100644</span>
+<span class="gd">--- a/src/main/java/MailMethod.java</span>
+<span class="gi">+++ b/src/main/java/MailMethod.java</span>
+<span class="gu">@@ -1,7 +1,7 @@</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gd">-public class MailMethod extends PaymentMethod {</span>
+<span class="gi">+public class MailMethod implements PaymentMethod {</span>
+<span class="w"> </span>    private String itsAddress;
+
+<span class="w"> </span>    public MailMethod(String address) {
+<span class="gh">diff --git a/src/main/java/PaymentMethod.java b/src/main/java/PaymentMethod.java</span>
+<span class="gh">index 2517559..7ad49f3 100644</span>
+<span class="gd">--- a/src/main/java/PaymentMethod.java</span>
+<span class="gi">+++ b/src/main/java/PaymentMethod.java</span>
+<span class="gu">@@ -1,5 +1,5 @@</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gd">-public class PaymentMethod {</span>
+<span class="gi">+public interface PaymentMethod {</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index d44dba3..967154c 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -228,4 +228,21 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertNotNull(mm);
+<span class="w"> </span>        assertEquals(&quot;4080 El Cerrito Road&quot;, mm.GetAddress());
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeDirectTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeDirectTransaction&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeDirectTransaction cdt = new ChangeDirectTransaction(empId, &quot;FirstNational&quot;, &quot;1058209&quot;);</span>
+<span class="gi">+        cdt.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        PaymentMethod pm = e.GetMethod();</span>
+<span class="gi">+        assertNotNull(pm);</span>
+<span class="gi">+        DirectMethod dm = (DirectMethod) pm;</span>
+<span class="gi">+        assertNotNull(dm);</span>
+<span class="gi">+        assertEquals(&quot;FirstNational&quot;, dm.GetBank());</span>
+<span class="gi">+        assertEquals(&quot;1058209&quot;,dm.GetAccount());</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="f1c3d1e">コミット: f1c3d1e<a class="headerlink" href="#f1c3d1e" title="Permanent link">&para;</a></h2>
+<h3 id="_17">メッセージ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与体系を変更するトランザクション
+・TestChangeMailTransaction
+</code></pre></div>
+<h3 id="_18">変更されたファイル<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeMailTransaction.java</li>
+<li>A src/main/java/ChangeMethodTransaction.java</li>
+<li>A src/main/java/MailMethod.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_19">変更内容<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit f1c3d1e94d5659941b941ccd20d67a478437a5cf
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 15:02:14 2017 +0900
+
+<span class="w"> </span>   給与体系を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeMailTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeMailTransaction.java b/src/main/java/ChangeMailTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..29317c5</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeMailTransaction.java</span>
+<span class="gu">@@ -0,0 +1,15 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeMailTransaction extends ChangeMethodTransaction {</span>
+<span class="gi">+    private String itsAddress;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeMailTransaction(int empId, String address) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsAddress = address;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentMethod GetMthod() {</span>
+<span class="gi">+        return new MailMethod(itsAddress);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/ChangeMethodTransaction.java b/src/main/java/ChangeMethodTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..2909acf</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeMethodTransaction.java</span>
+<span class="gu">@@ -0,0 +1,14 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public abstract class ChangeMethodTransaction extends ChangeEmployeeTransaction {</span>
+<span class="gi">+    public ChangeMethodTransaction(int empId) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Change(Employee e) {</span>
+<span class="gi">+        e.SetMethod(GetMthod());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    abstract PaymentMethod GetMthod();</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/MailMethod.java b/src/main/java/MailMethod.java</span>
+new file mode 100644
+<span class="gh">index 0000000..c734787</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/MailMethod.java</span>
+<span class="gu">@@ -0,0 +1,14 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class MailMethod extends PaymentMethod {</span>
+<span class="gi">+    private String itsAddress;</span>
+<span class="gi">+</span>
+<span class="gi">+    public MailMethod(String address) {</span>
+<span class="gi">+        itsAddress = address;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public String GetAddress() {</span>
+<span class="gi">+        return itsAddress;</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index d71561c..d44dba3 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -212,4 +212,20 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        BiweeklySchedule bs = (BiweeklySchedule) ps;
+<span class="w"> </span>        assertNotNull(bs);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeMailTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeMailTransaction&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeMailTransaction cmt = new ChangeMailTransaction(empId, &quot;4080 El Cerrito Road&quot;);</span>
+<span class="gi">+        cmt.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        PaymentMethod pm = e.GetMethod();</span>
+<span class="gi">+        assertNotNull(pm);</span>
+<span class="gi">+        MailMethod mm = (MailMethod) pm;</span>
+<span class="gi">+        assertNotNull(mm);</span>
+<span class="gi">+        assertEquals(&quot;4080 El Cerrito Road&quot;, mm.GetAddress());</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="79045d9">コミット: 79045d9<a class="headerlink" href="#79045d9" title="Permanent link">&para;</a></h2>
+<h3 id="_20">メッセージ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与体系を変更するトランザクション
+・TestChangeCommissionedTransaction
+</code></pre></div>
+<h3 id="_21">変更されたファイル<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeCommissionedTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_22">変更内容<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 79045d9d067373819cedcea9cb33624e1f5bb4c3
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 14:48:25 2017 +0900
+
+<span class="w"> </span>   給与体系を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeCommissionedTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeCommissionedTransaction.java b/src/main/java/ChangeCommissionedTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..d6861d1</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeCommissionedTransaction.java</span>
+<span class="gu">@@ -0,0 +1,21 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeCommissionedTransaction extends ChangeClassificationTransaction {</span>
+<span class="gi">+    private double itsSalary;</span>
+<span class="gi">+    private double itsHourlyRate;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeCommissionedTransaction(int empId, double salary, double hourlyRate) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsSalary = salary;</span>
+<span class="gi">+        itsHourlyRate = hourlyRate;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentSchedule GetSchedule() {</span>
+<span class="gi">+        return new BiweeklySchedule();</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentClassification GetClassification() {</span>
+<span class="gi">+        return new CommissionedClassification(itsSalary, itsHourlyRate);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 99f5ca0..d71561c 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -192,4 +192,24 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        MonthlySchedule ms = (MonthlySchedule) ps;
+<span class="w"> </span>        assertNotNull(ms);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeCommissionedTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeCommissionedTransaction&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;,&quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeCommissionedTransaction cct = new ChangeCommissionedTransaction(empId, 25000, 4.5);</span>
+<span class="gi">+        cct.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        PaymentClassification pc = e.GetClassification();</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        CommissionedClassification cc = (CommissionedClassification) pc;</span>
+<span class="gi">+        assertNotNull(cc);</span>
+<span class="gi">+        assertEquals(25000.0, cc.GetSalary());</span>
+<span class="gi">+        assertEquals(4.5, cc.GetRate());</span>
+<span class="gi">+        PaymentSchedule ps = e.GetSchedule();</span>
+<span class="gi">+        BiweeklySchedule bs = (BiweeklySchedule) ps;</span>
+<span class="gi">+        assertNotNull(bs);</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="f0b73c9">コミット: f0b73c9<a class="headerlink" href="#f0b73c9" title="Permanent link">&para;</a></h2>
+<h3 id="_23">メッセージ<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与体系を変更するトランザクション
+・TestChangeSalariedTransaction
+</code></pre></div>
+<h3 id="_24">変更されたファイル<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeSalariedTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_25">変更内容<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit f0b73c9fa6fb1d3cd75e0fe2c4d9b95baeb3d2ac
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 14:29:33 2017 +0900
+
+<span class="w"> </span>   給与体系を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeSalariedTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeSalariedTransaction.java b/src/main/java/ChangeSalariedTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..b773c18</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeSalariedTransaction.java</span>
+<span class="gu">@@ -0,0 +1,19 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeSalariedTransaction extends ChangeClassificationTransaction {</span>
+<span class="gi">+    private double itsSalary;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeSalariedTransaction(int empId, double salary) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsSalary = salary;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentSchedule GetSchedule() {</span>
+<span class="gi">+        return new MonthlySchedule();</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentClassification GetClassification() {</span>
+<span class="gi">+        return new SalariedClassification(itsSalary);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 6533349..99f5ca0 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -173,4 +173,23 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        WeeklySchedule ws = (WeeklySchedule) ps;
+<span class="w"> </span>        assertNotNull(ws);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeSalariedTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeSalariedTransaction&quot;);</span>
+<span class="gi">+        int empId = 3;</span>
+<span class="gi">+        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500, 3.2);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeSalariedTransaction cst = new ChangeSalariedTransaction(empId, 25000);</span>
+<span class="gi">+        cst.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        PaymentClassification pc = e.GetClassification();</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        SalariedClassification sc = (SalariedClassification) pc;</span>
+<span class="gi">+        assertNotNull(sc);</span>
+<span class="gi">+        assertEquals(25000.0, sc.GetSalary());</span>
+<span class="gi">+        PaymentSchedule ps = e.GetSchedule();</span>
+<span class="gi">+        MonthlySchedule ms = (MonthlySchedule) ps;</span>
+<span class="gi">+        assertNotNull(ms);</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="4358a21">コミット: 4358a21<a class="headerlink" href="#4358a21" title="Permanent link">&para;</a></h2>
+<h3 id="_26">メッセージ<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与体系を変更するトランザクション
+・TestChangeHourlyTransaction
+</code></pre></div>
+<h3 id="_27">変更されたファイル<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeClassificationTransaction.java</li>
+<li>A src/main/java/ChangeHourlyTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_28">変更内容<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 4358a21112a6c3c5db05cb5a9e42c0dc8db345f2
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 14:10:34 2017 +0900
+
+<span class="w"> </span>   給与体系を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeHourlyTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeClassificationTransaction.java b/src/main/java/ChangeClassificationTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..8167f53</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeClassificationTransaction.java</span>
+<span class="gu">@@ -0,0 +1,18 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public abstract class ChangeClassificationTransaction extends ChangeEmployeeTransaction {</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeClassificationTransaction(int empId) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Change(Employee e) {</span>
+<span class="gi">+        e.SetSchedule(GetSchedule());</span>
+<span class="gi">+        e.SetClassification(GetClassification());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    abstract PaymentSchedule GetSchedule();</span>
+<span class="gi">+</span>
+<span class="gi">+    abstract PaymentClassification GetClassification();</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/ChangeHourlyTransaction.java b/src/main/java/ChangeHourlyTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..c3b5fb3</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeHourlyTransaction.java</span>
+<span class="gu">@@ -0,0 +1,19 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeHourlyTransaction extends ChangeClassificationTransaction {</span>
+<span class="gi">+    private double itsRate;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeHourlyTransaction(int empId, double rate) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsRate = rate;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentSchedule GetSchedule() {</span>
+<span class="gi">+        return new WeeklySchedule();</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    PaymentClassification GetClassification() {</span>
+<span class="gi">+        return new HourlyClassification(itsRate);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index b6f371e..6533349 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -154,4 +154,23 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        assertEquals(&quot;Second Home&quot;, e.GetAddress());
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeHourlyTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeHourlyTransaction&quot;);</span>
+<span class="gi">+        int empId = 3;</span>
+<span class="gi">+        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;,2500,3.2);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeHourlyTransaction cht = new ChangeHourlyTransaction(empId, 27.52);</span>
+<span class="gi">+        cht.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        PaymentClassification pc = e.GetClassification();</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        HourlyClassification hc = (HourlyClassification) pc;</span>
+<span class="gi">+        assertNotNull(hc);</span>
+<span class="gi">+        assertEquals(27.52, hc.GetRate());</span>
+<span class="gi">+        PaymentSchedule ps = e.GetSchedule();</span>
+<span class="gi">+        WeeklySchedule ws = (WeeklySchedule) ps;</span>
+<span class="gi">+        assertNotNull(ws);</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="3a95ed3">コミット: 3a95ed3<a class="headerlink" href="#3a95ed3" title="Permanent link">&para;</a></h2>
+<h3 id="_29">メッセージ<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>従業員の属性を変更するトランザクション
+・TestChangeAddressTransaction
+</code></pre></div>
+<h3 id="_30">変更されたファイル<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeAddressTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_31">変更内容<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 3a95ed32f1a839d394aa642f814c333c3c889c1d
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 13:56:20 2017 +0900
+
+<span class="w"> </span>   従業員の属性を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeAddressTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeAddressTransaction.java b/src/main/java/ChangeAddressTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..8ecf16c</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeAddressTransaction.java</span>
+<span class="gu">@@ -0,0 +1,15 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeAddressTransaction extends ChangeEmployeeTransaction {</span>
+<span class="gi">+    private String itsAddress;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeAddressTransaction(int empId, String address) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsAddress = address;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    void Change(Employee e) {</span>
+<span class="gi">+        e.SetAddress(itsAddress);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 23e2c72..b6f371e 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -142,4 +142,16 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        assertEquals(&quot;Bob&quot;, e.GetName());
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeAddressTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeAddressTransaction&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeAddressTransaction cat = new ChangeAddressTransaction(empId, &quot;Second Home&quot;);</span>
+<span class="gi">+        cat.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        assertEquals(&quot;Second Home&quot;, e.GetAddress());</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="e4797c2">コミット: e4797c2<a class="headerlink" href="#e4797c2" title="Permanent link">&para;</a></h2>
+<h3 id="_32">メッセージ<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>従業員の属性を変更するトランザクション
+・TestChangeNameTransaction
+</code></pre></div>
+<h3 id="_33">変更されたファイル<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/ChangeEmployeeTransaction.java</li>
+<li>A src/main/java/ChangeNameTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_34">変更内容<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit e4797c266bf17a3cb0cb061c166c3cef1c3cd2bd
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Apr 7 13:44:19 2017 +0900
+
+<span class="w"> </span>   従業員の属性を変更するトランザクション
+
+<span class="w"> </span>   ・TestChangeNameTransaction
+
+<span class="gh">diff --git a/src/main/java/ChangeEmployeeTransaction.java b/src/main/java/ChangeEmployeeTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..37ece54</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeEmployeeTransaction.java</span>
+<span class="gu">@@ -0,0 +1,20 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public abstract class ChangeEmployeeTransaction implements Transaction {</span>
+<span class="gi">+    private int itsEmpId;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeEmployeeTransaction(int empId) {</span>
+<span class="gi">+        itsEmpId = empId;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Execute() {</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(itsEmpId);</span>
+<span class="gi">+        if (e != null) {</span>
+<span class="gi">+            Change(e);</span>
+<span class="gi">+        }</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    abstract void Change(Employee e);</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gh">diff --git a/src/main/java/ChangeNameTransaction.java b/src/main/java/ChangeNameTransaction.java</span>
+new file mode 100644
+<span class="gh">index 0000000..dc207d3</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/ChangeNameTransaction.java</span>
+<span class="gu">@@ -0,0 +1,15 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class ChangeNameTransaction extends ChangeEmployeeTransaction {</span>
+<span class="gi">+    private String itsName;</span>
+<span class="gi">+</span>
+<span class="gi">+    public ChangeNameTransaction(int empId, String name) {</span>
+<span class="gi">+        super(empId);</span>
+<span class="gi">+        itsName = name;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Change(Employee e) {</span>
+<span class="gi">+        e.SetName(itsName);</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index b71c30b..23e2c72 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -130,4 +130,16 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        double sc = af.GetServiceCharge(20011031);
+<span class="w"> </span>        assertEquals(12.95, sc, .001);
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void testChangeNameTransaction() {</span>
+<span class="gi">+        System.err.println(&quot;TestChangeNameTransaction&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        ChangeNameTransaction cnt = new ChangeNameTransaction(empId, &quot;Bob&quot;);</span>
+<span class="gi">+        cnt.Execute();</span>
+<span class="gi">+        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        assertNotNull(e);</span>
+<span class="gi">+        assertEquals(&quot;Bob&quot;, e.GetName());</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/k2works/case-study-payroll" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../docs/assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>

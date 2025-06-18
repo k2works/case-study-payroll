@@ -1,0 +1,8 @@
+@startuml
+actor Manager
+
+Manager -> SalariedClassification:Date
+Manager <- SalariedClassification:Pay
+Manager -> SalariedClassification:CalculatePay
+
+@enduml

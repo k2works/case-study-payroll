@@ -1,0 +1,5 @@
+@startuml
+
+UnionMember *-->"0..*"ServiceCharge
+
+@enduml

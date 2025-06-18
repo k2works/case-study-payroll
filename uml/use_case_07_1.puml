@@ -1,0 +1,14 @@
+@startuml
+actor Manager
+
+Manager -> HourlyClassification: CalculatePay
+Manager -> HourlyClassification: Date
+loop for each timecard
+    activate HourlyClassification
+      HourlyClassification -> TimeCard: GetHours
+      HourlyClassification <- TimeCard: hours
+      HourlyClassification -> TimeCard: GetDate
+      HourlyClassification <- TimeCard: date
+    deactivate HourlyClassification
+end
+@enduml

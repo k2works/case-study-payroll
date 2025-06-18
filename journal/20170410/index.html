@@ -1,0 +1,3453 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Payroll Case Study project.">
+      
+      
+        <meta name="author" content="Project Team">
+      
+      
+      
+        <link rel="prev" href="../20170408/">
+      
+      
+        <link rel="next" href="../20170411/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>20170410 - Payroll Case Study</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../docs/mkdocs/assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2017-04-10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Payroll Case Study" class="md-header__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Payroll Case Study
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20170410
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../specification/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  仕様
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../implementation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  実装
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../20170210/" class="md-tabs__link">
+          
+  
+  
+  履歴
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Payroll Case Study" class="md-nav__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Payroll Case Study
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    仕様
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    履歴
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            履歴
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170210
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170404/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170404
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170406/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170407/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170407
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170408/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170408
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    20170410
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170410
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7206779" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 7206779
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 7206779">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7332a49" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 7332a49
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 7332a49">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ca7a48f" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: ca7a48f
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: ca7a48f">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f74da67" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: f74da67
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: f74da67">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019ea6" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 2019ea6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 2019ea6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b5f1d97" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: b5f1d97
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: b5f1d97">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0898e36" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 0898e36
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 0898e36">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170411/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170411
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170524/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170524
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2017-04-10">作業履歴 2017-04-10<a class="headerlink" href="#2017-04-10" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>2017-04-10の作業内容をまとめています。</p>
+<h2 id="7206779">コミット: 7206779<a class="headerlink" href="#7206779" title="Permanent link">&para;</a></h2>
+<h3 id="_2">メッセージ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Payrollパッケージ１
+</code></pre></div>
+<h3 id="_3">変更されたファイル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M META-INF/ServiceCharge.txt</li>
+<li>A src/main/java/PayrollDomain/Paycheck.java</li>
+<li>M src/test/java/Main.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_4">変更内容<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 7206779337e45c0f45906676f65684471e0fd6fb
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Mon Apr 10 17:43:37 2017 +0900
+
+<span class="w"> </span>   Payrollパッケージ１
+
+<span class="gh">diff --git a/META-INF/ServiceCharge.txt b/META-INF/ServiceCharge.txt</span>
+<span class="gh">index 88e1c7a..8278b65 100644</span>
+<span class="gd">--- a/META-INF/ServiceCharge.txt</span>
+<span class="gi">+++ b/META-INF/ServiceCharge.txt</span>
+<span class="gu">@@ -1 +1 @@</span>
+<span class="gd">-ServiceCharge 86 2001/10/31 12.95</span>
+\ No newline at end of file
+<span class="gi">+Affiliations.ServiceCharge 86 2001/10/31 12.95</span>
+\ No newline at end of file
+<span class="gh">diff --git a/src/main/java/ChangeAffiliationTransaction.java b/src/main/java/AffiliationTransactions/ChangeAffiliationTransaction.java</span>
+similarity index 67%
+rename from src/main/java/ChangeAffiliationTransaction.java
+rename to src/main/java/AffiliationTransactions/ChangeAffiliationTransaction.java
+<span class="gh">index b62169b..49c71f7 100644</span>
+<span class="gd">--- a/src/main/java/ChangeAffiliationTransaction.java</span>
+<span class="gi">+++ b/src/main/java/AffiliationTransactions/ChangeAffiliationTransaction.java</span>
+<span class="gu">@@ -1,3 +1,9 @@</span>
+<span class="gi">+package AffiliationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import GeneralTransactions.ChangeEmployeeTransaction;</span>
+<span class="gi">+import PayrollDomain.Affiliation;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gu">@@ -6,7 +12,7 @@ public abstract class ChangeAffiliationTransaction extends ChangeEmployeeTransac</span>
+<span class="w"> </span>        super(empId);
+<span class="w"> </span>    }
+
+<span class="gd">-    void Change(Employee e) {</span>
+<span class="gi">+    public void Change(Employee e) {</span>
+<span class="w"> </span>        RecordMembership(e);
+<span class="w"> </span>        e.SetAffiliation(GetAffiliation());
+<span class="w"> </span>    }
+<span class="gh">diff --git a/src/main/java/ChangeMemberTransaction.java b/src/main/java/AffiliationTransactions/ChangeMemberTransaction.java</span>
+similarity index 56%
+rename from src/main/java/ChangeMemberTransaction.java
+rename to src/main/java/AffiliationTransactions/ChangeMemberTransaction.java
+<span class="gh">index 4e6d6b5..07e1a5b 100644</span>
+<span class="gd">--- a/src/main/java/ChangeMemberTransaction.java</span>
+<span class="gi">+++ b/src/main/java/AffiliationTransactions/ChangeMemberTransaction.java</span>
+<span class="gu">@@ -1,3 +1,10 @@</span>
+<span class="gi">+package AffiliationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Affiliations.UnionAffiliation;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Affiliation;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gu">@@ -11,11 +18,11 @@ public class ChangeMemberTransaction extends ChangeAffiliationTransaction {</span>
+<span class="w"> </span>        itsDues = dues;
+<span class="w"> </span>    }
+
+<span class="gd">-    Affiliation GetAffiliation() {</span>
+<span class="gd">-        return new UnionAffiliation(itsMemberId,itsDues);</span>
+<span class="gi">+    public Affiliation GetAffiliation() {</span>
+<span class="gi">+        return new UnionAffiliation(itsMemberId, itsDues);</span>
+<span class="w"> </span>    }
+
+<span class="gd">-    void RecordMembership(Employee e) {</span>
+<span class="gi">+    public void RecordMembership(Employee e) {</span>
+<span class="w"> </span>        GlobalDatabase.payrollDB.AddUnionMember(itsMemberId, e);
+<span class="w"> </span>    }
+<span class="gd">-}</span>
+<span class="gi">+}</span>
+\ No newline at end of file
+<span class="gh">diff --git a/src/main/java/ChangeUnaffiliatedTransaction.java b/src/main/java/AffiliationTransactions/ChangeUnaffiliatedTransaction.java</span>
+similarity index 74%
+rename from src/main/java/ChangeUnaffiliatedTransaction.java
+rename to src/main/java/AffiliationTransactions/ChangeUnaffiliatedTransaction.java
+<span class="gh">index bcecdfd..926e4bd 100644</span>
+<span class="gd">--- a/src/main/java/ChangeUnaffiliatedTransaction.java</span>
+<span class="gi">+++ b/src/main/java/AffiliationTransactions/ChangeUnaffiliatedTransaction.java</span>
+<span class="gu">@@ -1,3 +1,11 @@</span>
+<span class="gi">+package AffiliationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Affiliations.UnionAffiliation;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Affiliation;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.NoAffiliation;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ServiceChargeTransaction.java b/src/main/java/AffiliationTransactions/ServiceChargeTransaction.java</span>
+similarity index 76%
+rename from src/main/java/ServiceChargeTransaction.java
+rename to src/main/java/AffiliationTransactions/ServiceChargeTransaction.java
+<span class="gh">index 8b0bfe4..e436a7c 100644</span>
+<span class="gd">--- a/src/main/java/ServiceChargeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/AffiliationTransactions/ServiceChargeTransaction.java</span>
+<span class="gu">@@ -1,3 +1,11 @@</span>
+<span class="gi">+package AffiliationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Affiliations.UnionAffiliation;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Affiliation;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/Paycheck.java b/src/main/java/Affiliations/PaycheckImplementation.java</span>
+similarity index 72%
+rename from src/main/java/Paycheck.java
+rename to src/main/java/Affiliations/PaycheckImplementation.java
+<span class="gh">index 4681770..d207fb1 100644</span>
+<span class="gd">--- a/src/main/java/Paycheck.java</span>
+<span class="gi">+++ b/src/main/java/Affiliations/PaycheckImplementation.java</span>
+<span class="gu">@@ -1,31 +1,23 @@</span>
+<span class="gi">+package Affiliations;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="gd">- * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="w"> </span> */
+<span class="gd">-public class Paycheck {</span>
+<span class="gi">+public class PaycheckImplementation implements Paycheck {</span>
+<span class="w"> </span>    private Calendar itsPayPeriodStartDate;
+<span class="w"> </span>    private Calendar itsPayPeriodEndDate;
+<span class="w"> </span>    private double itsGrossPay;
+<span class="gd">-    private double itsDeducations;</span>
+<span class="gi">+    private double itsDeductions;</span>
+<span class="w"> </span>    private double itsNetPay;
+
+<span class="gd">-    public Paycheck(Calendar payPeriodStartDate, Calendar payPeriodEndDate) {</span>
+<span class="gi">+    public PaycheckImplementation(Calendar payPeriodStartDate, Calendar payPeriodEndDate) {</span>
+<span class="w"> </span>        itsPayPeriodStartDate = payPeriodStartDate;
+<span class="w"> </span>        itsPayPeriodEndDate = payPeriodEndDate;
+<span class="w"> </span>    }
+<span class="gd">-    </span>
+<span class="gd">-    public void SetGrossPay(double grossPay) {</span>
+<span class="gd">-        itsGrossPay = grossPay;</span>
+<span class="gd">-    }</span>
+<span class="gd">-</span>
+<span class="gd">-    public void SetDeductions(double deductions) {</span>
+<span class="gd">-        itsDeducations = deductions;</span>
+<span class="gd">-    }</span>
+<span class="gd">-</span>
+<span class="gd">-    public void SetNetPay(double netPay) {</span>
+<span class="gd">-        itsNetPay = netPay;</span>
+<span class="gd">-    }</span>
+
+<span class="w"> </span>    public Calendar GetPayPeriodStartDate() {
+<span class="w"> </span>        return itsPayPeriodStartDate;
+<span class="gu">@@ -39,6 +31,10 @@ public class Paycheck {</span>
+<span class="w"> </span>        return itsGrossPay;
+<span class="w"> </span>    }
+
+<span class="gi">+    public void SetGrossPay(double grossPay) {</span>
+<span class="gi">+        itsGrossPay = grossPay;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    public String GetField(String string) {
+<span class="w"> </span>        if (string.equals(&quot;Disposition&quot;)) {
+<span class="w"> </span>            return &quot;Hold&quot;;
+<span class="gu">@@ -46,11 +42,20 @@ public class Paycheck {</span>
+<span class="w"> </span>        return null;
+<span class="w"> </span>    }
+
+<span class="gd">-    public double GetDeducations() {</span>
+<span class="gd">-        return itsDeducations;</span>
+<span class="gi">+    public double GetDeductions() {</span>
+<span class="gi">+        return itsDeductions;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetDeductions(double deductions) {</span>
+<span class="gi">+        itsDeductions = deductions;</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public double GetNetPay() {
+<span class="w"> </span>        return itsNetPay;
+<span class="w"> </span>    }
+<span class="gi">+</span>
+<span class="gi">+    public void SetNetPay(double netPay) {</span>
+<span class="gi">+        itsNetPay = netPay;</span>
+<span class="gi">+    }</span>
+<span class="w"> </span>}
+<span class="gi">+</span>
+<span class="gh">diff --git a/src/main/java/ServiceCharge.java b/src/main/java/Affiliations/ServiceCharge.java</span>
+similarity index 94%
+rename from src/main/java/ServiceCharge.java
+rename to src/main/java/Affiliations/ServiceCharge.java
+<span class="gh">index 57bd559..dde8671 100644</span>
+<span class="gd">--- a/src/main/java/ServiceCharge.java</span>
+<span class="gi">+++ b/src/main/java/Affiliations/ServiceCharge.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package Affiliations;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/UnionAffiliation.java b/src/main/java/Affiliations/UnionAffiliation.java</span>
+similarity index 94%
+rename from src/main/java/UnionAffiliation.java
+rename to src/main/java/Affiliations/UnionAffiliation.java
+<span class="gh">index 4a633a3..71165b6 100644</span>
+<span class="gd">--- a/src/main/java/UnionAffiliation.java</span>
+<span class="gi">+++ b/src/main/java/Affiliations/UnionAffiliation.java</span>
+<span class="gu">@@ -1,7 +1,13 @@</span>
+<span class="gi">+package Affiliations;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gi">+import PayrollDomain.Affiliation;</span>
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import PayrollUtil.Date;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/Application.java b/src/main/java/Application/Application.java</span>
+similarity index 85%
+rename from src/main/java/Application.java
+rename to src/main/java/Application/Application.java
+<span class="gh">index a0695ef..042aa6d 100644</span>
+<span class="gd">--- a/src/main/java/Application.java</span>
+<span class="gi">+++ b/src/main/java/Application/Application.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package Application;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ChangeClassificationTransaction.java b/src/main/java/ClassificationTransactions/ChangeClassificationTransaction.java</span>
+similarity index 68%
+rename from src/main/java/ChangeClassificationTransaction.java
+rename to src/main/java/ClassificationTransactions/ChangeClassificationTransaction.java
+<span class="gh">index 8167f53..a79b3ee 100644</span>
+<span class="gd">--- a/src/main/java/ChangeClassificationTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ClassificationTransactions/ChangeClassificationTransaction.java</span>
+<span class="gu">@@ -1,3 +1,10 @@</span>
+<span class="gi">+package ClassificationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import GeneralTransactions.ChangeEmployeeTransaction;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ChangeCommissionedTransaction.java b/src/main/java/ClassificationTransactions/ChangeCommissionedTransaction.java</span>
+similarity index 74%
+rename from src/main/java/ChangeCommissionedTransaction.java
+rename to src/main/java/ClassificationTransactions/ChangeCommissionedTransaction.java
+<span class="gh">index d6861d1..f2bc752 100644</span>
+<span class="gd">--- a/src/main/java/ChangeCommissionedTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ClassificationTransactions/ChangeCommissionedTransaction.java</span>
+<span class="gu">@@ -1,3 +1,10 @@</span>
+<span class="gi">+package ClassificationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Classifications.CommissionedClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+import Schedules.BiweeklySchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ChangeHourlyTransaction.java b/src/main/java/ClassificationTransactions/ChangeHourlyTransaction.java</span>
+similarity index 69%
+rename from src/main/java/ChangeHourlyTransaction.java
+rename to src/main/java/ClassificationTransactions/ChangeHourlyTransaction.java
+<span class="gh">index c3b5fb3..4843576 100644</span>
+<span class="gd">--- a/src/main/java/ChangeHourlyTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ClassificationTransactions/ChangeHourlyTransaction.java</span>
+<span class="gu">@@ -1,3 +1,10 @@</span>
+<span class="gi">+package ClassificationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Classifications.HourlyClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+import Schedules.WeeklySchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ChangeSalariedTransaction.java b/src/main/java/ClassificationTransactions/ChangeSalariedTransaction.java</span>
+similarity index 70%
+rename from src/main/java/ChangeSalariedTransaction.java
+rename to src/main/java/ClassificationTransactions/ChangeSalariedTransaction.java
+<span class="gh">index b773c18..77d6cb6 100644</span>
+<span class="gd">--- a/src/main/java/ChangeSalariedTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ClassificationTransactions/ChangeSalariedTransaction.java</span>
+<span class="gu">@@ -1,3 +1,10 @@</span>
+<span class="gi">+package ClassificationTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Classifications.SalariedClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+import Schedules.MonthlySchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/SalesReceiptTransaction.java b/src/main/java/ClassificationTransactions/SalesReceiptTransaction.java</span>
+similarity index 75%
+rename from src/main/java/SalesReceiptTransaction.java
+rename to src/main/java/ClassificationTransactions/SalesReceiptTransaction.java
+<span class="gh">index 0eae104..e04aada 100644</span>
+<span class="gd">--- a/src/main/java/SalesReceiptTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ClassificationTransactions/SalesReceiptTransaction.java</span>
+<span class="gu">@@ -1,5 +1,13 @@</span>
+<span class="gi">+package ClassificationTransactions;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="gi">+import Classifications.CommissionedClassification;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gu">@@ -20,7 +28,7 @@ public class SalesReceiptTransaction implements Transaction {</span>
+<span class="w"> </span>            PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>            if (pc instanceof CommissionedClassification) {
+<span class="w"> </span>                CommissionedClassification cc = (CommissionedClassification) pc;
+<span class="gd">-                cc.AddReceipt(new SalesReceipt(itsSaleDate, itsAmount));</span>
+<span class="gi">+                cc.AddReceipt(itsSaleDate, itsAmount);</span>
+<span class="w"> </span>            } else {
+<span class="w"> </span>                System.err.println(&quot;Tried to add sales receipt to non-commissioned employee&quot;);
+<span class="w"> </span>            }
+<span class="gh">diff --git a/src/main/java/TimeCardTransaction.java b/src/main/java/ClassificationTransactions/TimeCardTransaction.java</span>
+similarity index 75%
+rename from src/main/java/TimeCardTransaction.java
+rename to src/main/java/ClassificationTransactions/TimeCardTransaction.java
+<span class="gh">index 6823042..b591366 100644</span>
+<span class="gd">--- a/src/main/java/TimeCardTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ClassificationTransactions/TimeCardTransaction.java</span>
+<span class="gu">@@ -1,5 +1,13 @@</span>
+<span class="gi">+package ClassificationTransactions;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="gi">+import Classifications.HourlyClassification;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gu">@@ -20,7 +28,7 @@ public class TimeCardTransaction implements Transaction {</span>
+<span class="w"> </span>            PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>            if (pc instanceof HourlyClassification) {
+<span class="w"> </span>                HourlyClassification hc = (HourlyClassification) pc;
+<span class="gd">-                hc.AddTimeCard(new TimeCard(itsDate, itsHours));</span>
+<span class="gi">+                hc.AddTimeCard(itsDate, itsHours);</span>
+<span class="w"> </span>            } else {
+<span class="w"> </span>                throw new RuntimeException(&quot;Tried to add timecard to non-hourly employee.&quot;);
+<span class="w"> </span>            }
+<span class="gh">diff --git a/src/main/java/CommissionedClassification.java b/src/main/java/Classifications/CommissionedClassification.java</span>
+similarity index 81%
+rename from src/main/java/CommissionedClassification.java
+rename to src/main/java/Classifications/CommissionedClassification.java
+<span class="gh">index 774abd6..33a3863 100644</span>
+<span class="gd">--- a/src/main/java/CommissionedClassification.java</span>
+<span class="gi">+++ b/src/main/java/Classifications/CommissionedClassification.java</span>
+<span class="gu">@@ -1,7 +1,13 @@</span>
+<span class="gi">+package Classifications;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollUtil.Date;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gu">@@ -24,8 +30,8 @@ public class CommissionedClassification implements PaymentClassification {</span>
+<span class="w"> </span>        return itsCommissionRate;
+<span class="w"> </span>    }
+
+<span class="gd">-    public void AddReceipt(SalesReceipt sr) {</span>
+<span class="gd">-        itsReceipts.put(sr.GetSaleDate(),sr);</span>
+<span class="gi">+    public void AddReceipt(Calendar saleDate, double amount) {</span>
+<span class="gi">+        itsReceipts.put(saleDate ,new SalesReceipt(saleDate,amount));</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public SalesReceipt GetReceipt(Calendar date) {
+<span class="gh">diff --git a/src/main/java/HourlyClassification.java b/src/main/java/Classifications/HourlyClassification.java</span>
+similarity index 81%
+rename from src/main/java/HourlyClassification.java
+rename to src/main/java/Classifications/HourlyClassification.java
+<span class="gh">index 3df6f8d..8316231 100644</span>
+<span class="gd">--- a/src/main/java/HourlyClassification.java</span>
+<span class="gi">+++ b/src/main/java/Classifications/HourlyClassification.java</span>
+<span class="gu">@@ -1,7 +1,13 @@</span>
+<span class="gi">+package Classifications;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollUtil.Date;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gu">@@ -22,8 +28,8 @@ public class HourlyClassification implements  PaymentClassification {</span>
+<span class="w"> </span>        return itsTimeCards.get(date);
+<span class="w"> </span>    }
+
+<span class="gd">-    public void AddTimeCard(TimeCard tc) {</span>
+<span class="gd">-        itsTimeCards.put(tc.GetDate(), tc);</span>
+<span class="gi">+    public void AddTimeCard(Calendar date, double amount) {</span>
+<span class="gi">+        itsTimeCards.put(date, new TimeCard(date, amount));</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public double CalculatePay(Paycheck pc) {
+<span class="gh">diff --git a/src/main/java/SalariedClassification.java b/src/main/java/Classifications/SalariedClassification.java</span>
+similarity index 78%
+rename from src/main/java/SalariedClassification.java
+rename to src/main/java/Classifications/SalariedClassification.java
+<span class="gh">index 81a2bbd..032437d 100644</span>
+<span class="gd">--- a/src/main/java/SalariedClassification.java</span>
+<span class="gi">+++ b/src/main/java/Classifications/SalariedClassification.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package Classifications;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/SalesReceipt.java b/src/main/java/Classifications/SalesReceipt.java</span>
+similarity index 94%
+rename from src/main/java/SalesReceipt.java
+rename to src/main/java/Classifications/SalesReceipt.java
+<span class="gh">index b62a8f3..94a6395 100644</span>
+<span class="gd">--- a/src/main/java/SalesReceipt.java</span>
+<span class="gi">+++ b/src/main/java/Classifications/SalesReceipt.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package Classifications;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/TimeCard.java b/src/main/java/Classifications/TimeCard.java</span>
+similarity index 93%
+rename from src/main/java/TimeCard.java
+rename to src/main/java/Classifications/TimeCard.java
+<span class="gh">index 3ed238c..17a82d9 100644</span>
+<span class="gd">--- a/src/main/java/TimeCard.java</span>
+<span class="gi">+++ b/src/main/java/Classifications/TimeCard.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package Classifications;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/AddCommissionedEmployee.java b/src/main/java/GeneralTransactions/AddCommissionedEmployee.java</span>
+similarity index 75%
+rename from src/main/java/AddCommissionedEmployee.java
+rename to src/main/java/GeneralTransactions/AddCommissionedEmployee.java
+<span class="gh">index 3f1a790..47716e5 100644</span>
+<span class="gd">--- a/src/main/java/AddCommissionedEmployee.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/AddCommissionedEmployee.java</span>
+<span class="gu">@@ -1,3 +1,10 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Classifications.CommissionedClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+import Schedules.BiweeklySchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/AddEmployeeTransaction.java b/src/main/java/GeneralTransactions/AddEmployeeTransaction.java</span>
+similarity index 74%
+rename from src/main/java/AddEmployeeTransaction.java
+rename to src/main/java/GeneralTransactions/AddEmployeeTransaction.java
+<span class="gh">index fea788b..f595bdf 100644</span>
+<span class="gd">--- a/src/main/java/AddEmployeeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/AddEmployeeTransaction.java</span>
+<span class="gu">@@ -1,3 +1,13 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Methods.HoldMethod;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/AddHourlyEmployee.java b/src/main/java/GeneralTransactions/AddHourlyEmployee.java</span>
+similarity index 72%
+rename from src/main/java/AddHourlyEmployee.java
+rename to src/main/java/GeneralTransactions/AddHourlyEmployee.java
+<span class="gh">index b5bdb47..134c52e 100644</span>
+<span class="gd">--- a/src/main/java/AddHourlyEmployee.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/AddHourlyEmployee.java</span>
+<span class="gu">@@ -1,3 +1,10 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Classifications.HourlyClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+import Schedules.WeeklySchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/AddSalariedEmployee.java b/src/main/java/GeneralTransactions/AddSalariedEmployee.java</span>
+similarity index 62%
+rename from src/main/java/AddSalariedEmployee.java
+rename to src/main/java/GeneralTransactions/AddSalariedEmployee.java
+<span class="gh">index f09e9e8..079c6e2 100644</span>
+<span class="gd">--- a/src/main/java/AddSalariedEmployee.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/AddSalariedEmployee.java</span>
+<span class="gu">@@ -1,7 +1,14 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Classifications.SalariedClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+import Schedules.MonthlySchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gd">-class AddSalariedEmployee extends AddEmployeeTransaction {</span>
+<span class="gi">+public class AddSalariedEmployee extends AddEmployeeTransaction {</span>
+<span class="w"> </span>    private double itsSalary;
+
+<span class="w"> </span>    public AddSalariedEmployee(int empId, String name, String address, double salary) {
+<span class="gh">diff --git a/src/main/java/ChangeAddressTransaction.java b/src/main/java/GeneralTransactions/ChangeAddressTransaction.java</span>
+similarity index 76%
+rename from src/main/java/ChangeAddressTransaction.java
+rename to src/main/java/GeneralTransactions/ChangeAddressTransaction.java
+<span class="gh">index 8ecf16c..391d035 100644</span>
+<span class="gd">--- a/src/main/java/ChangeAddressTransaction.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/ChangeAddressTransaction.java</span>
+<span class="gu">@@ -1,3 +1,7 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gu">@@ -9,7 +13,7 @@ public class ChangeAddressTransaction extends ChangeEmployeeTransaction {</span>
+<span class="w"> </span>        itsAddress = address;
+<span class="w"> </span>    }
+
+<span class="gd">-    void Change(Employee e) {</span>
+<span class="gi">+    public void Change(Employee e) {</span>
+<span class="w"> </span>        e.SetAddress(itsAddress);
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/ChangeEmployeeTransaction.java b/src/main/java/GeneralTransactions/ChangeEmployeeTransaction.java</span>
+similarity index 67%
+rename from src/main/java/ChangeEmployeeTransaction.java
+rename to src/main/java/GeneralTransactions/ChangeEmployeeTransaction.java
+<span class="gh">index ce881bc..d7b5884 100644</span>
+<span class="gd">--- a/src/main/java/ChangeEmployeeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/ChangeEmployeeTransaction.java</span>
+<span class="gu">@@ -1,3 +1,9 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gu">@@ -15,6 +21,6 @@ public abstract class ChangeEmployeeTransaction implements Transaction {</span>
+<span class="w"> </span>        }
+<span class="w"> </span>    }
+
+<span class="gd">-    abstract void Change(Employee e);</span>
+<span class="gi">+    public abstract void Change(Employee e);</span>
+<span class="w"> </span>}
+
+<span class="gh">diff --git a/src/main/java/ChangeNameTransaction.java b/src/main/java/GeneralTransactions/ChangeNameTransaction.java</span>
+similarity index 84%
+rename from src/main/java/ChangeNameTransaction.java
+rename to src/main/java/GeneralTransactions/ChangeNameTransaction.java
+<span class="gh">index dc207d3..fc40bb0 100644</span>
+<span class="gd">--- a/src/main/java/ChangeNameTransaction.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/ChangeNameTransaction.java</span>
+<span class="gu">@@ -1,3 +1,7 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/DeleteEmployeeTransaction.java b/src/main/java/GeneralTransactions/DeleteEmployeeTransaction.java</span>
+similarity index 73%
+rename from src/main/java/DeleteEmployeeTransaction.java
+rename to src/main/java/GeneralTransactions/DeleteEmployeeTransaction.java
+<span class="gh">index d117d32..43eb184 100644</span>
+<span class="gd">--- a/src/main/java/DeleteEmployeeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/DeleteEmployeeTransaction.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/PaydayTransaction.java b/src/main/java/GeneralTransactions/PaydayTransaction.java</span>
+similarity index 72%
+rename from src/main/java/PaydayTransaction.java
+rename to src/main/java/GeneralTransactions/PaydayTransaction.java
+<span class="gh">index d7b5b77..22d506e 100644</span>
+<span class="gd">--- a/src/main/java/PaydayTransaction.java</span>
+<span class="gi">+++ b/src/main/java/GeneralTransactions/PaydayTransaction.java</span>
+<span class="gu">@@ -1,8 +1,16 @@</span>
+<span class="gi">+package GeneralTransactions;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.List;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gi">+import Affiliations.PaycheckImplementation;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gu">@@ -19,7 +27,7 @@ public class PaydayTransaction implements Transaction {</span>
+<span class="w"> </span>        for(int empId : empIds) {
+<span class="w"> </span>            Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);
+<span class="w"> </span>            if(e.IsPayDate(itsPayDate)) {
+<span class="gd">-                Paycheck pc = new Paycheck(e.GetPayPeriodStartDate(itsPayDate),itsPayDate);</span>
+<span class="gi">+                Paycheck pc = new PaycheckImplementation(e.GetPayPeriodStartDate(itsPayDate),itsPayDate);</span>
+<span class="w"> </span>                itsPaychecks.put(empId, pc);
+<span class="w"> </span>                e.Payday(pc);
+<span class="w"> </span>            }
+<span class="gh">diff --git a/src/main/java/ChangeDirectTransaction.java b/src/main/java/MethodTransactions/ChangeDirectTransaction.java</span>
+similarity index 81%
+rename from src/main/java/ChangeDirectTransaction.java
+rename to src/main/java/MethodTransactions/ChangeDirectTransaction.java
+<span class="gh">index b53f17e..c30a8b5 100644</span>
+<span class="gd">--- a/src/main/java/ChangeDirectTransaction.java</span>
+<span class="gi">+++ b/src/main/java/MethodTransactions/ChangeDirectTransaction.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package MethodTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Methods.DirectMethod;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ChangeHoldTransaction.java b/src/main/java/MethodTransactions/ChangeHoldTransaction.java</span>
+similarity index 73%
+rename from src/main/java/ChangeHoldTransaction.java
+rename to src/main/java/MethodTransactions/ChangeHoldTransaction.java
+<span class="gh">index e8e23f3..c4d615a 100644</span>
+<span class="gd">--- a/src/main/java/ChangeHoldTransaction.java</span>
+<span class="gi">+++ b/src/main/java/MethodTransactions/ChangeHoldTransaction.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package MethodTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Methods.HoldMethod;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ChangeMailTransaction.java b/src/main/java/MethodTransactions/ChangeMailTransaction.java</span>
+similarity index 79%
+rename from src/main/java/ChangeMailTransaction.java
+rename to src/main/java/MethodTransactions/ChangeMailTransaction.java
+<span class="gh">index 79d835a..343b48e 100644</span>
+<span class="gd">--- a/src/main/java/ChangeMailTransaction.java</span>
+<span class="gi">+++ b/src/main/java/MethodTransactions/ChangeMailTransaction.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package MethodTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import Methods.MailMethod;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/ChangeMethodTransaction.java b/src/main/java/MethodTransactions/ChangeMethodTransaction.java</span>
+similarity index 68%
+rename from src/main/java/ChangeMethodTransaction.java
+rename to src/main/java/MethodTransactions/ChangeMethodTransaction.java
+<span class="gh">index 49875d5..fbd62bb 100644</span>
+<span class="gd">--- a/src/main/java/ChangeMethodTransaction.java</span>
+<span class="gi">+++ b/src/main/java/MethodTransactions/ChangeMethodTransaction.java</span>
+<span class="gu">@@ -1,3 +1,9 @@</span>
+<span class="gi">+package MethodTransactions;</span>
+<span class="gi">+</span>
+<span class="gi">+import GeneralTransactions.ChangeEmployeeTransaction;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/DirectMethod.java b/src/main/java/Methods/DirectMethod.java</span>
+similarity index 83%
+rename from src/main/java/DirectMethod.java
+rename to src/main/java/Methods/DirectMethod.java
+<span class="gh">index 7fba14a..ce89efe 100644</span>
+<span class="gd">--- a/src/main/java/DirectMethod.java</span>
+<span class="gi">+++ b/src/main/java/Methods/DirectMethod.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package Methods;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/HoldMethod.java b/src/main/java/Methods/HoldMethod.java</span>
+similarity index 61%
+rename from src/main/java/HoldMethod.java
+rename to src/main/java/Methods/HoldMethod.java
+<span class="gh">index 9bfadc9..062caf4 100644</span>
+<span class="gd">--- a/src/main/java/HoldMethod.java</span>
+<span class="gi">+++ b/src/main/java/Methods/HoldMethod.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package Methods;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/MailMethod.java b/src/main/java/Methods/MailMethod.java</span>
+similarity index 78%
+rename from src/main/java/MailMethod.java
+rename to src/main/java/Methods/MailMethod.java
+<span class="gh">index 842a9a0..bd38045 100644</span>
+<span class="gd">--- a/src/main/java/MailMethod.java</span>
+<span class="gi">+++ b/src/main/java/Methods/MailMethod.java</span>
+<span class="gu">@@ -1,3 +1,8 @@</span>
+<span class="gi">+package Methods;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.Paycheck;</span>
+<span class="gi">+import PayrollDomain.PaymentMethod;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/PayrollApplication.java b/src/main/java/PayrollApplication/PayrollApplication.java</span>
+similarity index 66%
+rename from src/main/java/PayrollApplication.java
+rename to src/main/java/PayrollApplication/PayrollApplication.java
+<span class="gh">index 531460f..0a2f1a6 100644</span>
+<span class="gd">--- a/src/main/java/PayrollApplication.java</span>
+<span class="gi">+++ b/src/main/java/PayrollApplication/PayrollApplication.java</span>
+<span class="gu">@@ -1,3 +1,9 @@</span>
+<span class="gi">+package PayrollApplication;</span>
+<span class="gi">+</span>
+<span class="gi">+import TextParserTransactionSource.TextParserTransactionSource;</span>
+<span class="gi">+import TransactionApplication.TransactionApplication;</span>
+<span class="gi">+import TransactionApplication.TransactionSource;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/GlobalDatabase.java b/src/main/java/PayrollDatabase/GlobalDatabase.java</span>
+similarity index 82%
+rename from src/main/java/GlobalDatabase.java
+rename to src/main/java/PayrollDatabase/GlobalDatabase.java
+<span class="gh">index a932039..dd5deec 100644</span>
+<span class="gd">--- a/src/main/java/GlobalDatabase.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDatabase/GlobalDatabase.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package PayrollDatabase;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/PayrollDatabase.java b/src/main/java/PayrollDatabase/PayrollDatabase.java</span>
+similarity index 86%
+rename from src/main/java/PayrollDatabase.java
+rename to src/main/java/PayrollDatabase/PayrollDatabase.java
+<span class="gh">index 52574c1..9c846d7 100644</span>
+<span class="gd">--- a/src/main/java/PayrollDatabase.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDatabase/PayrollDatabase.java</span>
+<span class="gu">@@ -1,8 +1,8 @@</span>
+<span class="gd">-import java.util.ArrayList;</span>
+<span class="gd">-import java.util.HashMap;</span>
+<span class="gi">+package PayrollDatabase;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.List;
+<span class="gd">-import java.util.Map;</span>
+
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/PayrollDatabaseImplementation.java b/src/main/java/PayrollDatabaseImplementation/PayrollDatabaseImplementation.java</span>
+similarity index 91%
+rename from src/main/java/PayrollDatabaseImplementation.java
+rename to src/main/java/PayrollDatabaseImplementation/PayrollDatabaseImplementation.java
+<span class="gh">index 47e451e..96498ed 100644</span>
+<span class="gd">--- a/src/main/java/PayrollDatabaseImplementation.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDatabaseImplementation/PayrollDatabaseImplementation.java</span>
+<span class="gu">@@ -1,8 +1,13 @@</span>
+<span class="gi">+package PayrollDatabaseImplementation;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.ArrayList;
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.List;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gi">+import PayrollDatabase.PayrollDatabase;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/Affiliation.java b/src/main/java/PayrollDomain/Affiliation.java</span>
+similarity index 89%
+rename from src/main/java/Affiliation.java
+rename to src/main/java/PayrollDomain/Affiliation.java
+<span class="gh">index eccbbd8..13e52a1 100644</span>
+<span class="gd">--- a/src/main/java/Affiliation.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDomain/Affiliation.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package PayrollDomain;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/Employee.java b/src/main/java/PayrollDomain/Employee.java</span>
+similarity index 97%
+rename from src/main/java/Employee.java
+rename to src/main/java/PayrollDomain/Employee.java
+<span class="gh">index f15b6e4..c31d7f5 100644</span>
+<span class="gd">--- a/src/main/java/Employee.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDomain/Employee.java</span>
+<span class="gu">@@ -1,9 +1,11 @@</span>
+<span class="gi">+package PayrollDomain;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gd">-class Employee {</span>
+<span class="gi">+public class Employee {</span>
+<span class="w"> </span>    private int itsEmpId;
+<span class="w"> </span>    private String itsName;
+<span class="w"> </span>    private String itsAddress;
+<span class="gh">diff --git a/src/main/java/NoAffiliation.java b/src/main/java/PayrollDomain/NoAffiliation.java</span>
+similarity index 92%
+rename from src/main/java/NoAffiliation.java
+rename to src/main/java/PayrollDomain/NoAffiliation.java
+<span class="gh">index 6edc76f..8d4a2b2 100644</span>
+<span class="gd">--- a/src/main/java/NoAffiliation.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDomain/NoAffiliation.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package PayrollDomain;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/PayrollDomain/Paycheck.java b/src/main/java/PayrollDomain/Paycheck.java</span>
+new file mode 100644
+<span class="gh">index 0000000..3fd1375</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/PayrollDomain/Paycheck.java</span>
+<span class="gu">@@ -0,0 +1,26 @@</span>
+<span class="gi">+package PayrollDomain;</span>
+<span class="gi">+</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/07.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public interface Paycheck {</span>
+<span class="gi">+    public Calendar GetPayPeriodStartDate();</span>
+<span class="gi">+</span>
+<span class="gi">+    public Calendar GetPayPeriodEndDate();</span>
+<span class="gi">+</span>
+<span class="gi">+    public double GetGrossPay();</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetGrossPay(double grossPay);</span>
+<span class="gi">+</span>
+<span class="gi">+    public String GetField(String string);</span>
+<span class="gi">+</span>
+<span class="gi">+    public double GetDeductions();</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetDeductions(double deductions);</span>
+<span class="gi">+</span>
+<span class="gi">+    public double GetNetPay();</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetNetPay(double netPay);</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/PaymentClassification.java b/src/main/java/PayrollDomain/PaymentClassification.java</span>
+similarity index 84%
+rename from src/main/java/PaymentClassification.java
+rename to src/main/java/PayrollDomain/PaymentClassification.java
+<span class="gh">index 116a7cb..02cfc3b 100644</span>
+<span class="gd">--- a/src/main/java/PaymentClassification.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDomain/PaymentClassification.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package PayrollDomain;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/PaymentMethod.java b/src/main/java/PayrollDomain/PaymentMethod.java</span>
+similarity index 81%
+rename from src/main/java/PaymentMethod.java
+rename to src/main/java/PayrollDomain/PaymentMethod.java
+<span class="gh">index eccd52e..a27a559 100644</span>
+<span class="gd">--- a/src/main/java/PaymentMethod.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDomain/PaymentMethod.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package PayrollDomain;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/PaymentSchedule.java b/src/main/java/PayrollDomain/PaymentSchedule.java</span>
+similarity index 89%
+rename from src/main/java/PaymentSchedule.java
+rename to src/main/java/PayrollDomain/PaymentSchedule.java
+<span class="gh">index 278232e..7a66ef0 100644</span>
+<span class="gd">--- a/src/main/java/PaymentSchedule.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDomain/PaymentSchedule.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package PayrollDomain;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/Date.java b/src/main/java/PayrollUtil/Date.java</span>
+similarity index 95%
+rename from src/main/java/Date.java
+rename to src/main/java/PayrollUtil/Date.java
+<span class="gh">index 51f2774..3c52a35 100644</span>
+<span class="gd">--- a/src/main/java/Date.java</span>
+<span class="gi">+++ b/src/main/java/PayrollUtil/Date.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package PayrollUtil;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.GregorianCalendar;
+
+<span class="gh">diff --git a/src/main/java/BiweeklySchedule.java b/src/main/java/Schedules/BiweeklySchedule.java</span>
+similarity index 94%
+rename from src/main/java/BiweeklySchedule.java
+rename to src/main/java/Schedules/BiweeklySchedule.java
+<span class="gh">index cbcab18..1376b0b 100644</span>
+<span class="gd">--- a/src/main/java/BiweeklySchedule.java</span>
+<span class="gi">+++ b/src/main/java/Schedules/BiweeklySchedule.java</span>
+<span class="gu">@@ -1,6 +1,10 @@</span>
+<span class="gi">+package Schedules;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.GregorianCalendar;
+
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/MonthlySchedule.java b/src/main/java/Schedules/MonthlySchedule.java</span>
+similarity index 92%
+rename from src/main/java/MonthlySchedule.java
+rename to src/main/java/Schedules/MonthlySchedule.java
+<span class="gh">index f0c3446..2a82c93 100644</span>
+<span class="gd">--- a/src/main/java/MonthlySchedule.java</span>
+<span class="gi">+++ b/src/main/java/Schedules/MonthlySchedule.java</span>
+<span class="gu">@@ -1,3 +1,7 @@</span>
+<span class="gi">+package Schedules;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/WeeklySchedule.java b/src/main/java/Schedules/WeeklySchedule.java</span>
+similarity index 89%
+rename from src/main/java/WeeklySchedule.java
+rename to src/main/java/Schedules/WeeklySchedule.java
+<span class="gh">index 64e19f2..d2d1f93 100644</span>
+<span class="gd">--- a/src/main/java/WeeklySchedule.java</span>
+<span class="gi">+++ b/src/main/java/Schedules/WeeklySchedule.java</span>
+<span class="gu">@@ -1,3 +1,7 @@</span>
+<span class="gi">+package Schedules;</span>
+<span class="gi">+</span>
+<span class="gi">+import PayrollDomain.PaymentSchedule;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.util.Calendar;
+
+<span class="w"> </span>/**
+<span class="gh">diff --git a/src/main/java/TextParserTransactionSource.java b/src/main/java/TextParserTransactionSource/TextParserTransactionSource.java</span>
+similarity index 84%
+rename from src/main/java/TextParserTransactionSource.java
+rename to src/main/java/TextParserTransactionSource/TextParserTransactionSource.java
+<span class="gh">index 92e43f9..dcf923c 100644</span>
+<span class="gd">--- a/src/main/java/TextParserTransactionSource.java</span>
+<span class="gi">+++ b/src/main/java/TextParserTransactionSource/TextParserTransactionSource.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package TextParserTransactionSource;</span>
+<span class="gi">+</span>
+<span class="w"> </span>import java.io.BufferedReader;
+<span class="w"> </span>import java.io.FileNotFoundException;
+<span class="w"> </span>import java.io.FileReader;
+<span class="gu">@@ -8,6 +10,27 @@ import java.util.ArrayList;</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.List;
+
+<span class="gi">+import AffiliationTransactions.ChangeMemberTransaction;</span>
+<span class="gi">+import AffiliationTransactions.ChangeUnaffiliatedTransaction;</span>
+<span class="gi">+import AffiliationTransactions.ServiceChargeTransaction;</span>
+<span class="gi">+import ClassificationTransactions.ChangeCommissionedTransaction;</span>
+<span class="gi">+import ClassificationTransactions.ChangeHourlyTransaction;</span>
+<span class="gi">+import ClassificationTransactions.ChangeSalariedTransaction;</span>
+<span class="gi">+import ClassificationTransactions.SalesReceiptTransaction;</span>
+<span class="gi">+import ClassificationTransactions.TimeCardTransaction;</span>
+<span class="gi">+import GeneralTransactions.AddCommissionedEmployee;</span>
+<span class="gi">+import GeneralTransactions.AddHourlyEmployee;</span>
+<span class="gi">+import GeneralTransactions.AddSalariedEmployee;</span>
+<span class="gi">+import GeneralTransactions.ChangeAddressTransaction;</span>
+<span class="gi">+import GeneralTransactions.ChangeNameTransaction;</span>
+<span class="gi">+import GeneralTransactions.DeleteEmployeeTransaction;</span>
+<span class="gi">+import GeneralTransactions.PaydayTransaction;</span>
+<span class="gi">+import MethodTransactions.ChangeDirectTransaction;</span>
+<span class="gi">+import MethodTransactions.ChangeHoldTransaction;</span>
+<span class="gi">+import MethodTransactions.ChangeMailTransaction;</span>
+<span class="gi">+import TransactionApplication.Transaction;</span>
+<span class="gi">+import TransactionApplication.TransactionSource;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gu">@@ -32,7 +55,7 @@ public class TextParserTransactionSource extends TransactionSource {</span>
+<span class="w"> </span>        } else if (transactionName.equals(&quot;DelEmp&quot;)) {
+<span class="w"> </span>            int empId = Integer.parseInt(line.get(1));
+<span class="w"> </span>            t = new DeleteEmployeeTransaction(empId);
+<span class="gd">-        } else if (transactionName.equals(&quot;ServiceCharge&quot;)) {</span>
+<span class="gi">+        } else if (transactionName.equals(&quot;Affiliations.ServiceCharge&quot;)) {</span>
+<span class="w"> </span>            int memberId = Integer.parseInt(line.get(1));
+<span class="w"> </span>            Calendar date = Calendar.getInstance();
+<span class="w"> </span>            date.setTime(new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(line.get(2)));
+<span class="gu">@@ -122,8 +145,8 @@ public class TextParserTransactionSource extends TransactionSource {</span>
+<span class="w"> </span>            t = new AddSalariedEmployee(empId, line.get(2), line.get(3), salary);
+<span class="w"> </span>        } else if (line.get(4).equals(&quot;C&quot;)) {
+<span class="w"> </span>            double salary = Double.parseDouble(line.get(5));
+<span class="gd">-            double commisionRate = Double.parseDouble(line.get(6));</span>
+<span class="gd">-            t = new AddCommissionedEmployee(empId, line.get(2), line.get(3), salary, commisionRate);</span>
+<span class="gi">+            double commissionRate = Double.parseDouble(line.get(6));</span>
+<span class="gi">+            t = new AddCommissionedEmployee(empId, line.get(2), line.get(3), salary, commissionRate);</span>
+<span class="w"> </span>        }
+<span class="w"> </span>        return t;
+<span class="w"> </span>    }
+<span class="gh">diff --git a/src/main/java/Transaction.java b/src/main/java/TransactionApplication/Transaction.java</span>
+similarity index 74%
+rename from src/main/java/Transaction.java
+rename to src/main/java/TransactionApplication/Transaction.java
+<span class="gh">index c8b1c7c..67b6aa6 100644</span>
+<span class="gd">--- a/src/main/java/Transaction.java</span>
+<span class="gi">+++ b/src/main/java/TransactionApplication/Transaction.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package TransactionApplication;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/TransactionApplication.java b/src/main/java/TransactionApplication/TransactionApplication.java</span>
+similarity index 63%
+rename from src/main/java/TransactionApplication.java
+rename to src/main/java/TransactionApplication/TransactionApplication.java
+<span class="gh">index 2908221..0002121 100644</span>
+<span class="gd">--- a/src/main/java/TransactionApplication.java</span>
+<span class="gi">+++ b/src/main/java/TransactionApplication/TransactionApplication.java</span>
+<span class="gu">@@ -1,3 +1,7 @@</span>
+<span class="gi">+package TransactionApplication;</span>
+<span class="gi">+</span>
+<span class="gi">+import Application.Application;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/main/java/TransactionSource.java b/src/main/java/TransactionApplication/TransactionSource.java</span>
+similarity index 83%
+rename from src/main/java/TransactionSource.java
+rename to src/main/java/TransactionApplication/TransactionSource.java
+<span class="gh">index bc34478..b181050 100644</span>
+<span class="gd">--- a/src/main/java/TransactionSource.java</span>
+<span class="gi">+++ b/src/main/java/TransactionApplication/TransactionSource.java</span>
+<span class="gu">@@ -1,3 +1,5 @@</span>
+<span class="gi">+package TransactionApplication;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/test/java/Main.java b/src/test/java/Main.java</span>
+<span class="gh">index 9594267..e839b85 100644</span>
+<span class="gd">--- a/src/test/java/Main.java</span>
+<span class="gi">+++ b/src/test/java/Main.java</span>
+<span class="gu">@@ -1,6 +1,15 @@</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.GregorianCalendar;
+
+<span class="gi">+import Application.Application;</span>
+<span class="gi">+import Classifications.HourlyClassification;</span>
+<span class="gi">+import Classifications.TimeCard;</span>
+<span class="gi">+import PayrollApplication.PayrollApplication;</span>
+<span class="gi">+import PayrollDatabase.GlobalDatabase;</span>
+<span class="gi">+import PayrollDatabaseImplementation.PayrollDatabaseImplementation;</span>
+<span class="gi">+import PayrollDomain.Employee;</span>
+<span class="gi">+import PayrollDomain.PaymentClassification;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/10.
+<span class="w"> </span> */
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 93cb08b..6cfc00f 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -3,6 +3,19 @@ import junit.framework.TestCase;</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="w"> </span>import java.util.GregorianCalendar;
+
+<span class="gi">+import AffiliationTransactions.*;</span>
+<span class="gi">+import Affiliations.*;</span>
+<span class="gi">+import ClassificationTransactions.*;</span>
+<span class="gi">+import Classifications.*;</span>
+<span class="gi">+import GeneralTransactions.*;</span>
+<span class="gi">+import MethodTransactions.*;</span>
+<span class="gi">+import Methods.*;</span>
+<span class="gi">+import PayrollDatabase.*;</span>
+<span class="gi">+import PayrollDatabaseImplementation.*;</span>
+<span class="gi">+import PayrollDomain.*;</span>
+<span class="gi">+import Schedules.*;</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gu">@@ -472,7 +485,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(pc.GetPayPeriodEndDate(), payDate);
+<span class="w"> </span>        assertEquals(1000.0,pc.GetGrossPay());
+<span class="w"> </span>        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));
+<span class="gd">-        assertEquals(fridays * 9.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(fridays * 9.42, pc.GetDeductions());</span>
+<span class="w"> </span>        assertEquals(1000.0 - fridays * 9.42, pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gu">@@ -494,7 +507,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(pc.GetPayPeriodEndDate(),payDate);
+<span class="w"> </span>        assertEquals(8 * 15.24, pc.GetGrossPay());
+<span class="w"> </span>        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));
+<span class="gd">-        assertEquals(9.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(9.42, pc.GetDeductions());</span>
+<span class="w"> </span>        assertEquals(8 * 15.24 - 9.42, pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gu">@@ -514,7 +527,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(pc.GetPayPeriodEndDate(),payDate);
+<span class="w"> </span>        assertEquals(2500.0, pc.GetGrossPay());
+<span class="w"> </span>        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));
+<span class="gd">-        assertEquals(2 * 9.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(2 * 9.42, pc.GetDeductions());</span>
+<span class="w"> </span>        assertEquals(2500.0 - 2 * 9.42, pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gu">@@ -538,7 +551,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(pc.GetPayPeriodEndDate(), payDate);
+<span class="w"> </span>        assertEquals(8 * 15.24, pc.GetGrossPay());
+<span class="w"> </span>        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));
+<span class="gd">-        assertEquals(9.42 + 19.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(9.42 + 19.42, pc.GetDeductions());</span>
+<span class="w"> </span>        assertEquals(8 * 15.24 - (9.42 + 19.42), pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gu">@@ -570,7 +583,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(pc.GetPayPeriodEndDate(), payDate);
+<span class="w"> </span>        assertEquals(8 * 15.24, pc.GetGrossPay());
+<span class="w"> </span>        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));
+<span class="gd">-        assertEquals(9.42 + 19.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(9.42 + 19.42, pc.GetDeductions());</span>
+<span class="w"> </span>        assertEquals(8 * 15.24 - (9.42 + 19.42), pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gu">@@ -580,7 +593,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(pc.GetPayPeriodEndDate(), payDate);
+<span class="w"> </span>        assertEquals(pay, pc.GetGrossPay());
+<span class="w"> </span>        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));
+<span class="gd">-        assertEquals(0.0, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(0.0, pc.GetDeductions());</span>
+<span class="w"> </span>        assertEquals(pay, pc.GetNetPay());
+<span class="w"> </span>    }
+<span class="w"> </span>}
+\ No newline at end of file
+</code></pre></div>
+<h2 id="7332a49">コミット: 7332a49<a class="headerlink" href="#7332a49" title="Permanent link">&para;</a></h2>
+<h3 id="_5">メッセージ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>メインプログラムとデータベース
+</code></pre></div>
+<h3 id="_6">変更されたファイル<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A META-INF/AddEmp.txt</li>
+<li>A META-INF/ChgEmp.txt</li>
+<li>A META-INF/DelEmp.txt</li>
+<li>A META-INF/Main.txt</li>
+<li>A META-INF/SalesRecipt.txt</li>
+<li>A META-INF/ServiceCharge.txt</li>
+<li>A META-INF/TimeCard.txt</li>
+<li>M src/main/java/AddEmployeeTransaction.java</li>
+<li>A src/main/java/Application.java</li>
+<li>M src/main/java/ChangeEmployeeTransaction.java</li>
+<li>M src/main/java/ChangeMemberTransaction.java</li>
+<li>M src/main/java/ChangeUnaffiliatedTransaction.java</li>
+<li>M src/main/java/DeleteEmployeeTransaction.java</li>
+<li>A src/main/java/GlobalDatabase.java</li>
+<li>M src/main/java/PaydayTransaction.java</li>
+<li>A src/main/java/PayrollApplication.java</li>
+<li>M src/main/java/PayrollDatabase.java</li>
+<li>A src/main/java/PayrollDatabaseImplementation.java</li>
+<li>M src/main/java/SalesReceiptTransaction.java</li>
+<li>M src/main/java/ServiceChargeTransaction.java</li>
+<li>A src/main/java/TextParserTransactionSource.java</li>
+<li>M src/main/java/TimeCardTransaction.java</li>
+<li>A src/main/java/TransactionApplication.java</li>
+<li>A src/main/java/TransactionSource.java</li>
+<li>A src/test/java/Main.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_7">変更内容<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 7332a4999ef32b1e96f06537ad68dfa5be923b7d
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Mon Apr 10 15:20:59 2017 +0900
+
+<span class="w"> </span>   メインプログラムとデータベース
+
+<span class="gh">diff --git a/META-INF/AddEmp.txt b/META-INF/AddEmp.txt</span>
+new file mode 100644
+<span class="gh">index 0000000..0e8ab1b</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/META-INF/AddEmp.txt</span>
+<span class="gu">@@ -0,0 +1,3 @@</span>
+<span class="gi">+AddEmp 1 &quot;Bob&quot; &quot;Home&quot; S 1000.00</span>
+<span class="gi">+AddEmp 2 &quot;Bill&quot; &quot;Home&quot; H 15.25</span>
+<span class="gi">+AddEmp 3 &quot;Lance&quot; &quot;Home&quot; C 2500.0 3.2</span>
+\ No newline at end of file
+<span class="gh">diff --git a/META-INF/ChgEmp.txt b/META-INF/ChgEmp.txt</span>
+new file mode 100644
+<span class="gh">index 0000000..36e146f</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/META-INF/ChgEmp.txt</span>
+<span class="gu">@@ -0,0 +1,2 @@</span>
+<span class="gi">+ChgEmp 2 Name &quot;Lance&quot;</span>
+<span class="gi">+ChgEmp 3 Address &quot;Second Home&quot;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/META-INF/DelEmp.txt b/META-INF/DelEmp.txt</span>
+new file mode 100644
+<span class="gh">index 0000000..a04f7ee</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/META-INF/DelEmp.txt</span>
+<span class="gu">@@ -0,0 +1 @@</span>
+<span class="gi">+DelEmp 1</span>
+\ No newline at end of file
+<span class="gh">diff --git a/META-INF/Main.txt b/META-INF/Main.txt</span>
+new file mode 100644
+<span class="gh">index 0000000..5104442</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/META-INF/Main.txt</span>
+<span class="gu">@@ -0,0 +1,2 @@</span>
+<span class="gi">+AddEmp 2 &quot;Bill&quot; &quot;Home&quot; H 15.25</span>
+<span class="gi">+TimeCard 2 2001/10/31 8.0</span>
+\ No newline at end of file
+<span class="gh">diff --git a/META-INF/SalesRecipt.txt b/META-INF/SalesRecipt.txt</span>
+new file mode 100644
+<span class="gh">index 0000000..5bd5fab</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/META-INF/SalesRecipt.txt</span>
+<span class="gu">@@ -0,0 +1 @@</span>
+<span class="gi">+SalesReceipt 3 2001/11/12 25000</span>
+\ No newline at end of file
+<span class="gh">diff --git a/META-INF/ServiceCharge.txt b/META-INF/ServiceCharge.txt</span>
+new file mode 100644
+<span class="gh">index 0000000..88e1c7a</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/META-INF/ServiceCharge.txt</span>
+<span class="gu">@@ -0,0 +1 @@</span>
+<span class="gi">+ServiceCharge 86 2001/10/31 12.95</span>
+\ No newline at end of file
+<span class="gh">diff --git a/META-INF/TimeCard.txt b/META-INF/TimeCard.txt</span>
+new file mode 100644
+<span class="gh">index 0000000..a24d6ab</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/META-INF/TimeCard.txt</span>
+<span class="gu">@@ -0,0 +1 @@</span>
+<span class="gi">+TimeCard 2 2001/10/31 8.0</span>
+\ No newline at end of file
+<span class="gh">diff --git a/src/main/java/AddEmployeeTransaction.java b/src/main/java/AddEmployeeTransaction.java</span>
+<span class="gh">index 33b5ecf..fea788b 100644</span>
+<span class="gd">--- a/src/main/java/AddEmployeeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/AddEmployeeTransaction.java</span>
+<span class="gu">@@ -20,7 +20,7 @@ public abstract class AddEmployeeTransaction implements Transaction {</span>
+<span class="w"> </span>        e.SetClassification(pc);
+<span class="w"> </span>        e.SetSchedule(ps);
+<span class="w"> </span>        e.SetMethod(pm);
+<span class="gd">-        PayrollDatabase.AddEmployee(itsEmpId, e);</span>
+<span class="gi">+        GlobalDatabase.payrollDB.AddEmployee(itsEmpId, e);</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    abstract PaymentSchedule GetSchedule();
+<span class="gh">diff --git a/src/main/java/Application.java b/src/main/java/Application.java</span>
+new file mode 100644
+<span class="gh">index 0000000..a0695ef</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/Application.java</span>
+<span class="gu">@@ -0,0 +1,6 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public abstract class Application {</span>
+<span class="gi">+    public abstract void SetSource(String source);</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/ChangeEmployeeTransaction.java b/src/main/java/ChangeEmployeeTransaction.java</span>
+<span class="gh">index 37ece54..ce881bc 100644</span>
+<span class="gd">--- a/src/main/java/ChangeEmployeeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ChangeEmployeeTransaction.java</span>
+<span class="gu">@@ -9,7 +9,7 @@ public abstract class ChangeEmployeeTransaction implements Transaction {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public void Execute() {
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(itsEmpId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(itsEmpId);</span>
+<span class="w"> </span>        if (e != null) {
+<span class="w"> </span>            Change(e);
+<span class="w"> </span>        }
+<span class="gh">diff --git a/src/main/java/ChangeMemberTransaction.java b/src/main/java/ChangeMemberTransaction.java</span>
+<span class="gh">index 3229e24..4e6d6b5 100644</span>
+<span class="gd">--- a/src/main/java/ChangeMemberTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ChangeMemberTransaction.java</span>
+<span class="gu">@@ -16,6 +16,6 @@ public class ChangeMemberTransaction extends ChangeAffiliationTransaction {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    void RecordMembership(Employee e) {
+<span class="gd">-        PayrollDatabase.AddUnionMember(itsMemberId, e);</span>
+<span class="gi">+        GlobalDatabase.payrollDB.AddUnionMember(itsMemberId, e);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/ChangeUnaffiliatedTransaction.java b/src/main/java/ChangeUnaffiliatedTransaction.java</span>
+<span class="gh">index b7f81ea..bcecdfd 100644</span>
+<span class="gd">--- a/src/main/java/ChangeUnaffiliatedTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ChangeUnaffiliatedTransaction.java</span>
+<span class="gu">@@ -15,7 +15,7 @@ public class ChangeUnaffiliatedTransaction extends ChangeAffiliationTransaction</span>
+<span class="w"> </span>        if (af instanceof UnionAffiliation) {
+<span class="w"> </span>            UnionAffiliation uf = (UnionAffiliation) af;
+<span class="w"> </span>            int memberId = uf.GetMemberId();
+<span class="gd">-            PayrollDatabase.RemoveUnionMember(memberId);</span>
+<span class="gi">+            GlobalDatabase.payrollDB.RemoveUnionMember(memberId);</span>
+<span class="w"> </span>        }
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/DeleteEmployeeTransaction.java b/src/main/java/DeleteEmployeeTransaction.java</span>
+<span class="gh">index da66810..d117d32 100644</span>
+<span class="gd">--- a/src/main/java/DeleteEmployeeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/DeleteEmployeeTransaction.java</span>
+<span class="gu">@@ -8,6 +8,6 @@ public class DeleteEmployeeTransaction implements Transaction {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public void Execute() {
+<span class="gd">-        PayrollDatabase.DeleteEmployee(itsEmpId);</span>
+<span class="gi">+        GlobalDatabase.payrollDB.DeleteEmployee(itsEmpId);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/GlobalDatabase.java b/src/main/java/GlobalDatabase.java</span>
+new file mode 100644
+<span class="gh">index 0000000..a932039</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/GlobalDatabase.java</span>
+<span class="gu">@@ -0,0 +1,6 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class GlobalDatabase {</span>
+<span class="gi">+    public static PayrollDatabase payrollDB;</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/PaydayTransaction.java b/src/main/java/PaydayTransaction.java</span>
+<span class="gh">index 1d6c03a..d7b5b77 100644</span>
+<span class="gd">--- a/src/main/java/PaydayTransaction.java</span>
+<span class="gi">+++ b/src/main/java/PaydayTransaction.java</span>
+<span class="gu">@@ -15,9 +15,9 @@ public class PaydayTransaction implements Transaction {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public void Execute() {
+<span class="gd">-        List&lt;Integer&gt; empIds = PayrollDatabase.GetAllEmployeeIds();</span>
+<span class="gi">+        List&lt;Integer&gt; empIds = GlobalDatabase.payrollDB.GetAllEmployeeIds();</span>
+<span class="w"> </span>        for(int empId : empIds) {
+<span class="gd">-            Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+            Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>            if(e.IsPayDate(itsPayDate)) {
+<span class="w"> </span>                Paycheck pc = new Paycheck(e.GetPayPeriodStartDate(itsPayDate),itsPayDate);
+<span class="w"> </span>                itsPaychecks.put(empId, pc);
+<span class="gh">diff --git a/src/main/java/PayrollApplication.java b/src/main/java/PayrollApplication.java</span>
+new file mode 100644
+<span class="gh">index 0000000..531460f</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/PayrollApplication.java</span>
+<span class="gu">@@ -0,0 +1,15 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class PayrollApplication extends TransactionApplication {</span>
+<span class="gi">+    private TransactionSource transactionSource;</span>
+<span class="gi">+</span>
+<span class="gi">+    public PayrollApplication() {</span>
+<span class="gi">+        transactionSource = new TextParserTransactionSource();</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetSource(String source) {</span>
+<span class="gi">+        transactionSource.SetSource(source);</span>
+<span class="gi">+        transactionSource.Execute();</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/PayrollDatabase.java b/src/main/java/PayrollDatabase.java</span>
+<span class="gh">index 24f3a66..52574c1 100644</span>
+<span class="gd">--- a/src/main/java/PayrollDatabase.java</span>
+<span class="gi">+++ b/src/main/java/PayrollDatabase.java</span>
+<span class="gu">@@ -6,35 +6,20 @@ import java.util.Map;</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="gd">-class PayrollDatabase {</span>
+<span class="gd">-    private static Map&lt;Integer, Employee&gt; itsEmployees = new HashMap&lt;Integer, Employee&gt;();</span>
+<span class="gd">-    private static Map&lt;Integer, Employee&gt; itsUnionMembers = new HashMap&lt;Integer, Employee&gt;();</span>
+<span class="gi">+public interface PayrollDatabase {</span>
+<span class="gi">+    public void AddEmployee(int empId, Employee e);</span>
+
+<span class="gd">-    public static void AddEmployee(int empId, Employee e) {</span>
+<span class="gd">-        itsEmployees.put(empId, e);</span>
+<span class="gd">-    }</span>
+<span class="gi">+    public Employee GetEmployee(int empId);</span>
+
+<span class="gd">-    public static Employee GetEmployee(int empId) {</span>
+<span class="gd">-        return itsEmployees.get(empId);</span>
+<span class="gd">-    }</span>
+<span class="gi">+    public void Clear();</span>
+
+<span class="gd">-    public static void DeleteEmployee(int empId) {</span>
+<span class="gd">-        itsEmployees.remove(empId);</span>
+<span class="gd">-    }</span>
+<span class="gi">+    public void DeleteEmployee(int empId);</span>
+
+<span class="gd">-    public static void AddUnionMember(int memberId, Employee e) {</span>
+<span class="gd">-        itsUnionMembers.put(memberId, e);</span>
+<span class="gd">-    }</span>
+<span class="gi">+    public void AddUnionMember(int memberId, Employee e);</span>
+
+<span class="gd">-    public static Employee GetUnionMbember(int memberId) {</span>
+<span class="gd">-        return itsUnionMembers.get(memberId);</span>
+<span class="gd">-    }</span>
+<span class="gi">+    public Employee GetUnionMember(int memberId);</span>
+
+<span class="gd">-    public static void RemoveUnionMember(int memberId) {</span>
+<span class="gd">-        itsUnionMembers.remove(memberId);</span>
+<span class="gd">-    }</span>
+<span class="gi">+    public void RemoveUnionMember(int memberId);</span>
+
+<span class="gd">-    public static List&lt;Integer&gt; GetAllEmployeeIds() {</span>
+<span class="gd">-        return new ArrayList&lt;Integer&gt;(itsEmployees.keySet());</span>
+<span class="gd">-    }</span>
+<span class="gi">+    public List&lt;Integer&gt; GetAllEmployeeIds();</span>
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/PayrollDatabaseImplementation.java b/src/main/java/PayrollDatabaseImplementation.java</span>
+new file mode 100644
+<span class="gh">index 0000000..47e451e</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/PayrollDatabaseImplementation.java</span>
+<span class="gu">@@ -0,0 +1,45 @@</span>
+<span class="gi">+import java.util.ArrayList;</span>
+<span class="gi">+import java.util.HashMap;</span>
+<span class="gi">+import java.util.List;</span>
+<span class="gi">+import java.util.Map;</span>
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class PayrollDatabaseImplementation implements PayrollDatabase {</span>
+<span class="gi">+    private static Map&lt;Integer, Employee&gt; itsEmployees = new HashMap&lt;Integer, Employee&gt;();</span>
+<span class="gi">+    private static Map&lt;Integer, Employee&gt; itsUnionMembers = new HashMap&lt;Integer, Employee&gt;();</span>
+<span class="gi">+</span>
+<span class="gi">+    public void AddEmployee(int empId, Employee e) {</span>
+<span class="gi">+        itsEmployees.put(empId, e);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Employee GetEmployee(int empId) {</span>
+<span class="gi">+        return itsEmployees.get(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Clear() {</span>
+<span class="gi">+        itsEmployees.clear();</span>
+<span class="gi">+        itsUnionMembers.clear();</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void DeleteEmployee(int empId) {</span>
+<span class="gi">+        itsEmployees.remove(empId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void AddUnionMember(int memberId, Employee e) {</span>
+<span class="gi">+        itsUnionMembers.put(memberId, e);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Employee GetUnionMember(int memberId) {</span>
+<span class="gi">+        return itsUnionMembers.get(memberId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void RemoveUnionMember(int memberId) {</span>
+<span class="gi">+        itsUnionMembers.remove(memberId);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public List&lt;Integer&gt; GetAllEmployeeIds() {</span>
+<span class="gi">+        return new ArrayList&lt;Integer&gt;(itsEmployees.keySet());</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+\ No newline at end of file
+<span class="gh">diff --git a/src/main/java/SalesReceiptTransaction.java b/src/main/java/SalesReceiptTransaction.java</span>
+<span class="gh">index d747197..0eae104 100644</span>
+<span class="gd">--- a/src/main/java/SalesReceiptTransaction.java</span>
+<span class="gi">+++ b/src/main/java/SalesReceiptTransaction.java</span>
+<span class="gu">@@ -15,7 +15,7 @@ public class SalesReceiptTransaction implements Transaction {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public void Execute() {
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(itsEmpId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(itsEmpId);</span>
+<span class="w"> </span>        if (e != null) {
+<span class="w"> </span>            PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>            if (pc instanceof CommissionedClassification) {
+<span class="gh">diff --git a/src/main/java/ServiceChargeTransaction.java b/src/main/java/ServiceChargeTransaction.java</span>
+<span class="gh">index 8612128..8b0bfe4 100644</span>
+<span class="gd">--- a/src/main/java/ServiceChargeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ServiceChargeTransaction.java</span>
+<span class="gu">@@ -15,7 +15,7 @@ public class ServiceChargeTransaction implements Transaction {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public void Execute() {
+<span class="gd">-        Employee e = PayrollDatabase.GetUnionMbember(itsMemberId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetUnionMember(itsMemberId);</span>
+<span class="w"> </span>        Affiliation af = e.GetAffiliation();
+<span class="w"> </span>        if (af instanceof UnionAffiliation) {
+<span class="w"> </span>            UnionAffiliation uaf = (UnionAffiliation) af;
+<span class="gh">diff --git a/src/main/java/TextParserTransactionSource.java b/src/main/java/TextParserTransactionSource.java</span>
+new file mode 100644
+<span class="gh">index 0000000..92e43f9</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/TextParserTransactionSource.java</span>
+<span class="gu">@@ -0,0 +1,169 @@</span>
+<span class="gi">+import java.io.BufferedReader;</span>
+<span class="gi">+import java.io.FileNotFoundException;</span>
+<span class="gi">+import java.io.FileReader;</span>
+<span class="gi">+import java.io.IOException;</span>
+<span class="gi">+import java.text.ParseException;</span>
+<span class="gi">+import java.text.SimpleDateFormat;</span>
+<span class="gi">+import java.util.ArrayList;</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+import java.util.List;</span>
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class TextParserTransactionSource extends TransactionSource {</span>
+<span class="gi">+    public String itsSource;</span>
+<span class="gi">+</span>
+<span class="gi">+    public void Execute() {</span>
+<span class="gi">+        parse();</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    private void lineExecute(List&lt;String&gt; line) throws ParseException {</span>
+<span class="gi">+        if (line.size() &lt; 1) {</span>
+<span class="gi">+            System.err.println(&quot;Read Line Error&quot;);</span>
+<span class="gi">+            return;</span>
+<span class="gi">+        }</span>
+<span class="gi">+        Transaction t = null;</span>
+<span class="gi">+        String transactionName = line.get(0);</span>
+<span class="gi">+        if (transactionName.equals(&quot;AddEmp&quot;)) {</span>
+<span class="gi">+            t = AddEmp(line);</span>
+<span class="gi">+        } else if (transactionName.equals(&quot;ChgEmp&quot;)) {</span>
+<span class="gi">+            t = ChgEmp(line);</span>
+<span class="gi">+        } else if (transactionName.equals(&quot;DelEmp&quot;)) {</span>
+<span class="gi">+            int empId = Integer.parseInt(line.get(1));</span>
+<span class="gi">+            t = new DeleteEmployeeTransaction(empId);</span>
+<span class="gi">+        } else if (transactionName.equals(&quot;ServiceCharge&quot;)) {</span>
+<span class="gi">+            int memberId = Integer.parseInt(line.get(1));</span>
+<span class="gi">+            Calendar date = Calendar.getInstance();</span>
+<span class="gi">+            date.setTime(new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(line.get(2)));</span>
+<span class="gi">+            double amount = Double.parseDouble(line.get(2));</span>
+<span class="gi">+            t = new ServiceChargeTransaction(memberId, date, amount);</span>
+<span class="gi">+        }  else if (transactionName.equals(&quot;SalesReceipt&quot;)) {</span>
+<span class="gi">+            int empId = Integer.parseInt(line.get(1));</span>
+<span class="gi">+            Calendar date = Calendar.getInstance();</span>
+<span class="gi">+            date.setTime(new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(line.get(2)));</span>
+<span class="gi">+            double amount = Double.parseDouble(line.get(3));</span>
+<span class="gi">+            t = new SalesReceiptTransaction(date, amount, empId);</span>
+<span class="gi">+        } else if (transactionName.equals(&quot;TimeCard&quot;)) {</span>
+<span class="gi">+            int empId = Integer.parseInt(line.get(1));</span>
+<span class="gi">+            Calendar date = Calendar.getInstance();</span>
+<span class="gi">+            date.setTime(new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(line.get(2)));</span>
+<span class="gi">+            double hours = Double.parseDouble(line.get(3));</span>
+<span class="gi">+            t = new TimeCardTransaction(date, hours, empId);</span>
+<span class="gi">+        } else if (transactionName.equals(&quot;Payday&quot;)) {</span>
+<span class="gi">+            Calendar payDate = Calendar.getInstance();</span>
+<span class="gi">+            payDate.setTime(new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(line.get(1)));</span>
+<span class="gi">+            t = new PaydayTransaction(payDate);</span>
+<span class="gi">+        }</span>
+<span class="gi">+        if (t != null) {</span>
+<span class="gi">+            t.Execute();</span>
+<span class="gi">+        }</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public void SetSource(String source) {</span>
+<span class="gi">+        itsSource = source;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+    private void parse() {</span>
+<span class="gi">+        if (itsSource == null) {</span>
+<span class="gi">+            System.err.println(&quot;Not set Source File&quot;);</span>
+<span class="gi">+        } else {</span>
+<span class="gi">+            try {</span>
+<span class="gi">+                BufferedReader br = new BufferedReader(new FileReader(itsSource));</span>
+<span class="gi">+                String line = null;</span>
+<span class="gi">+                while((line = br.readLine()) != null) {</span>
+<span class="gi">+                    String[] lineStrs = line.split(&quot; &quot;);</span>
+<span class="gi">+                    List&lt;String&gt; lineList = new ArrayList&lt;String&gt;();</span>
+<span class="gi">+                    boolean doublequoteFlag = false;</span>
+<span class="gi">+                    StringBuilder sb = null;</span>
+<span class="gi">+                    for(String str : lineStrs) {</span>
+<span class="gi">+                        if(doublequoteFlag) {</span>
+<span class="gi">+                            sb.append(&quot; &quot; + str);</span>
+<span class="gi">+                            if(str.endsWith(&quot;\&quot;&quot;)) {</span>
+<span class="gi">+                                lineList.add(sb.toString());</span>
+<span class="gi">+                                doublequoteFlag = false;</span>
+<span class="gi">+                            }</span>
+<span class="gi">+                        } else {</span>
+<span class="gi">+                            if(str.startsWith(&quot;\&quot;&quot;) &amp;&amp; str.endsWith(&quot;\&quot;&quot;) == false) {</span>
+<span class="gi">+                                sb = new StringBuilder(str);</span>
+<span class="gi">+                                doublequoteFlag = true;</span>
+<span class="gi">+                            } else {</span>
+<span class="gi">+                                lineList.add(str);</span>
+<span class="gi">+                            }</span>
+<span class="gi">+                        }</span>
+<span class="gi">+                    }</span>
+<span class="gi">+                    //System.out.println(lineList);</span>
+<span class="gi">+                    lineExecute(lineList);</span>
+<span class="gi">+                }</span>
+<span class="gi">+            } catch (FileNotFoundException e) {</span>
+<span class="gi">+                // TODO Auto-generated catch block</span>
+<span class="gi">+                e.printStackTrace();</span>
+<span class="gi">+            } catch (IOException e) {</span>
+<span class="gi">+                // TODO Auto-generated catch block</span>
+<span class="gi">+                e.printStackTrace();</span>
+<span class="gi">+            } catch (ParseException e) {</span>
+<span class="gi">+                // TODO Auto-generated catch block</span>
+<span class="gi">+                e.printStackTrace();</span>
+<span class="gi">+            }</span>
+<span class="gi">+</span>
+<span class="gi">+        }</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+    public Transaction AddEmp(List&lt;String&gt; line) {</span>
+<span class="gi">+        Transaction t = null;</span>
+<span class="gi">+        int empId = Integer.parseInt(line.get(1));</span>
+<span class="gi">+        if (line.get(4).equals(&quot;H&quot;)) {</span>
+<span class="gi">+            double hourlyRate = Double.parseDouble(line.get(5));</span>
+<span class="gi">+            t = new AddHourlyEmployee(empId, line.get(2),  line.get(3), hourlyRate);</span>
+<span class="gi">+        } else if (line.get(4).equals(&quot;S&quot;)) {</span>
+<span class="gi">+            double salary = Double.parseDouble(line.get(5));</span>
+<span class="gi">+            t = new AddSalariedEmployee(empId, line.get(2), line.get(3), salary);</span>
+<span class="gi">+        } else if (line.get(4).equals(&quot;C&quot;)) {</span>
+<span class="gi">+            double salary = Double.parseDouble(line.get(5));</span>
+<span class="gi">+            double commisionRate = Double.parseDouble(line.get(6));</span>
+<span class="gi">+            t = new AddCommissionedEmployee(empId, line.get(2), line.get(3), salary, commisionRate);</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return t;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    public Transaction ChgEmp(List&lt;String&gt; line) {</span>
+<span class="gi">+        Transaction t = null;</span>
+<span class="gi">+        int empId = Integer.parseInt(line.get(1));</span>
+<span class="gi">+        String changeInfo = line.get(2);</span>
+<span class="gi">+        if (changeInfo.equals(&quot;Name&quot;)) {</span>
+<span class="gi">+            String name = line.get(3);</span>
+<span class="gi">+            t = new ChangeNameTransaction(empId, name);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Address&quot;)) {</span>
+<span class="gi">+            String address = line.get(3);</span>
+<span class="gi">+            t = new ChangeAddressTransaction(empId, address);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Hourly&quot;)) {</span>
+<span class="gi">+            double hourly = Double.parseDouble(line.get(3));</span>
+<span class="gi">+            t = new ChangeHourlyTransaction(empId, hourly);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Salaried&quot;)) {</span>
+<span class="gi">+            double salary = Double.parseDouble(line.get(3));</span>
+<span class="gi">+            t = new ChangeSalariedTransaction(empId, salary);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Commissioned&quot;)) {</span>
+<span class="gi">+            double salary = Double.parseDouble(line.get(3));</span>
+<span class="gi">+            double rate = Double.parseDouble(line.get(4));</span>
+<span class="gi">+            t = new ChangeCommissionedTransaction(empId, salary, rate);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Hold&quot;)) {</span>
+<span class="gi">+            t = new ChangeHoldTransaction(empId);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Direct&quot;)) {</span>
+<span class="gi">+            String bank = line.get(3);</span>
+<span class="gi">+            String account = line.get(4);</span>
+<span class="gi">+            t = new ChangeDirectTransaction(empId, bank, account);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Mail&quot;)) {</span>
+<span class="gi">+            String address = line.get(3);</span>
+<span class="gi">+            t = new ChangeMailTransaction(0, address);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;Member&quot;)) {</span>
+<span class="gi">+            int memberId = Integer.parseInt(line.get(3));</span>
+<span class="gi">+            double dues = Double.parseDouble(line.get(5));</span>
+<span class="gi">+            t = new ChangeMemberTransaction(empId, memberId, dues);</span>
+<span class="gi">+        } else if (changeInfo.equals(&quot;NoMember&quot;)) {</span>
+<span class="gi">+            t = new ChangeUnaffiliatedTransaction(empId);</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return t;</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/TimeCardTransaction.java b/src/main/java/TimeCardTransaction.java</span>
+<span class="gh">index 81e5568..6823042 100644</span>
+<span class="gd">--- a/src/main/java/TimeCardTransaction.java</span>
+<span class="gi">+++ b/src/main/java/TimeCardTransaction.java</span>
+<span class="gu">@@ -15,7 +15,7 @@ public class TimeCardTransaction implements Transaction {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public void Execute() {
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(itsEmpId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(itsEmpId);</span>
+<span class="w"> </span>        if (e != null) {
+<span class="w"> </span>            PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>            if (pc instanceof HourlyClassification) {
+<span class="gh">diff --git a/src/main/java/TransactionApplication.java b/src/main/java/TransactionApplication.java</span>
+new file mode 100644
+<span class="gh">index 0000000..2908221</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/TransactionApplication.java</span>
+<span class="gu">@@ -0,0 +1,5 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public abstract class TransactionApplication extends Application {</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/TransactionSource.java b/src/main/java/TransactionSource.java</span>
+new file mode 100644
+<span class="gh">index 0000000..bc34478</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/TransactionSource.java</span>
+<span class="gu">@@ -0,0 +1,6 @@</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public abstract class TransactionSource implements Transaction {</span>
+<span class="gi">+    public abstract void SetSource(String source);</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/Main.java b/src/test/java/Main.java</span>
+new file mode 100644
+<span class="gh">index 0000000..9594267</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/test/java/Main.java</span>
+<span class="gu">@@ -0,0 +1,20 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+import java.util.GregorianCalendar;</span>
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/10.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class Main {</span>
+<span class="gi">+    public static void main(String[] args) {</span>
+<span class="gi">+        GlobalDatabase.payrollDB = new PayrollDatabaseImplementation();</span>
+<span class="gi">+        Application application = new PayrollApplication();</span>
+<span class="gi">+        application.SetSource(&quot;META-INF/Main.txt&quot;);</span>
+<span class="gi">+        Calendar date = new GregorianCalendar(2001, Calendar.OCTOBER, 31);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="gi">+        PaymentClassification pc = e.GetClassification();</span>
+<span class="gi">+        HourlyClassification hc = (HourlyClassification) pc;</span>
+<span class="gi">+        TimeCard tc = hc.GetTimeCard(date);</span>
+<span class="gi">+        System.out.println(tc.GetHours());</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 268e7b6..93cb08b 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -12,7 +12,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        int empId = 1;
+<span class="w"> </span>        AddSalariedEmployee t = new AddSalariedEmployee(empId, &quot;Bob&quot;, &quot;Home&quot;, 1000.00);
+<span class="w"> </span>        t.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        assertEquals(&quot;Bob&quot;, e.GetName());
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="gu">@@ -32,7 +32,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        int empId = 2;
+<span class="w"> </span>        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.25);
+<span class="w"> </span>        t.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        assertEquals(&quot;Bill&quot;, e.GetName());
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="gu">@@ -52,7 +52,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        int empId = 1;
+<span class="w"> </span>        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500.0, 3.2);
+<span class="w"> </span>        t.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        assertEquals(&quot;Lance&quot;, e.GetName());
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="gu">@@ -73,11 +73,11 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        int empId = 3;
+<span class="w"> </span>        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;,&quot;Home&quot;,2500,3.2);
+<span class="w"> </span>        t.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        DeleteEmployeeTransaction dt = new DeleteEmployeeTransaction(empId);
+<span class="w"> </span>        dt.Execute();
+<span class="gd">-        e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNull(e);
+<span class="w"> </span>    }
+
+<span class="gu">@@ -89,7 +89,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        Calendar date = new GregorianCalendar(2001, Calendar.OCTOBER, 31);
+<span class="w"> </span>        TimeCardTransaction tct = new TimeCardTransaction(date,8.0,empId);
+<span class="w"> </span>        tct.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>        HourlyClassification hc = (HourlyClassification) pc;
+<span class="gu">@@ -107,7 +107,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        Calendar date = new GregorianCalendar(2001, Calendar.NOVEMBER, 12);
+<span class="w"> </span>        SalesReceiptTransaction srt = new SalesReceiptTransaction(date, 25000, empId);
+<span class="w"> </span>        srt.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>        CommissionedClassification cc = (CommissionedClassification) pc;
+<span class="gu">@@ -125,12 +125,12 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        Calendar date = new GregorianCalendar(2001, Calendar.OCTOBER, 31);
+<span class="w"> </span>        TimeCardTransaction tct = new TimeCardTransaction(date,8.0, empId);
+<span class="w"> </span>        tct.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        Affiliation af = new UnionAffiliation(12.5);
+<span class="w"> </span>        e.SetAffiliation(af);
+<span class="w"> </span>        int memberId = 86;
+<span class="gd">-        PayrollDatabase.AddUnionMember(memberId,e);</span>
+<span class="gi">+        GlobalDatabase.payrollDB.AddUnionMember(memberId,e);</span>
+<span class="w"> </span>        ServiceChargeTransaction sct = new ServiceChargeTransaction(memberId, date, 12.95);
+<span class="w"> </span>        sct.Execute();
+<span class="w"> </span>        double sc = af.GetServiceCharge(date);
+<span class="gu">@@ -144,7 +144,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeNameTransaction cnt = new ChangeNameTransaction(empId, &quot;Bob&quot;);
+<span class="w"> </span>        cnt.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        assertEquals(&quot;Bob&quot;, e.GetName());
+<span class="w"> </span>    }
+<span class="gu">@@ -156,7 +156,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeAddressTransaction cat = new ChangeAddressTransaction(empId, &quot;Second Home&quot;);
+<span class="w"> </span>        cat.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        assertEquals(&quot;Second Home&quot;, e.GetAddress());
+<span class="w"> </span>    }
+<span class="gu">@@ -168,7 +168,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeHourlyTransaction cht = new ChangeHourlyTransaction(empId, 27.52);
+<span class="w"> </span>        cht.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>        assertNotNull(pc);
+<span class="gu">@@ -187,7 +187,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeSalariedTransaction cst = new ChangeSalariedTransaction(empId, 25000);
+<span class="w"> </span>        cst.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>        assertNotNull(pc);
+<span class="gu">@@ -206,7 +206,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeCommissionedTransaction cct = new ChangeCommissionedTransaction(empId, 25000, 4.5);
+<span class="w"> </span>        cct.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>        assertNotNull(pc);
+<span class="gu">@@ -226,7 +226,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeMailTransaction cmt = new ChangeMailTransaction(empId, &quot;4080 El Cerrito Road&quot;);
+<span class="w"> </span>        cmt.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentMethod pm = e.GetMethod();
+<span class="w"> </span>        assertNotNull(pm);
+<span class="gu">@@ -242,7 +242,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeDirectTransaction cdt = new ChangeDirectTransaction(empId, &quot;FirstNational&quot;, &quot;1058209&quot;);
+<span class="w"> </span>        cdt.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentMethod pm = e.GetMethod();
+<span class="w"> </span>        assertNotNull(pm);
+<span class="gu">@@ -259,7 +259,7 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeHoldTransaction cht = new ChangeHoldTransaction(empId);
+<span class="w"> </span>        cht.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentMethod pm = e.GetMethod();
+<span class="w"> </span>        assertNotNull(pm);
+<span class="gu">@@ -275,14 +275,14 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        t.Execute();
+<span class="w"> </span>        ChangeMemberTransaction cmt = new ChangeMemberTransaction(empId, memberId, 99.42);
+<span class="w"> </span>        cmt.Execute();
+<span class="gd">-        Employee e = PayrollDatabase.GetEmployee(empId);</span>
+<span class="gi">+        Employee e = GlobalDatabase.payrollDB.GetEmployee(empId);</span>
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        Affiliation af = e.GetAffiliation();
+<span class="w"> </span>        assertNotNull(af);
+<span class="w"> </span>        UnionAffiliation uf = (UnionAffiliation) af;
+<span class="w"> </span>        assertNotNull(uf);
+<span class="w"> </span>        assertEquals(99.42, uf.GetDues());
+<span class="gd">-        Employee member = PayrollDatabase.GetUnionMbember(memberId);</span>
+<span class="gi">+        Employee member = GlobalDatabase.payrollDB.GetUnionMember(memberId);</span>
+<span class="w"> </span>        assertNotNull(member);
+<span class="w"> </span>        assertEquals(e,member);
+<span class="w"> </span>    }
+</code></pre></div>
+<h2 id="ca7a48f">コミット: ca7a48f<a class="headerlink" href="#ca7a48f" title="Permanent link">&para;</a></h2>
+<h3 id="_8">メッセージ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与対象期間：設計上の問題
+・TestServiceChargesSpanningMultiplePayPeriods
+</code></pre></div>
+<h3 id="_9">変更されたファイル<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_10">変更内容<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit ca7a48fec2fe0517d3293b3b1b0204743202410e
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Mon Apr 10 13:19:19 2017 +0900
+
+<span class="w"> </span>   給与対象期間：設計上の問題
+
+<span class="w"> </span>   ・TestServiceChargesSpanningMultiplePayPeriods
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 29610d1..268e7b6 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -542,6 +542,38 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(8 * 15.24 - (9.42 + 19.42), pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testServiceChargesSpanningMultiplePayPeriods() {</span>
+<span class="gi">+        System.err.println(&quot;TestServiceChargesSpanningMultiplePayPeriods&quot;);</span>
+<span class="gi">+        int empId = 1;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.24);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        int memberId = 7734;</span>
+<span class="gi">+        ChangeMemberTransaction cmt = new ChangeMemberTransaction(empId, memberId, 9.42);</span>
+<span class="gi">+        cmt.Execute();</span>
+<span class="gi">+        Calendar earlyDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 2); // Previous</span>
+<span class="gi">+        // Friday</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        Calendar lateDate = new GregorianCalendar(2001, Calendar.DECEMBER, 16); // Next</span>
+<span class="gi">+        // Friday</span>
+<span class="gi">+        ServiceChargeTransaction sct = new ServiceChargeTransaction(memberId, payDate, 19.42);</span>
+<span class="gi">+        sct.Execute();</span>
+<span class="gi">+        ServiceChargeTransaction sctEarly = new ServiceChargeTransaction(memberId, earlyDate, 100.00);</span>
+<span class="gi">+        sctEarly.Execute();</span>
+<span class="gi">+        ServiceChargeTransaction sctLate = new ServiceChargeTransaction(memberId, lateDate, 200.00);</span>
+<span class="gi">+        sctLate.Execute();</span>
+<span class="gi">+        TimeCardTransaction tct = new TimeCardTransaction(payDate, 8.0, empId);</span>
+<span class="gi">+        tct.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        assertEquals(pc.GetPayPeriodEndDate(), payDate);</span>
+<span class="gi">+        assertEquals(8 * 15.24, pc.GetGrossPay());</span>
+<span class="gi">+        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));</span>
+<span class="gi">+        assertEquals(9.42 + 19.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(8 * 15.24 - (9.42 + 19.42), pc.GetNetPay());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="f74da67">コミット: f74da67<a class="headerlink" href="#f74da67" title="Permanent link">&para;</a></h2>
+<h3 id="_11">メッセージ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与対象期間：設計上の問題
+・TestHourlyUnionMemberServiceCharge
+</code></pre></div>
+<h3 id="_12">変更されたファイル<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_13">変更内容<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit f74da67f1f603d44ad60dcb27aecfb083b1dd5bd
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Mon Apr 10 13:03:20 2017 +0900
+
+<span class="w"> </span>   給与対象期間：設計上の問題
+
+<span class="w"> </span>   ・TestHourlyUnionMemberServiceCharge
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 9281adb..29610d1 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -518,6 +518,30 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(2500.0 - 2 * 9.42, pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testHourlyUnionMemberServiceCharge() {</span>
+<span class="gi">+        System.err.println(&quot;TestHourlyUnionMemberServiceCharge&quot;);</span>
+<span class="gi">+        int empId = 1;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.24);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        int memberId = 7734;</span>
+<span class="gi">+        ChangeMemberTransaction cmt = new ChangeMemberTransaction(empId, memberId, 9.42);</span>
+<span class="gi">+        cmt.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER,9);</span>
+<span class="gi">+        ServiceChargeTransaction sct = new ServiceChargeTransaction(memberId, payDate, 19.42);</span>
+<span class="gi">+        sct.Execute();</span>
+<span class="gi">+        TimeCardTransaction tct = new TimeCardTransaction(payDate,8.0,empId);</span>
+<span class="gi">+        tct.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        assertEquals(pc.GetPayPeriodEndDate(), payDate);</span>
+<span class="gi">+        assertEquals(8 * 15.24, pc.GetGrossPay());</span>
+<span class="gi">+        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));</span>
+<span class="gi">+        assertEquals(9.42 + 19.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(8 * 15.24 - (9.42 + 19.42), pc.GetNetPay());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="2019ea6">コミット: 2019ea6<a class="headerlink" href="#2019ea6" title="Permanent link">&para;</a></h2>
+<h3 id="_14">メッセージ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与対象期間：設計上の問題
+・TestCommissionedUnionMemberDues
+</code></pre></div>
+<h3 id="_15">変更されたファイル<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_16">変更内容<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 2019ea67d66a2ffaba69fa564f61dc08aad4908f
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Mon Apr 10 12:36:07 2017 +0900
+
+<span class="w"> </span>   給与対象期間：設計上の問題
+
+<span class="w"> </span>   ・TestCommissionedUnionMemberDues
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index a133e0f..9281adb 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -498,6 +498,26 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(8 * 15.24 - 9.42, pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testCommissionedUnionMemberDues() {</span>
+<span class="gi">+        System.err.println(&quot;TestCommissionedUnionMemberDues&quot;);</span>
+<span class="gi">+        int empId = 3;</span>
+<span class="gi">+        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500,.032);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        int memberId = 7734;</span>
+<span class="gi">+        ChangeMemberTransaction cmt = new ChangeMemberTransaction(empId, memberId, 9.42);</span>
+<span class="gi">+        cmt.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        assertEquals(pc.GetPayPeriodEndDate(),payDate);</span>
+<span class="gi">+        assertEquals(2500.0, pc.GetGrossPay());</span>
+<span class="gi">+        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));</span>
+<span class="gi">+        assertEquals(2 * 9.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(2500.0 - 2 * 9.42, pc.GetNetPay());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="b5f1d97">コミット: b5f1d97<a class="headerlink" href="#b5f1d97" title="Permanent link">&para;</a></h2>
+<h3 id="_17">メッセージ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与対象期間：設計上の問題
+・TestHourlyUnionMemberDues
+</code></pre></div>
+<h3 id="_18">変更されたファイル<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_19">変更内容<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit b5f1d97d2ac939707c32c035cc3b636d00b7f78f
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Mon Apr 10 12:26:13 2017 +0900
+
+<span class="w"> </span>   給与対象期間：設計上の問題
+
+<span class="w"> </span>   ・TestHourlyUnionMemberDues
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index a1722ff..a133e0f 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -476,6 +476,28 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertEquals(1000.0 - fridays * 9.42, pc.GetNetPay());
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testHourlyUnionMemberDues() {</span>
+<span class="gi">+        System.err.println(&quot;TestHourlyUnionMemberDues&quot;);</span>
+<span class="gi">+        int empId = 1;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;,&quot;Home&quot;,15.24);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        int memberId = 7734;</span>
+<span class="gi">+        ChangeMemberTransaction cmt = new ChangeMemberTransaction(empId,memberId,9.42);</span>
+<span class="gi">+        cmt.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        TimeCardTransaction tct = new TimeCardTransaction(payDate, 8.0, empId);</span>
+<span class="gi">+        tct.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        assertEquals(pc.GetPayPeriodEndDate(),payDate);</span>
+<span class="gi">+        assertEquals(8 * 15.24, pc.GetGrossPay());</span>
+<span class="gi">+        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));</span>
+<span class="gi">+        assertEquals(9.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(8 * 15.24 - 9.42, pc.GetNetPay());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="0898e36">コミット: 0898e36<a class="headerlink" href="#0898e36" title="Permanent link">&para;</a></h2>
+<h3 id="_20">メッセージ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>給与対象期間：設計上の問題
+・TestSalariedUnionMemberDues
+</code></pre></div>
+<h3 id="_21">変更されたファイル<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/main/java/Affiliation.java</li>
+<li>M src/main/java/NoAffiliation.java</li>
+<li>M src/main/java/ServiceCharge.java</li>
+<li>M src/main/java/ServiceChargeTransaction.java</li>
+<li>M src/main/java/UnionAffiliation.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_22">変更内容<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 0898e3637a612cc0dfd31658c17cd5dd19460305
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Mon Apr 10 12:01:40 2017 +0900
+
+<span class="w"> </span>   給与対象期間：設計上の問題
+
+<span class="w"> </span>   ・TestSalariedUnionMemberDues
+
+<span class="gh">diff --git a/src/main/java/Affiliation.java b/src/main/java/Affiliation.java</span>
+<span class="gh">index 10834b3..eccbbd8 100644</span>
+<span class="gd">--- a/src/main/java/Affiliation.java</span>
+<span class="gi">+++ b/src/main/java/Affiliation.java</span>
+<span class="gu">@@ -1,8 +1,10 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public interface Affiliation {
+<span class="gd">-    double GetServiceCharge(long date);</span>
+<span class="gi">+    double GetServiceCharge(Calendar date);</span>
+
+<span class="w"> </span>    double CalculateDeductions(Paycheck pc);
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/NoAffiliation.java b/src/main/java/NoAffiliation.java</span>
+<span class="gh">index c6263b3..6edc76f 100644</span>
+<span class="gd">--- a/src/main/java/NoAffiliation.java</span>
+<span class="gi">+++ b/src/main/java/NoAffiliation.java</span>
+<span class="gu">@@ -1,8 +1,10 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/07.
+<span class="w"> </span> */
+<span class="w"> </span>public class NoAffiliation implements Affiliation {
+<span class="gd">-    public double GetServiceCharge(long date) {</span>
+<span class="gi">+    public double GetServiceCharge(Calendar date) {</span>
+<span class="w"> </span>        return 0;
+<span class="w"> </span>    }
+
+<span class="gh">diff --git a/src/main/java/ServiceCharge.java b/src/main/java/ServiceCharge.java</span>
+<span class="gh">index 313a8c1..57bd559 100644</span>
+<span class="gd">--- a/src/main/java/ServiceCharge.java</span>
+<span class="gi">+++ b/src/main/java/ServiceCharge.java</span>
+<span class="gu">@@ -1,16 +1,18 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class ServiceCharge {
+<span class="gd">-    private long itsDate;</span>
+<span class="gi">+    private Calendar itsDate;</span>
+<span class="w"> </span>    private double itsAmount;
+
+<span class="gd">-    public ServiceCharge(long date, double amount) {</span>
+<span class="gi">+    public ServiceCharge(Calendar date, double amount) {</span>
+<span class="w"> </span>        itsDate = date;
+<span class="w"> </span>        itsAmount = amount;
+<span class="w"> </span>    }
+
+<span class="gd">-    public long GetDate() {</span>
+<span class="gi">+    public Calendar GetDate() {</span>
+<span class="w"> </span>        return itsDate;
+<span class="w"> </span>    }
+
+<span class="gh">diff --git a/src/main/java/ServiceChargeTransaction.java b/src/main/java/ServiceChargeTransaction.java</span>
+<span class="gh">index 058d09d..8612128 100644</span>
+<span class="gd">--- a/src/main/java/ServiceChargeTransaction.java</span>
+<span class="gi">+++ b/src/main/java/ServiceChargeTransaction.java</span>
+<span class="gu">@@ -1,12 +1,14 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class ServiceChargeTransaction implements Transaction {
+<span class="w"> </span>    private int itsMemberId;
+<span class="gd">-    private long itsDate;</span>
+<span class="gi">+    private Calendar itsDate;</span>
+<span class="w"> </span>    private double itsAmount;
+
+<span class="gd">-    public ServiceChargeTransaction(int memberId, long date, double amount) {</span>
+<span class="gi">+    public ServiceChargeTransaction(int memberId, Calendar date, double amount) {</span>
+<span class="w"> </span>        itsMemberId = memberId;
+<span class="w"> </span>        itsDate = date;
+<span class="w"> </span>        itsAmount = amount;
+<span class="gh">diff --git a/src/main/java/UnionAffiliation.java b/src/main/java/UnionAffiliation.java</span>
+<span class="gh">index f3d5de1..4a633a3 100644</span>
+<span class="gd">--- a/src/main/java/UnionAffiliation.java</span>
+<span class="gi">+++ b/src/main/java/UnionAffiliation.java</span>
+<span class="gu">@@ -1,3 +1,4 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gu">@@ -5,7 +6,7 @@ import java.util.Map;</span>
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class UnionAffiliation implements Affiliation {
+<span class="gd">-    private Map&lt;Long, ServiceCharge&gt; itsServiceCharges = new HashMap&lt;Long, ServiceCharge&gt;();</span>
+<span class="gi">+    private Map&lt;Calendar, ServiceCharge&gt; itsServiceCharges = new HashMap&lt;Calendar, ServiceCharge&gt;();</span>
+<span class="w"> </span>    private int itsMemberId;
+<span class="w"> </span>    private double itsDues;
+
+<span class="gu">@@ -18,7 +19,7 @@ public class UnionAffiliation implements Affiliation {</span>
+<span class="w"> </span>        itsDues = dues;
+<span class="w"> </span>    }
+
+<span class="gd">-    public double GetServiceCharge(long date) {</span>
+<span class="gi">+    public double GetServiceCharge(Calendar date) {</span>
+<span class="w"> </span>        if (itsServiceCharges.get(date) == null) {
+<span class="w"> </span>            return 0;
+<span class="w"> </span>        }
+<span class="gu">@@ -26,10 +27,32 @@ public class UnionAffiliation implements Affiliation {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public double CalculateDeductions(Paycheck pc) {
+<span class="gd">-        return 0;</span>
+<span class="gi">+        double totalServiceCharge = 0;</span>
+<span class="gi">+        double totalDues = 0;</span>
+<span class="gi">+        for (ServiceCharge sc : itsServiceCharges.values()) {</span>
+<span class="gi">+            if (Date.IsBetween(sc.GetDate(), pc.GetPayPeriodStartDate(),pc.GetPayPeriodEndDate())) {</span>
+<span class="gi">+                totalServiceCharge += sc.GetAmount();</span>
+<span class="gi">+            }</span>
+<span class="gi">+        }</span>
+<span class="gi">+        int fridays = NumberOfFridaysInPayPeriod(pc.GetPayPeriodStartDate(),pc.GetPayPeriodEndDate());</span>
+<span class="gi">+        totalDues = itsDues * fridays;</span>
+<span class="gi">+        return totalDues + totalServiceCharge;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    private int NumberOfFridaysInPayPeriod(Calendar payPeriodStart, Calendar payPeriodEnd) {</span>
+<span class="gi">+        int fridays = 0;</span>
+<span class="gi">+        Calendar cal = Calendar.getInstance();</span>
+<span class="gi">+        cal.setTime(payPeriodStart.getTime());</span>
+<span class="gi">+        while (cal.compareTo(payPeriodEnd) &lt;= 0) {</span>
+<span class="gi">+            if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY) {</span>
+<span class="gi">+                fridays++;</span>
+<span class="gi">+            }</span>
+<span class="gi">+            cal.add(Calendar.DATE,1);</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return fridays;</span>
+<span class="w"> </span>    }
+
+<span class="gd">-    public void AddServiceCharge(long date, double amount) {</span>
+<span class="gi">+    public void AddServiceCharge(Calendar date, double amount) {</span>
+<span class="w"> </span>        itsServiceCharges.put(date, new ServiceCharge(date, amount));
+<span class="w"> </span>    }
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index a7192f2..a1722ff 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -131,9 +131,9 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        e.SetAffiliation(af);
+<span class="w"> </span>        int memberId = 86;
+<span class="w"> </span>        PayrollDatabase.AddUnionMember(memberId,e);
+<span class="gd">-        ServiceChargeTransaction sct = new ServiceChargeTransaction(memberId, 20011031, 12.95);</span>
+<span class="gi">+        ServiceChargeTransaction sct = new ServiceChargeTransaction(memberId, date, 12.95);</span>
+<span class="w"> </span>        sct.Execute();
+<span class="gd">-        double sc = af.GetServiceCharge(20011031);</span>
+<span class="gi">+        double sc = af.GetServiceCharge(date);</span>
+<span class="w"> </span>        assertEquals(12.95, sc, .001);
+<span class="w"> </span>    }
+
+<span class="gu">@@ -455,6 +455,27 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId, payDate, 2500.0 + .032 * 13000);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testSalariedUnionMemberDues() {</span>
+<span class="gi">+        System.err.println(&quot;TestSalariedUnionMemberDues&quot;);</span>
+<span class="gi">+        int empId = 1;</span>
+<span class="gi">+        AddSalariedEmployee t = new AddSalariedEmployee(empId, &quot;Bob&quot;,&quot;Home&quot;,1000.0);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        int memberId = 7734;</span>
+<span class="gi">+        ChangeMemberTransaction cmt = new ChangeMemberTransaction(empId, memberId,9.42);</span>
+<span class="gi">+        cmt.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 30);</span>
+<span class="gi">+        int fridays = 5; // Fridays in Nov, 2001.</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNotNull(pc);</span>
+<span class="gi">+        assertEquals(pc.GetPayPeriodEndDate(), payDate);</span>
+<span class="gi">+        assertEquals(1000.0,pc.GetGrossPay());</span>
+<span class="gi">+        assertEquals(&quot;Hold&quot;, pc.GetField(&quot;Disposition&quot;));</span>
+<span class="gi">+        assertEquals(fridays * 9.42, pc.GetDeducations());</span>
+<span class="gi">+        assertEquals(1000.0 - fridays * 9.42, pc.GetNetPay());</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/k2works/case-study-payroll" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../docs/assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>

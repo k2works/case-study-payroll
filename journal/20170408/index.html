@@ -1,0 +1,1932 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Payroll Case Study project.">
+      
+      
+        <meta name="author" content="Project Team">
+      
+      
+      
+        <link rel="prev" href="../20170407/">
+      
+      
+        <link rel="next" href="../20170410/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>20170408 - Payroll Case Study</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../docs/mkdocs/assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2017-04-08" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Payroll Case Study" class="md-header__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Payroll Case Study
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20170408
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../specification/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  仕様
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../implementation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  実装
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../20170210/" class="md-tabs__link">
+          
+  
+  
+  履歴
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Payroll Case Study" class="md-nav__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Payroll Case Study
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    仕様
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    履歴
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            履歴
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170210/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170210
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170404/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170404
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170406/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170407/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170407
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    20170408
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170408
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1eeba72" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 1eeba72
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 1eeba72">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8cc386c" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 8cc386c
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 8cc386c">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fbc7c25" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: fbc7c25
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: fbc7c25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#05926e0" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 05926e0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 05926e0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c765f96" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: c765f96
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: c765f96">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6f1f55b" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 6f1f55b
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 6f1f55b">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b19e7a7" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: b19e7a7
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: b19e7a7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8fff22a" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 8fff22a
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 8fff22a">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f7b50bf" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: f7b50bf
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: f7b50bf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0978601" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 0978601
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 0978601">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170410/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170410
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170411/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170411
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170524/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170524
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2017-04-08">作業履歴 2017-04-08<a class="headerlink" href="#2017-04-08" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>2017-04-08の作業内容をまとめています。</p>
+<h2 id="1eeba72">コミット: 1eeba72<a class="headerlink" href="#1eeba72" title="Permanent link">&para;</a></h2>
+<h3 id="_2">メッセージ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・testPaySingleCommissionedEmployeeSpanMultiplePayPeriods
+</code></pre></div>
+<h3 id="_3">変更されたファイル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_4">変更内容<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 1eeba729e860fb187b35341f83f10d195deb382e
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 18:05:53 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・testPaySingleCommissionedEmployeeSpanMultiplePayPeriods
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index b83e077..a7192f2 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -431,6 +431,30 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId, payDate, 2500.0 + .032 * 13000 + .032 * 24000);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleCommissionedEmployeeSpanMultiplePayPeriods() {</span>
+<span class="gi">+        System.err.println(&quot;testPaySingleCommissionedEmployeeSpanMultiplePayPeriods&quot;);</span>
+<span class="gi">+        int empId = 3;</span>
+<span class="gi">+        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500, .032);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar earlyDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9); // Previous</span>
+<span class="gi">+        // pay</span>
+<span class="gi">+        // period</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 23); // Biweekly</span>
+<span class="gi">+        // Friday</span>
+<span class="gi">+        Calendar lateDate = new GregorianCalendar(2001, Calendar.DECEMBER, 7); // Next</span>
+<span class="gi">+        // pay</span>
+<span class="gi">+        // period</span>
+<span class="gi">+        SalesReceiptTransaction srt = new SalesReceiptTransaction(payDate, 13000, empId);</span>
+<span class="gi">+        srt.Execute();</span>
+<span class="gi">+        SalesReceiptTransaction srt2 = new SalesReceiptTransaction(earlyDate, 24000, empId);</span>
+<span class="gi">+        srt2.Execute();</span>
+<span class="gi">+        SalesReceiptTransaction srt3 = new SalesReceiptTransaction(lateDate, 15000, empId);</span>
+<span class="gi">+        srt3.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId, payDate, 2500.0 + .032 * 13000);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="8cc386c">コミット: 8cc386c<a class="headerlink" href="#8cc386c" title="Permanent link">&para;</a></h2>
+<h3 id="_5">メッセージ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleCommissionedEmployeeTwoSalesReceipts
+</code></pre></div>
+<h3 id="_6">変更されたファイル<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_7">変更内容<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 8cc386c5f7573089107f01ff0b4662eb903c84f8
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 17:39:06 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleCommissionedEmployeeTwoSalesReceipts
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 9e87749..b83e077 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -416,6 +416,21 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId, payDate, 2500.0 + .032 * 13000);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleCommissionedEmployeeTwoSalesReceipts() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleCommissionedEmployeeTwoSalesReceipts&quot;);</span>
+<span class="gi">+        int empId = 3;</span>
+<span class="gi">+        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500, .032);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        SalesReceiptTransaction srt = new SalesReceiptTransaction(payDate, 13000.0, empId);</span>
+<span class="gi">+        srt.Execute();</span>
+<span class="gi">+        SalesReceiptTransaction srt2 = new SalesReceiptTransaction(new GregorianCalendar(2001, Calendar.NOVEMBER, 8), 24000, empId);</span>
+<span class="gi">+        srt2.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId, payDate, 2500.0 + .032 * 13000 + .032 * 24000);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="fbc7c25">コミット: fbc7c25<a class="headerlink" href="#fbc7c25" title="Permanent link">&para;</a></h2>
+<h3 id="_8">メッセージ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleCommissionedEmployeeOneSalesReceipt
+</code></pre></div>
+<h3 id="_9">変更されたファイル<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_10">変更内容<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit fbc7c25c3c816644caf18490352aff217f6ba43b
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 17:32:46 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleCommissionedEmployeeOneSalesReceipt
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 3d39be9..9e87749 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -403,6 +403,19 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId, payDate, 2500.00);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleCommissionedEmployeeOneSalesReceipt() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleCommissionedEmployeeOneSalesReceipt&quot;);</span>
+<span class="gi">+        int empId = 3;</span>
+<span class="gi">+        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500, .032);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        SalesReceiptTransaction srt = new SalesReceiptTransaction(payDate, 13000.0, empId);</span>
+<span class="gi">+        srt.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId, payDate, 2500.0 + .032 * 13000);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="05926e0">コミット: 05926e0<a class="headerlink" href="#05926e0" title="Permanent link">&para;</a></h2>
+<h3 id="_11">メッセージ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleCommissionedEmployeeNoSalesReceipts
+</code></pre></div>
+<h3 id="_12">変更されたファイル<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/main/java/BiweeklySchedule.java</li>
+<li>M src/main/java/CommissionedClassification.java</li>
+<li>M src/main/java/SalesReceipt.java</li>
+<li>M src/main/java/SalesReceiptTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_13">変更内容<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 05926e06a06090808823863e0bdbdf276bc4a18e
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 17:27:24 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleCommissionedEmployeeNoSalesReceipts
+
+<span class="gh">diff --git a/src/main/java/BiweeklySchedule.java b/src/main/java/BiweeklySchedule.java</span>
+<span class="gh">index eaaa644..cbcab18 100644</span>
+<span class="gd">--- a/src/main/java/BiweeklySchedule.java</span>
+<span class="gi">+++ b/src/main/java/BiweeklySchedule.java</span>
+<span class="gu">@@ -1,14 +1,30 @@</span>
+<span class="w"> </span>import java.util.Calendar;
+<span class="gi">+import java.util.GregorianCalendar;</span>
+
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class BiweeklySchedule implements PaymentSchedule {
+<span class="gi">+    private final Calendar FIRST_PAYBALE_FRIDAY = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+</span>
+<span class="w"> </span>    public boolean IsPayDate(Calendar payDate) {
+<span class="gi">+        Calendar cal = Calendar.getInstance();</span>
+<span class="gi">+        if ((payDate.get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY)) {</span>
+<span class="gi">+            cal.setTime(FIRST_PAYBALE_FRIDAY.getTime());</span>
+<span class="gi">+            while (cal.compareTo(payDate) &lt;= 0) {</span>
+<span class="gi">+                if (cal.equals(payDate)) {</span>
+<span class="gi">+                    return true;</span>
+<span class="gi">+                }</span>
+<span class="gi">+                cal.add(Calendar.DATE, 14);</span>
+<span class="gi">+            }</span>
+<span class="gi">+        }</span>
+<span class="w"> </span>        return false;
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public Calendar GetPayPeriodStartDate(Calendar payDate) {
+<span class="gd">-        return null;</span>
+<span class="gi">+        Calendar payPeriodStartDate = Calendar.getInstance();</span>
+<span class="gi">+        payPeriodStartDate.setTime(payDate.getTime());</span>
+<span class="gi">+        payPeriodStartDate.add(Calendar.DATE, -13);</span>
+<span class="gi">+        return payPeriodStartDate;</span>
+<span class="w"> </span>    }
+<span class="gd">-}</span>
+<span class="gi">+}</span>
+\ No newline at end of file
+<span class="gh">diff --git a/src/main/java/CommissionedClassification.java b/src/main/java/CommissionedClassification.java</span>
+<span class="gh">index 081c1a3..774abd6 100644</span>
+<span class="gd">--- a/src/main/java/CommissionedClassification.java</span>
+<span class="gi">+++ b/src/main/java/CommissionedClassification.java</span>
+<span class="gu">@@ -1,3 +1,4 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gu">@@ -7,12 +8,12 @@ import java.util.Map;</span>
+<span class="w"> </span>public class CommissionedClassification implements PaymentClassification {
+<span class="w"> </span>    private double itsSalary;
+<span class="w"> </span>    private double itsCommissionRate;
+<span class="gd">-    private Map&lt;Long, SalesReceipt&gt; itsReceipts;</span>
+<span class="gi">+    private Map&lt;Calendar, SalesReceipt&gt; itsReceipts;</span>
+
+<span class="w"> </span>    public CommissionedClassification(double salary, double commissionRate) {
+<span class="w"> </span>        itsSalary = salary;
+<span class="w"> </span>        itsCommissionRate = commissionRate;
+<span class="gd">-        itsReceipts = new HashMap&lt;Long, SalesReceipt&gt;();</span>
+<span class="gi">+        itsReceipts = new HashMap&lt;Calendar, SalesReceipt&gt;();</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public double GetSalary() {
+<span class="gu">@@ -27,11 +28,17 @@ public class CommissionedClassification implements PaymentClassification {</span>
+<span class="w"> </span>        itsReceipts.put(sr.GetSaleDate(),sr);
+<span class="w"> </span>    }
+
+<span class="gd">-    public SalesReceipt GetReceipt(long date) {</span>
+<span class="gi">+    public SalesReceipt GetReceipt(Calendar date) {</span>
+<span class="w"> </span>        return itsReceipts.get(date);
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public double CalculatePay(Paycheck pc) {
+<span class="gd">-        return 0;</span>
+<span class="gi">+        double commission = 0.0;</span>
+<span class="gi">+        for (SalesReceipt receipt : itsReceipts.values()) {</span>
+<span class="gi">+            if (Date.IsBetween(receipt.GetSaleDate(), pc.GetPayPeriodStartDate(),pc.GetPayPeriodEndDate())) {</span>
+<span class="gi">+                commission += receipt.GetAmount() * itsCommissionRate;</span>
+<span class="gi">+            }</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return itsSalary + commission;</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/SalesReceipt.java b/src/main/java/SalesReceipt.java</span>
+<span class="gh">index 84bb661..b62a8f3 100644</span>
+<span class="gd">--- a/src/main/java/SalesReceipt.java</span>
+<span class="gi">+++ b/src/main/java/SalesReceipt.java</span>
+<span class="gu">@@ -1,16 +1,18 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class SalesReceipt {
+<span class="gd">-    private long itsSaleDate;</span>
+<span class="gi">+    private Calendar itsSaleDate;</span>
+<span class="w"> </span>    private double itsAmount;
+
+<span class="gd">-    public SalesReceipt(long saleDate, double amount) {</span>
+<span class="gi">+    public SalesReceipt(Calendar saleDate, double amount) {</span>
+<span class="w"> </span>        itsSaleDate = saleDate;
+<span class="w"> </span>        itsAmount = amount;
+<span class="w"> </span>    }
+
+<span class="gd">-    public long GetSaleDate() {</span>
+<span class="gi">+    public Calendar GetSaleDate() {</span>
+<span class="w"> </span>        return itsSaleDate;
+<span class="w"> </span>    }
+
+<span class="gh">diff --git a/src/main/java/SalesReceiptTransaction.java b/src/main/java/SalesReceiptTransaction.java</span>
+<span class="gh">index f69596f..d747197 100644</span>
+<span class="gd">--- a/src/main/java/SalesReceiptTransaction.java</span>
+<span class="gi">+++ b/src/main/java/SalesReceiptTransaction.java</span>
+<span class="gu">@@ -1,12 +1,14 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class SalesReceiptTransaction implements Transaction {
+<span class="gd">-    private long itsSaleDate;</span>
+<span class="gi">+    private Calendar itsSaleDate;</span>
+<span class="w"> </span>    private double itsAmount;
+<span class="w"> </span>    private int itsEmpId;
+
+<span class="gd">-    public SalesReceiptTransaction(long saleDate, double amount, int empId) {</span>
+<span class="gi">+    public SalesReceiptTransaction(Calendar saleDate, double amount, int empId) {</span>
+<span class="w"> </span>        itsSaleDate = saleDate;
+<span class="w"> </span>        itsAmount = amount;
+<span class="w"> </span>        itsEmpId = empId;
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index ee33092..3d39be9 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -104,14 +104,15 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        int empId = 3;
+<span class="w"> </span>        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500, 3.2);
+<span class="w"> </span>        t.Execute();
+<span class="gd">-        SalesReceiptTransaction srt = new SalesReceiptTransaction(20011112, 25000, empId);</span>
+<span class="gi">+        Calendar date = new GregorianCalendar(2001, Calendar.NOVEMBER, 12);</span>
+<span class="gi">+        SalesReceiptTransaction srt = new SalesReceiptTransaction(date, 25000, empId);</span>
+<span class="w"> </span>        srt.Execute();
+<span class="w"> </span>        Employee e = PayrollDatabase.GetEmployee(empId);
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>        CommissionedClassification cc = (CommissionedClassification) pc;
+<span class="w"> </span>        assertNotNull(cc);
+<span class="gd">-        SalesReceipt receipt = cc.GetReceipt(20011112);</span>
+<span class="gi">+        SalesReceipt receipt = cc.GetReceipt(date);</span>
+<span class="w"> </span>        assertNotNull(receipt);
+<span class="w"> </span>        assertEquals(25000.0, receipt.GetAmount());
+<span class="w"> </span>    }
+<span class="gu">@@ -391,6 +392,16 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId, payDate, 2 * 15.25);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleCommissionedEmployeeNoSalesReceipts() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleCommissionedEmployeeNoSalesReceipts&quot;);</span>
+<span class="gi">+        int empId = 3;</span>
+<span class="gi">+        AddCommissionedEmployee t = new AddCommissionedEmployee(empId, &quot;Lance&quot;, &quot;Home&quot;, 2500, 3.2);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId, payDate, 2500.00);</span>
+<span class="gi">+    }</span>
+
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+</code></pre></div>
+<h2 id="c765f96">コミット: c765f96<a class="headerlink" href="#c765f96" title="Permanent link">&para;</a></h2>
+<h3 id="_14">メッセージ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleHourlyEmployeeWithTimeCardsSpanningTwoPayPeriods
+</code></pre></div>
+<h3 id="_15">変更されたファイル<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_16">変更内容<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit c765f96a5ee79ada518344b948b0e0e749955e1b
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 16:31:47 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleHourlyEmployeeWithTimeCardsSpanningTwoPayPeriods
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 83842da..ee33092 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -375,6 +375,22 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId,payDate,7 * 15.25);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleHourlyEmployeeWithTimeCardsSpanningTwoPayPeriods() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleHourlyEmployeeWithTimeCardsSpanningTwoPayPeriods&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;,&quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        Calendar dateInPreviousPayPeriod = new GregorianCalendar(2001, Calendar.NOVEMBER, 2);</span>
+<span class="gi">+        TimeCardTransaction tc = new TimeCardTransaction(payDate, 2.0 ,empId);</span>
+<span class="gi">+        tc.Execute();</span>
+<span class="gi">+        TimeCardTransaction tc2 = new TimeCardTransaction(dateInPreviousPayPeriod,5.0, empId);</span>
+<span class="gi">+        tc2.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId, payDate, 2 * 15.25);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+</code></pre></div>
+<h2 id="6f1f55b">コミット: 6f1f55b<a class="headerlink" href="#6f1f55b" title="Permanent link">&para;</a></h2>
+<h3 id="_17">メッセージ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleHourlyEmployeeTwoTimeCards
+</code></pre></div>
+<h3 id="_18">変更されたファイル<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_19">変更内容<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 6f1f55b10f363b646b7ce100bf1a5d56f1978ae2
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 16:21:09 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleHourlyEmployeeTwoTimeCards
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index daa4dd8..83842da 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -360,6 +360,22 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertNull(pc);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleHourlyEmployeeTwoTimeCards() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleHourlyEmployeeTwoTimeCards&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        TimeCardTransaction tc = new TimeCardTransaction(payDate, 2.0, empId);</span>
+<span class="gi">+        tc.Execute();</span>
+<span class="gi">+        TimeCardTransaction tc2 = new TimeCardTransaction(new GregorianCalendar(2001, Calendar.NOVEMBER,8), 5.0, empId);</span>
+<span class="gi">+        tc2.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId,payDate,7 * 15.25);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="b19e7a7">コミット: b19e7a7<a class="headerlink" href="#b19e7a7" title="Permanent link">&para;</a></h2>
+<h3 id="_20">メッセージ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleHourlyEmployeeOnWrongDate
+</code></pre></div>
+<h3 id="_21">変更されたファイル<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_22">変更内容<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit b19e7a75d701e826ac8fa3bd4489382899780ff2
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 15:49:02 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleHourlyEmployeeOnWrongDate
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index b32d176..daa4dd8 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -346,6 +346,20 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt,empId,payDate,(8 + 1.5) * 15.25);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleHourlyEmployeeOnWrongDate() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleHourlyEmployeeOnWrongDate&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 8);</span>
+<span class="gi">+        TimeCardTransaction tc = new TimeCardTransaction(payDate, 9.0, empId);</span>
+<span class="gi">+        tc.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        Paycheck pc = pt.GetPaycheck(empId);</span>
+<span class="gi">+        assertNull(pc);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="8fff22a">コミット: 8fff22a<a class="headerlink" href="#8fff22a" title="Permanent link">&para;</a></h2>
+<h3 id="_23">メッセージ<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleHourlyEmployeeOvertimeOneTimeCard
+</code></pre></div>
+<h3 id="_24">変更されたファイル<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_25">変更内容<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 8fff22a60bae4f4881bf9629e571b1937c518f26
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 15:39:20 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleHourlyEmployeeOvertimeOneTimeCard
+
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 651d354..b32d176 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -333,6 +333,19 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt,empId,payDate,30.5);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleHourlyEmployeeOvertimeOneTimeCard() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleHourlyEmployeeOvertimeOneTimeCard&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId,&quot;Bill&quot;,&quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        TimeCardTransaction tc = new TimeCardTransaction(payDate,9.0, empId);</span>
+<span class="gi">+        tc.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt,empId,payDate,(8 + 1.5) * 15.25);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="f7b50bf">コミット: f7b50bf<a class="headerlink" href="#f7b50bf" title="Permanent link">&para;</a></h2>
+<h3 id="_26">メッセージ<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleHourlyEmployeeOneTimeCard
+</code></pre></div>
+<h3 id="_27">変更されたファイル<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A src/main/java/Date.java</li>
+<li>M src/main/java/HourlyClassification.java</li>
+<li>M src/main/java/Paycheck.java</li>
+<li>M src/main/java/TimeCard.java</li>
+<li>M src/main/java/TimeCardTransaction.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_28">変更内容<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit f7b50bffed658f082505af8f8ddb4bd8a6b76a1c
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 15:22:03 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleHourlyEmployeeOneTimeCard
+
+<span class="gh">diff --git a/src/main/java/Date.java b/src/main/java/Date.java</span>
+new file mode 100644
+<span class="gh">index 0000000..51f2774</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/src/main/java/Date.java</span>
+<span class="gu">@@ -0,0 +1,16 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+import java.util.GregorianCalendar;</span>
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Created by k2works on 2017/04/08.</span>
+<span class="gi">+ */</span>
+<span class="gi">+public class Date extends GregorianCalendar {</span>
+<span class="gi">+    private static final long serialVersionUID = 2317114430827648749L;</span>
+<span class="gi">+</span>
+<span class="gi">+    public static boolean IsBetween(Calendar theDate, Calendar startDate, Calendar endDate) {</span>
+<span class="gi">+        if (0 &lt;= theDate.compareTo(startDate) &amp;&amp; theDate.compareTo(endDate) &lt;= 0) {</span>
+<span class="gi">+            return true;</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return false;</span>
+<span class="gi">+    }</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/src/main/java/HourlyClassification.java b/src/main/java/HourlyClassification.java</span>
+<span class="gh">index a2e0678..3df6f8d 100644</span>
+<span class="gd">--- a/src/main/java/HourlyClassification.java</span>
+<span class="gi">+++ b/src/main/java/HourlyClassification.java</span>
+<span class="gu">@@ -1,3 +1,4 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="w"> </span>import java.util.HashMap;
+<span class="w"> </span>import java.util.Map;
+
+<span class="gu">@@ -5,11 +6,11 @@ import java.util.Map;</span>
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class HourlyClassification implements  PaymentClassification {
+<span class="gd">-    private Map&lt;Long, TimeCard&gt; itsTimeCards;</span>
+<span class="gi">+    private Map&lt;Calendar, TimeCard&gt; itsTimeCards;</span>
+<span class="w"> </span>    private double itsHourlyRate;
+
+<span class="w"> </span>    public HourlyClassification(double hourlyRate) {
+<span class="gd">-        itsTimeCards = new HashMap&lt;Long, TimeCard&gt;();</span>
+<span class="gi">+        itsTimeCards = new HashMap&lt;Calendar, TimeCard&gt;();</span>
+<span class="w"> </span>        itsHourlyRate = hourlyRate;
+<span class="w"> </span>    }
+
+<span class="gu">@@ -17,7 +18,7 @@ public class HourlyClassification implements  PaymentClassification {</span>
+<span class="w"> </span>        return itsHourlyRate;
+<span class="w"> </span>    }
+
+<span class="gd">-    public TimeCard GetTimeCard(long date) {</span>
+<span class="gi">+    public TimeCard GetTimeCard(Calendar date) {</span>
+<span class="w"> </span>        return itsTimeCards.get(date);
+<span class="w"> </span>    }
+
+<span class="gu">@@ -26,6 +27,16 @@ public class HourlyClassification implements  PaymentClassification {</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public double CalculatePay(Paycheck pc) {
+<span class="gd">-        return 0;</span>
+<span class="gi">+        double totalPay = 0;</span>
+<span class="gi">+        for (TimeCard tc : itsTimeCards.values()) {</span>
+<span class="gi">+            if (Date.IsBetween(tc.GetDate(), pc.GetPayPeriodStartDate(),pc.GetPayPeriodEndDate())) {</span>
+<span class="gi">+                if(8 &lt; tc.GetHours()) {</span>
+<span class="gi">+                    totalPay += itsHourlyRate * 8 + itsHourlyRate * (tc.GetHours() - 8) * 1.5;</span>
+<span class="gi">+                } else {</span>
+<span class="gi">+                    totalPay += itsHourlyRate * tc.GetHours();</span>
+<span class="gi">+                }</span>
+<span class="gi">+            }</span>
+<span class="gi">+        }</span>
+<span class="gi">+        return totalPay;</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/main/java/Paycheck.java b/src/main/java/Paycheck.java</span>
+<span class="gh">index c59838d..4681770 100644</span>
+<span class="gd">--- a/src/main/java/Paycheck.java</span>
+<span class="gi">+++ b/src/main/java/Paycheck.java</span>
+<span class="gu">@@ -27,6 +27,10 @@ public class Paycheck {</span>
+<span class="w"> </span>        itsNetPay = netPay;
+<span class="w"> </span>    }
+
+<span class="gi">+    public Calendar GetPayPeriodStartDate() {</span>
+<span class="gi">+        return itsPayPeriodStartDate;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    public Calendar GetPayPeriodEndDate() {
+<span class="w"> </span>        return itsPayPeriodEndDate;
+<span class="w"> </span>    }
+<span class="gh">diff --git a/src/main/java/TimeCard.java b/src/main/java/TimeCard.java</span>
+<span class="gh">index b95b0ed..3ed238c 100644</span>
+<span class="gd">--- a/src/main/java/TimeCard.java</span>
+<span class="gi">+++ b/src/main/java/TimeCard.java</span>
+<span class="gu">@@ -1,16 +1,18 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class TimeCard {
+<span class="gd">-    private long itsDate;</span>
+<span class="gi">+    private Calendar itsDate;</span>
+<span class="w"> </span>    private double itsHours;
+
+<span class="gd">-    public TimeCard(long date, double hours) {</span>
+<span class="gi">+    public TimeCard(Calendar date, double hours) {</span>
+<span class="w"> </span>        itsDate = date;
+<span class="w"> </span>        itsHours = hours;
+<span class="w"> </span>    }
+
+<span class="gd">-    public long GetDate() {</span>
+<span class="gi">+    public Calendar GetDate() {</span>
+<span class="w"> </span>        return itsDate;
+<span class="w"> </span>    }
+
+<span class="gh">diff --git a/src/main/java/TimeCardTransaction.java b/src/main/java/TimeCardTransaction.java</span>
+<span class="gh">index 268d20d..81e5568 100644</span>
+<span class="gd">--- a/src/main/java/TimeCardTransaction.java</span>
+<span class="gi">+++ b/src/main/java/TimeCardTransaction.java</span>
+<span class="gu">@@ -1,12 +1,14 @@</span>
+<span class="gi">+import java.util.Calendar;</span>
+<span class="gi">+</span>
+<span class="w"> </span>/**
+<span class="w"> </span> * Created by k2works on 2017/04/06.
+<span class="w"> </span> */
+<span class="w"> </span>public class TimeCardTransaction implements Transaction {
+<span class="gd">-    private long itsDate;</span>
+<span class="gi">+    private Calendar itsDate;</span>
+<span class="w"> </span>    private double itsHours;
+<span class="w"> </span>    private int itsEmpId;
+
+<span class="gd">-    public TimeCardTransaction(long date, double hours, int empId) {</span>
+<span class="gi">+    public TimeCardTransaction(Calendar date, double hours, int empId) {</span>
+<span class="w"> </span>        itsDate = date;
+<span class="w"> </span>        itsHours = hours;
+<span class="w"> </span>        itsEmpId = empId;
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 2c02c29..651d354 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -86,14 +86,15 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        int empId = 2;
+<span class="w"> </span>        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;, &quot;Home&quot;, 15.25);
+<span class="w"> </span>        t.Execute();
+<span class="gd">-        TimeCardTransaction tct = new TimeCardTransaction(20011031,8.0,empId);</span>
+<span class="gi">+        Calendar date = new GregorianCalendar(2001, Calendar.OCTOBER, 31);</span>
+<span class="gi">+        TimeCardTransaction tct = new TimeCardTransaction(date,8.0,empId);</span>
+<span class="w"> </span>        tct.Execute();
+<span class="w"> </span>        Employee e = PayrollDatabase.GetEmployee(empId);
+<span class="w"> </span>        assertNotNull(e);
+<span class="w"> </span>        PaymentClassification pc = e.GetClassification();
+<span class="w"> </span>        HourlyClassification hc = (HourlyClassification) pc;
+<span class="w"> </span>        assertNotNull(hc);
+<span class="gd">-        TimeCard tc = hc.GetTimeCard(20011031);</span>
+<span class="gi">+        TimeCard tc = hc.GetTimeCard(date);</span>
+<span class="w"> </span>        assertNotNull(tc);
+<span class="w"> </span>        assertEquals(8.0, tc.GetHours());
+<span class="w"> </span>    }
+<span class="gu">@@ -120,7 +121,8 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        int empId = 2;
+<span class="w"> </span>        AddHourlyEmployee t = new AddHourlyEmployee(empId, &quot;Bill&quot;,&quot;Home&quot;,15.25);
+<span class="w"> </span>        t.Execute();
+<span class="gd">-        TimeCardTransaction tct = new TimeCardTransaction(20011031,8.0, empId);</span>
+<span class="gi">+        Calendar date = new GregorianCalendar(2001, Calendar.OCTOBER, 31);</span>
+<span class="gi">+        TimeCardTransaction tct = new TimeCardTransaction(date,8.0, empId);</span>
+<span class="w"> </span>        tct.Execute();
+<span class="w"> </span>        Employee e = PayrollDatabase.GetEmployee(empId);
+<span class="w"> </span>        assertNotNull(e);
+<span class="gu">@@ -318,6 +320,19 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        ValidatePaycheck(pt, empId, payDate, 0.0);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleHourlyEmployeeOneTimeCard() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleHourlyEmployeeOneTimeCard&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId,&quot;Bill&quot;,&quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        TimeCardTransaction tc = new TimeCardTransaction(payDate, 2.0, empId);</span>
+<span class="gi">+        tc.Execute();</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt,empId,payDate,30.5);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+<h2 id="0978601">コミット: 0978601<a class="headerlink" href="#0978601" title="Permanent link">&para;</a></h2>
+<h3 id="_29">メッセージ<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>時間給の従業員の給与
+・TestPaySingleHourlyEmployeeNoTimeCards
+</code></pre></div>
+<h3 id="_30">変更されたファイル<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<ul>
+<li>M src/main/java/WeeklySchedule.java</li>
+<li>M src/test/java/TestPayroll.java</li>
+</ul>
+<h3 id="_31">変更内容<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 09786018ce4ffb04a1ac9f3ce3b0e966ab2cef73
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Sat Apr 8 14:36:07 2017 +0900
+
+<span class="w"> </span>   時間給の従業員の給与
+
+<span class="w"> </span>   ・TestPaySingleHourlyEmployeeNoTimeCards
+
+<span class="gh">diff --git a/src/main/java/WeeklySchedule.java b/src/main/java/WeeklySchedule.java</span>
+<span class="gh">index 26bec68..64e19f2 100644</span>
+<span class="gd">--- a/src/main/java/WeeklySchedule.java</span>
+<span class="gi">+++ b/src/main/java/WeeklySchedule.java</span>
+<span class="gu">@@ -5,10 +5,13 @@ import java.util.Calendar;</span>
+<span class="w"> </span> */
+<span class="w"> </span>public class WeeklySchedule implements PaymentSchedule {
+<span class="w"> </span>    public boolean IsPayDate(Calendar payDate) {
+<span class="gd">-        return false;</span>
+<span class="gi">+        return (payDate.get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY);</span>
+<span class="w"> </span>    }
+
+<span class="w"> </span>    public Calendar GetPayPeriodStartDate(Calendar payDate) {
+<span class="gd">-        return null;</span>
+<span class="gi">+        Calendar payPeriodStartDate = Calendar.getInstance();</span>
+<span class="gi">+        payPeriodStartDate.setTime(payDate.getTime());</span>
+<span class="gi">+        payPeriodStartDate.add(Calendar.DATE, -6);</span>
+<span class="gi">+        return payPeriodStartDate;</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="gh">diff --git a/src/test/java/TestPayroll.java b/src/test/java/TestPayroll.java</span>
+<span class="gh">index 1885821..2c02c29 100644</span>
+<span class="gd">--- a/src/test/java/TestPayroll.java</span>
+<span class="gi">+++ b/src/test/java/TestPayroll.java</span>
+<span class="gu">@@ -307,6 +307,17 @@ public class TestPayroll extends TestCase{</span>
+<span class="w"> </span>        assertNull(pc);
+<span class="w"> </span>    }
+
+<span class="gi">+    public void testPaySingleHourlyEmployeeNoTimeCards() {</span>
+<span class="gi">+        System.err.println(&quot;TestPaySingleHourlyEmployeeNoTimeCards&quot;);</span>
+<span class="gi">+        int empId = 2;</span>
+<span class="gi">+        AddHourlyEmployee t = new AddHourlyEmployee(empId,&quot;Bill&quot;,&quot;Home&quot;,15.25);</span>
+<span class="gi">+        t.Execute();</span>
+<span class="gi">+        Calendar payDate = new GregorianCalendar(2001, Calendar.NOVEMBER, 9);</span>
+<span class="gi">+        PaydayTransaction pt = new PaydayTransaction(payDate);</span>
+<span class="gi">+        pt.Execute();</span>
+<span class="gi">+        ValidatePaycheck(pt, empId, payDate, 0.0);</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="w"> </span>    private void ValidatePaycheck(PaydayTransaction pt, int empId, Calendar payDate, double pay) {
+<span class="w"> </span>        Paycheck pc = pt.GetPaycheck(empId);
+<span class="w"> </span>        assertNotNull(pc);
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/k2works/case-study-payroll" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../docs/assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>

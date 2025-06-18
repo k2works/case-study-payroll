@@ -1,0 +1,14 @@
+@startuml
+actor Manager
+
+Manager -> CommissionedClassification: CalculatePay
+Manager -> CommissionedClassification: Date
+loop for each sale receipt
+    activate CommissionedClassification
+      CommissionedClassification -> SalesReceipt: GetAmount
+      CommissionedClassification <- SalesReceipt: amount
+      CommissionedClassification -> SalesReceipt: GetDate
+      CommissionedClassification <- SalesReceipt: date
+    deactivate CommissionedClassification
+end
+@enduml

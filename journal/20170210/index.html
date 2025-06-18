@@ -1,0 +1,1507 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Payroll Case Study project.">
+      
+      
+        <meta name="author" content="Project Team">
+      
+      
+      
+        <link rel="prev" href="../../implementation/">
+      
+      
+        <link rel="next" href="../20170404/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>20170210 - Payroll Case Study</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../docs/mkdocs/assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2017-02-10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Payroll Case Study" class="md-header__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Payroll Case Study
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20170210
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../specification/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  仕様
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../implementation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  実装
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  履歴
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Payroll Case Study" class="md-nav__button md-logo" aria-label="Payroll Case Study" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Payroll Case Study
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/k2works/case-study-payroll" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    case-study-payroll
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    仕様
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    履歴
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            履歴
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    20170210
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170210
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4dd83db" class="md-nav__link">
+    <span class="md-ellipsis">
+      コミット: 4dd83db
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コミット: 4dd83db">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッセージ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更されたファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170404/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170404
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170406/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170407/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170407
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170408/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170408
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170410/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170410
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170411/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170411
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20170524/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20170524
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2017-02-10">作業履歴 2017-02-10<a class="headerlink" href="#2017-02-10" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>2017-02-10の作業内容をまとめています。</p>
+<h2 id="4dd83db">コミット: 4dd83db<a class="headerlink" href="#4dd83db" title="Permanent link">&para;</a></h2>
+<h3 id="_2">メッセージ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Initial Setup
+</code></pre></div>
+<h3 id="_3">変更されたファイル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A .gitignore</li>
+<li>A .idea/compiler.xml</li>
+<li>A .idea/misc.xml</li>
+<li>A .idea/modules.xml</li>
+<li>A .idea/modules/etude-op10-no8.iml</li>
+<li>A .idea/modules/etude-op10-no8_main.iml</li>
+<li>A .idea/modules/etude-op10-no8_test.iml</li>
+<li>A .idea/vcs.xml</li>
+<li>A Dockerfile</li>
+<li>A README.md</li>
+<li>A Vagrantfile</li>
+<li>A build.gradle</li>
+<li>A docker-compose.yml</li>
+<li>A gradle/wrapper/gradle-wrapper.properties</li>
+<li>A gradlew</li>
+<li>A gradlew.bat</li>
+<li>A settings.gradle</li>
+<li>A src/main/java/.keep</li>
+<li>A src/main/resources/.keep</li>
+<li>A src/test/java/.keep</li>
+<li>A src/test/resources/.keep</li>
+</ul>
+<h3 id="_4">変更内容<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>commit 4dd83db62698d0d347a35c5a5da0cb81e6e3eb6c
+Author: k2works &lt;kakimomokuri@gmail.com&gt;
+Date:   Fri Feb 10 12:04:08 2017 +0900
+
+<span class="w"> </span>   Initial Setup
+
+<span class="gh">diff --git a/.gitignore b/.gitignore</span>
+new file mode 100644
+<span class="gh">index 0000000..b5698b9</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.gitignore</span>
+<span class="gu">@@ -0,0 +1,78 @@</span>
+<span class="gi">+# Created by .ignore support plugin (hsz.mobi)</span>
+<span class="gi">+### JetBrains template</span>
+<span class="gi">+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm</span>
+<span class="gi">+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839</span>
+<span class="gi">+</span>
+<span class="gi">+# User-specific stuff:</span>
+<span class="gi">+.idea/workspace.xml</span>
+<span class="gi">+.idea/tasks.xml</span>
+<span class="gi">+</span>
+<span class="gi">+# Sensitive or high-churn files:</span>
+<span class="gi">+.idea/dataSources/</span>
+<span class="gi">+.idea/dataSources.ids</span>
+<span class="gi">+.idea/dataSources.xml</span>
+<span class="gi">+.idea/dataSources.local.xml</span>
+<span class="gi">+.idea/sqlDataSources.xml</span>
+<span class="gi">+.idea/dynamic.xml</span>
+<span class="gi">+.idea/uiDesigner.xml</span>
+<span class="gi">+</span>
+<span class="gi">+# Gradle:</span>
+<span class="gi">+.idea/gradle.xml</span>
+<span class="gi">+.idea/libraries</span>
+<span class="gi">+</span>
+<span class="gi">+# Mongo Explorer plugin:</span>
+<span class="gi">+.idea/mongoSettings.xml</span>
+<span class="gi">+</span>
+<span class="gi">+## File-based project format:</span>
+<span class="gi">+*.iws</span>
+<span class="gi">+</span>
+<span class="gi">+## Plugin-specific files:</span>
+<span class="gi">+</span>
+<span class="gi">+# IntelliJ</span>
+<span class="gi">+/out/</span>
+<span class="gi">+</span>
+<span class="gi">+# mpeltonen/sbt-idea plugin</span>
+<span class="gi">+.idea_modules/</span>
+<span class="gi">+</span>
+<span class="gi">+# JIRA plugin</span>
+<span class="gi">+atlassian-ide-plugin.xml</span>
+<span class="gi">+</span>
+<span class="gi">+# Crashlytics plugin (for Android Studio and IntelliJ)</span>
+<span class="gi">+com_crashlytics_export_strings.xml</span>
+<span class="gi">+crashlytics.properties</span>
+<span class="gi">+crashlytics-build.properties</span>
+<span class="gi">+fabric.properties</span>
+<span class="gi">+### Vagrant template</span>
+<span class="gi">+.vagrant/</span>
+<span class="gi">+### Gradle template</span>
+<span class="gi">+.gradle</span>
+<span class="gi">+/build/</span>
+<span class="gi">+</span>
+<span class="gi">+# Ignore Gradle GUI config</span>
+<span class="gi">+gradle-app.setting</span>
+<span class="gi">+</span>
+<span class="gi">+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)</span>
+<span class="gi">+!gradle-wrapper.jar</span>
+<span class="gi">+</span>
+<span class="gi">+# Cache of project</span>
+<span class="gi">+.gradletasknamecache</span>
+<span class="gi">+</span>
+<span class="gi">+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898</span>
+<span class="gi">+# gradle/wrapper/gradle-wrapper.properties</span>
+<span class="gi">+### Java template</span>
+<span class="gi">+*.class</span>
+<span class="gi">+</span>
+<span class="gi">+# BlueJ files</span>
+<span class="gi">+*.ctxt</span>
+<span class="gi">+</span>
+<span class="gi">+# Mobile Tools for Java (J2ME)</span>
+<span class="gi">+.mtj.tmp/</span>
+<span class="gi">+</span>
+<span class="gi">+# Package Files #</span>
+<span class="gi">+*.jar</span>
+<span class="gi">+*.war</span>
+<span class="gi">+*.ear</span>
+<span class="gi">+</span>
+<span class="gi">+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml</span>
+<span class="gi">+hs_err_pid*</span>
+<span class="gi">+</span>
+<span class="gh">diff --git a/.idea/compiler.xml b/.idea/compiler.xml</span>
+new file mode 100644
+<span class="gh">index 0000000..90670ec</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.idea/compiler.xml</span>
+<span class="gu">@@ -0,0 +1,9 @@</span>
+<span class="gi">+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="gi">+&lt;project version=&quot;4&quot;&gt;</span>
+<span class="gi">+  &lt;component name=&quot;CompilerConfiguration&quot;&gt;</span>
+<span class="gi">+    &lt;bytecodeTargetLevel&gt;</span>
+<span class="gi">+      &lt;module name=&quot;etude-op10-no8_main&quot; target=&quot;1.5&quot; /&gt;</span>
+<span class="gi">+      &lt;module name=&quot;etude-op10-no8_test&quot; target=&quot;1.5&quot; /&gt;</span>
+<span class="gi">+    &lt;/bytecodeTargetLevel&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+&lt;/project&gt;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/.idea/misc.xml b/.idea/misc.xml</span>
+new file mode 100644
+<span class="gh">index 0000000..b5c6ea5</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.idea/misc.xml</span>
+<span class="gu">@@ -0,0 +1,95 @@</span>
+<span class="gi">+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="gi">+&lt;project version=&quot;4&quot;&gt;</span>
+<span class="gi">+  &lt;component name=&quot;ClientPropertiesManager&quot;&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.AbstractButton&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;hideActionText&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JComponent&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;html.disable&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JEditorPane&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;JEditorPane.w3cLengthUnits&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+      &lt;property name=&quot;JEditorPane.honorDisplayProperties&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+      &lt;property name=&quot;charset&quot; class=&quot;java.lang.String&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JList&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;List.isFileList&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JPasswordField&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;JPasswordField.cutCopyAllowed&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JSlider&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;Slider.paintThumbArrowShape&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+      &lt;property name=&quot;JSlider.isFilled&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JTable&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;Table.isFileList&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+      &lt;property name=&quot;JTable.autoStartsEdit&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+      &lt;property name=&quot;terminateEditOnFocusLost&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JToolBar&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;JToolBar.isRollover&quot; class=&quot;java.lang.Boolean&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.JTree&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;JTree.lineStyle&quot; class=&quot;java.lang.String&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+    &lt;properties class=&quot;javax.swing.text.JTextComponent&quot;&gt;</span>
+<span class="gi">+      &lt;property name=&quot;caretAspectRatio&quot; class=&quot;java.lang.Double&quot; /&gt;</span>
+<span class="gi">+      &lt;property name=&quot;caretWidth&quot; class=&quot;java.lang.Integer&quot; /&gt;</span>
+<span class="gi">+    &lt;/properties&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+  &lt;component name=&quot;ProjectRootManager&quot; version=&quot;2&quot; languageLevel=&quot;JDK_1_8&quot; default=&quot;true&quot; project-jdk-name=&quot;1.8&quot; project-jdk-type=&quot;JavaSDK&quot;&gt;</span>
+<span class="gi">+    &lt;output url=&quot;file://$PROJECT_DIR$/out&quot; /&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+  &lt;component name=&quot;masterDetails&quot;&gt;</span>
+<span class="gi">+    &lt;states&gt;</span>
+<span class="gi">+      &lt;state key=&quot;GlobalLibrariesConfigurable.UI&quot;&gt;</span>
+<span class="gi">+        &lt;settings&gt;</span>
+<span class="gi">+          &lt;last-edited&gt;actionmailer (v3.2.13, rbenv: 2.1.10) [gem]&lt;/last-edited&gt;</span>
+<span class="gi">+          &lt;splitter-proportions&gt;</span>
+<span class="gi">+            &lt;option name=&quot;proportions&quot;&gt;</span>
+<span class="gi">+              &lt;list&gt;</span>
+<span class="gi">+                &lt;option value=&quot;0.2&quot; /&gt;</span>
+<span class="gi">+              &lt;/list&gt;</span>
+<span class="gi">+            &lt;/option&gt;</span>
+<span class="gi">+          &lt;/splitter-proportions&gt;</span>
+<span class="gi">+        &lt;/settings&gt;</span>
+<span class="gi">+      &lt;/state&gt;</span>
+<span class="gi">+      &lt;state key=&quot;JdkListConfigurable.UI&quot;&gt;</span>
+<span class="gi">+        &lt;settings&gt;</span>
+<span class="gi">+          &lt;last-edited&gt;rbenv: 2.1.2&lt;/last-edited&gt;</span>
+<span class="gi">+          &lt;splitter-proportions&gt;</span>
+<span class="gi">+            &lt;option name=&quot;proportions&quot;&gt;</span>
+<span class="gi">+              &lt;list&gt;</span>
+<span class="gi">+                &lt;option value=&quot;0.2&quot; /&gt;</span>
+<span class="gi">+              &lt;/list&gt;</span>
+<span class="gi">+            &lt;/option&gt;</span>
+<span class="gi">+          &lt;/splitter-proportions&gt;</span>
+<span class="gi">+        &lt;/settings&gt;</span>
+<span class="gi">+      &lt;/state&gt;</span>
+<span class="gi">+      &lt;state key=&quot;ProjectJDKs.UI&quot;&gt;</span>
+<span class="gi">+        &lt;settings&gt;</span>
+<span class="gi">+          &lt;last-edited&gt;1.8&lt;/last-edited&gt;</span>
+<span class="gi">+          &lt;splitter-proportions&gt;</span>
+<span class="gi">+            &lt;option name=&quot;proportions&quot;&gt;</span>
+<span class="gi">+              &lt;list&gt;</span>
+<span class="gi">+                &lt;option value=&quot;0.2&quot; /&gt;</span>
+<span class="gi">+              &lt;/list&gt;</span>
+<span class="gi">+            &lt;/option&gt;</span>
+<span class="gi">+          &lt;/splitter-proportions&gt;</span>
+<span class="gi">+        &lt;/settings&gt;</span>
+<span class="gi">+      &lt;/state&gt;</span>
+<span class="gi">+      &lt;state key=&quot;ProjectLibrariesConfigurable.UI&quot;&gt;</span>
+<span class="gi">+        &lt;settings&gt;</span>
+<span class="gi">+          &lt;splitter-proportions&gt;</span>
+<span class="gi">+            &lt;option name=&quot;proportions&quot;&gt;</span>
+<span class="gi">+              &lt;list&gt;</span>
+<span class="gi">+                &lt;option value=&quot;0.2&quot; /&gt;</span>
+<span class="gi">+              &lt;/list&gt;</span>
+<span class="gi">+            &lt;/option&gt;</span>
+<span class="gi">+          &lt;/splitter-proportions&gt;</span>
+<span class="gi">+        &lt;/settings&gt;</span>
+<span class="gi">+      &lt;/state&gt;</span>
+<span class="gi">+    &lt;/states&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+&lt;/project&gt;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/.idea/modules.xml b/.idea/modules.xml</span>
+new file mode 100644
+<span class="gh">index 0000000..6f59531</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.idea/modules.xml</span>
+<span class="gu">@@ -0,0 +1,10 @@</span>
+<span class="gi">+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="gi">+&lt;project version=&quot;4&quot;&gt;</span>
+<span class="gi">+  &lt;component name=&quot;ProjectModuleManager&quot;&gt;</span>
+<span class="gi">+    &lt;modules&gt;</span>
+<span class="gi">+      &lt;module fileurl=&quot;file://$PROJECT_DIR$/.idea/modules/etude-op10-no8.iml&quot; filepath=&quot;$PROJECT_DIR$/.idea/modules/etude-op10-no8.iml&quot; /&gt;</span>
+<span class="gi">+      &lt;module fileurl=&quot;file://$PROJECT_DIR$/.idea/modules/etude-op10-no8_main.iml&quot; filepath=&quot;$PROJECT_DIR$/.idea/modules/etude-op10-no8_main.iml&quot; group=&quot;etude-op10-no8&quot; /&gt;</span>
+<span class="gi">+      &lt;module fileurl=&quot;file://$PROJECT_DIR$/.idea/modules/etude-op10-no8_test.iml&quot; filepath=&quot;$PROJECT_DIR$/.idea/modules/etude-op10-no8_test.iml&quot; group=&quot;etude-op10-no8&quot; /&gt;</span>
+<span class="gi">+    &lt;/modules&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+&lt;/project&gt;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/.idea/modules/etude-op10-no8.iml b/.idea/modules/etude-op10-no8.iml</span>
+new file mode 100644
+<span class="gh">index 0000000..d148552</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.idea/modules/etude-op10-no8.iml</span>
+<span class="gu">@@ -0,0 +1,12 @@</span>
+<span class="gi">+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="gi">+&lt;module external.linked.project.id=&quot;etude-op10-no8&quot; external.linked.project.path=&quot;$MODULE_DIR$/../..&quot; external.root.project.path=&quot;$MODULE_DIR$/../..&quot; external.system.id=&quot;GRADLE&quot; external.system.module.group=&quot;io.github.k2works&quot; external.system.module.version=&quot;1.0-SNAPSHOT&quot; type=&quot;JAVA_MODULE&quot; version=&quot;4&quot;&gt;</span>
+<span class="gi">+  &lt;component name=&quot;NewModuleRootManager&quot; inherit-compiler-output=&quot;true&quot;&gt;</span>
+<span class="gi">+    &lt;exclude-output /&gt;</span>
+<span class="gi">+    &lt;content url=&quot;file://$MODULE_DIR$/../..&quot;&gt;</span>
+<span class="gi">+      &lt;excludeFolder url=&quot;file://$MODULE_DIR$/../../.gradle&quot; /&gt;</span>
+<span class="gi">+      &lt;excludeFolder url=&quot;file://$MODULE_DIR$/../../build&quot; /&gt;</span>
+<span class="gi">+    &lt;/content&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;inheritedJdk&quot; /&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;sourceFolder&quot; forTests=&quot;false&quot; /&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+&lt;/module&gt;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/.idea/modules/etude-op10-no8_main.iml b/.idea/modules/etude-op10-no8_main.iml</span>
+new file mode 100644
+<span class="gh">index 0000000..56b7636</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.idea/modules/etude-op10-no8_main.iml</span>
+<span class="gu">@@ -0,0 +1,13 @@</span>
+<span class="gi">+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="gi">+&lt;module external.linked.project.id=&quot;etude-op10-no8:main&quot; external.linked.project.path=&quot;$MODULE_DIR$/../..&quot; external.root.project.path=&quot;$MODULE_DIR$/../..&quot; external.system.id=&quot;GRADLE&quot; external.system.module.group=&quot;io.github.k2works&quot; external.system.module.type=&quot;sourceSet&quot; external.system.module.version=&quot;1.0-SNAPSHOT&quot; type=&quot;JAVA_MODULE&quot; version=&quot;4&quot;&gt;</span>
+<span class="gi">+  &lt;component name=&quot;NewModuleRootManager&quot; LANGUAGE_LEVEL=&quot;JDK_1_5&quot; inherit-compiler-output=&quot;false&quot;&gt;</span>
+<span class="gi">+    &lt;output url=&quot;file://$MODULE_DIR$/../../build/classes/main&quot; /&gt;</span>
+<span class="gi">+    &lt;exclude-output /&gt;</span>
+<span class="gi">+    &lt;content url=&quot;file://$MODULE_DIR$/../../src/main&quot;&gt;</span>
+<span class="gi">+      &lt;sourceFolder url=&quot;file://$MODULE_DIR$/../../src/main/java&quot; isTestSource=&quot;false&quot; /&gt;</span>
+<span class="gi">+      &lt;sourceFolder url=&quot;file://$MODULE_DIR$/../../src/main/resources&quot; type=&quot;java-resource&quot; /&gt;</span>
+<span class="gi">+    &lt;/content&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;inheritedJdk&quot; /&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;sourceFolder&quot; forTests=&quot;false&quot; /&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+&lt;/module&gt;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/.idea/modules/etude-op10-no8_test.iml b/.idea/modules/etude-op10-no8_test.iml</span>
+new file mode 100644
+<span class="gh">index 0000000..616174c</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.idea/modules/etude-op10-no8_test.iml</span>
+<span class="gu">@@ -0,0 +1,17 @@</span>
+<span class="gi">+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="gi">+&lt;module external.linked.project.id=&quot;etude-op10-no8:test&quot; external.linked.project.path=&quot;$MODULE_DIR$/../..&quot; external.root.project.path=&quot;$MODULE_DIR$/../..&quot; external.system.id=&quot;GRADLE&quot; external.system.module.group=&quot;io.github.k2works&quot; external.system.module.type=&quot;sourceSet&quot; external.system.module.version=&quot;1.0-SNAPSHOT&quot; type=&quot;JAVA_MODULE&quot; version=&quot;4&quot;&gt;</span>
+<span class="gi">+  &lt;component name=&quot;NewModuleRootManager&quot; LANGUAGE_LEVEL=&quot;JDK_1_5&quot; inherit-compiler-output=&quot;false&quot;&gt;</span>
+<span class="gi">+    &lt;output-test url=&quot;file://$MODULE_DIR$/../../build/classes/test&quot; /&gt;</span>
+<span class="gi">+    &lt;exclude-output /&gt;</span>
+<span class="gi">+    &lt;content url=&quot;file://$MODULE_DIR$/../../src/test&quot;&gt;</span>
+<span class="gi">+      &lt;sourceFolder url=&quot;file://$MODULE_DIR$/../../src/test/java&quot; isTestSource=&quot;true&quot; /&gt;</span>
+<span class="gi">+      &lt;sourceFolder url=&quot;file://$MODULE_DIR$/../../src/test/resources&quot; type=&quot;java-test-resource&quot; /&gt;</span>
+<span class="gi">+    &lt;/content&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;inheritedJdk&quot; /&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;sourceFolder&quot; forTests=&quot;false&quot; /&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;module&quot; module-name=&quot;etude-op10-no8_main&quot; /&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;library&quot; name=&quot;Gradle: junit:junit:4.11&quot; level=&quot;project&quot; /&gt;</span>
+<span class="gi">+    &lt;orderEntry type=&quot;library&quot; name=&quot;Gradle: org.hamcrest:hamcrest-core:1.3&quot; level=&quot;project&quot; /&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+  &lt;component name=&quot;TestModuleProperties&quot; production-module=&quot;etude-op10-no8_main&quot; /&gt;</span>
+<span class="gi">+&lt;/module&gt;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/.idea/vcs.xml b/.idea/vcs.xml</span>
+new file mode 100644
+<span class="gh">index 0000000..35eb1dd</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/.idea/vcs.xml</span>
+<span class="gu">@@ -0,0 +1,6 @@</span>
+<span class="gi">+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="gi">+&lt;project version=&quot;4&quot;&gt;</span>
+<span class="gi">+  &lt;component name=&quot;VcsDirectoryMappings&quot;&gt;</span>
+<span class="gi">+    &lt;mapping directory=&quot;&quot; vcs=&quot;Git&quot; /&gt;</span>
+<span class="gi">+  &lt;/component&gt;</span>
+<span class="gi">+&lt;/project&gt;</span>
+\ No newline at end of file
+<span class="gh">diff --git a/Dockerfile b/Dockerfile</span>
+new file mode 100644
+<span class="gh">index 0000000..0efa7ca</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/Dockerfile</span>
+<span class="gu">@@ -0,0 +1,8 @@</span>
+<span class="gi">+FROM java:8</span>
+<span class="gi">+ADD . /code</span>
+<span class="gi">+WORKDIR /code</span>
+<span class="gi">+RUN apt-get update</span>
+<span class="gi">+RUN apt-get install zip -y</span>
+<span class="gi">+RUN curl -s https://get.sdkman.io | bash</span>
+<span class="gi">+RUN /bin/bash -c &quot;source /root/.sdkman/bin/sdkman-init.sh&quot;</span>
+<span class="gi">+RUN sdk install gradle 3.3</span>
+\ No newline at end of file
+<span class="gh">diff --git a/README.md b/README.md</span>
+new file mode 100644
+<span class="gh">index 0000000..092ac60</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/README.md</span>
+<span class="gu">@@ -0,0 +1,30 @@</span>
+<span class="gi">+# etude-op-10-no-8</span>
+<span class="gi">+===================</span>
+<span class="gi">+</span>
+<span class="gi">+# 目的 #</span>
+<span class="gi">+給与システムのケーススタディ</span>
+<span class="gi">+</span>
+<span class="gi">+# 前提 #</span>
+<span class="gi">+| ソフトウェア   | バージョン   | 備考        |</span>
+<span class="gi">+|:---------------|:-------------|:------------|</span>
+<span class="gi">+| java           |1.8.0    |             |</span>
+<span class="gi">+| vagrant        |1.8.7    |             |</span>
+<span class="gi">+| docker         |1.12.5    |             |</span>
+<span class="gi">+| docker-compose |1.8.0    |             |</span>
+<span class="gi">+</span>
+<span class="gi">+# 構成 #</span>
+<span class="gi">+1. [アプリケーション環境](#環境)</span>
+<span class="gi">+1. [アプリケーション開発](#開発)</span>
+<span class="gi">+1. [アプリケーション配置](#配置)</span>
+<span class="gi">+</span>
+<span class="gi">+## アプリケーション環境</span>
+<span class="gi">+**[⬆ back to top](#構成)**</span>
+<span class="gi">+</span>
+<span class="gi">+## アプリケーション開発</span>
+<span class="gi">+**[⬆ back to top](#構成)**</span>
+<span class="gi">+</span>
+<span class="gi">+## アプリケーション配置</span>
+<span class="gi">+**[⬆ back to top](#構成)**</span>
+<span class="gi">+</span>
+<span class="gi">+# 参照 #</span>
+<span class="gi">++ [アジャイルソフトウェア開発の奥義 第2版 オブジェクト指向開発の神髄と匠の技](https://www.amazon.co.jp/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E3%81%AE%E5%A5%A5%E7%BE%A9-%E7%AC%AC2%E7%89%88-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E9%96%8B%E7%99%BA%E3%81%AE%E7%A5%9E%E9%AB%84%E3%81%A8%E5%8C%A0%E3%81%AE%E6%8A%80-%E3%83%AD%E3%83%90%E3%83%BC%E3%83%88%E3%83%BBC%E3%83%BB%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3/dp/4797347783)</span>
+\ No newline at end of file
+<span class="gh">diff --git a/Vagrantfile b/Vagrantfile</span>
+new file mode 100644
+<span class="gh">index 0000000..e633f03</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/Vagrantfile</span>
+<span class="gu">@@ -0,0 +1,16 @@</span>
+<span class="gi">+# -*- mode: ruby -*-</span>
+<span class="gi">+# vi: set ft=ruby :</span>
+<span class="gi">+</span>
+<span class="gi">+Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="gi">+  config.vm.box = &quot;hiroshima-arc/black_russian&quot;</span>
+<span class="gi">+  config.vm.box_version = &quot;0.1.0&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+  config.vm.network :forwarded_port, guest:8080, host:8080, id:&quot;jenkins&quot;</span>
+<span class="gi">+  config.vm.network :forwarded_port, guest:3000, host:3000, id:&quot;java&quot;</span>
+<span class="gi">+  config.vm.network :private_network, ip:&quot;192.168.30.1&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+  config.vm.provider :virtualbox do |vb|</span>
+<span class="gi">+    vb.customize [&quot;modifyvm&quot;, :id, &quot;--natdnsproxy1&quot;, &quot;on&quot;]</span>
+<span class="gi">+    vb.customize [&quot;modifyvm&quot;, :id, &quot;--natdnshostresolver1&quot;, &quot;on&quot;]</span>
+<span class="gi">+  end</span>
+<span class="gi">+end</span>
+<span class="gh">diff --git a/build.gradle b/build.gradle</span>
+new file mode 100644
+<span class="gh">index 0000000..573bb79</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/build.gradle</span>
+<span class="gu">@@ -0,0 +1,14 @@</span>
+<span class="gi">+group &#39;io.github.k2works&#39;</span>
+<span class="gi">+version &#39;1.0-SNAPSHOT&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+apply plugin: &#39;java&#39;</span>
+<span class="gi">+</span>
+<span class="gi">+sourceCompatibility = 1.5</span>
+<span class="gi">+</span>
+<span class="gi">+repositories {</span>
+<span class="gi">+    mavenCentral()</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gi">+dependencies {</span>
+<span class="gi">+    testCompile group: &#39;junit&#39;, name: &#39;junit&#39;, version: &#39;4.11&#39;</span>
+<span class="gi">+}</span>
+<span class="gh">diff --git a/docker-compose.yml b/docker-compose.yml</span>
+new file mode 100644
+<span class="gh">index 0000000..29102d3</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/docker-compose.yml</span>
+<span class="gu">@@ -0,0 +1,8 @@</span>
+<span class="gi">+version: &#39;2&#39;</span>
+<span class="gi">+services:</span>
+<span class="gi">+  app:</span>
+<span class="gi">+    build: .</span>
+<span class="gi">+    ports:</span>
+<span class="gi">+     - &quot;3000:3000&quot;</span>
+<span class="gi">+    volumes:</span>
+<span class="gi">+     - .:/code</span>
+\ No newline at end of file
+<span class="gh">diff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties</span>
+new file mode 100644
+<span class="gh">index 0000000..80ae99b</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/gradle/wrapper/gradle-wrapper.properties</span>
+<span class="gu">@@ -0,0 +1,6 @@</span>
+<span class="gi">+#Fri Feb 10 11:54:27 JST 2017</span>
+<span class="gi">+distributionBase=GRADLE_USER_HOME</span>
+<span class="gi">+distributionPath=wrapper/dists</span>
+<span class="gi">+zipStoreBase=GRADLE_USER_HOME</span>
+<span class="gi">+zipStorePath=wrapper/dists</span>
+<span class="gi">+distributionUrl=https\://services.gradle.org/distributions/gradle-3.1-bin.zip</span>
+<span class="gh">diff --git a/gradlew b/gradlew</span>
+new file mode 100755
+<span class="gh">index 0000000..9aa616c</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/gradlew</span>
+<span class="gu">@@ -0,0 +1,169 @@</span>
+<span class="gi">+#!/usr/bin/env bash</span>
+<span class="gi">+</span>
+<span class="gi">+##############################################################################</span>
+<span class="gi">+##</span>
+<span class="gi">+##  Gradle start up script for UN*X</span>
+<span class="gi">+##</span>
+<span class="gi">+##############################################################################</span>
+<span class="gi">+</span>
+<span class="gi">+# Attempt to set APP_HOME</span>
+<span class="gi">+# Resolve links: $0 may be a link</span>
+<span class="gi">+PRG=&quot;$0&quot;</span>
+<span class="gi">+# Need this for relative symlinks.</span>
+<span class="gi">+while [ -h &quot;$PRG&quot; ] ; do</span>
+<span class="gi">+    ls=`ls -ld &quot;$PRG&quot;`</span>
+<span class="gi">+    link=`expr &quot;$ls&quot; : &#39;.*-&gt; \(.*\)$&#39;`</span>
+<span class="gi">+    if expr &quot;$link&quot; : &#39;/.*&#39; &gt; /dev/null; then</span>
+<span class="gi">+        PRG=&quot;$link&quot;</span>
+<span class="gi">+    else</span>
+<span class="gi">+        PRG=`dirname &quot;$PRG&quot;`&quot;/$link&quot;</span>
+<span class="gi">+    fi</span>
+<span class="gi">+done</span>
+<span class="gi">+SAVED=&quot;`pwd`&quot;</span>
+<span class="gi">+cd &quot;`dirname \&quot;$PRG\&quot;`/&quot; &gt;/dev/null</span>
+<span class="gi">+APP_HOME=&quot;`pwd -P`&quot;</span>
+<span class="gi">+cd &quot;$SAVED&quot; &gt;/dev/null</span>
+<span class="gi">+</span>
+<span class="gi">+APP_NAME=&quot;Gradle&quot;</span>
+<span class="gi">+APP_BASE_NAME=`basename &quot;$0&quot;`</span>
+<span class="gi">+</span>
+<span class="gi">+# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.</span>
+<span class="gi">+DEFAULT_JVM_OPTS=&quot;&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+# Use the maximum available, or set MAX_FD != -1 to use that value.</span>
+<span class="gi">+MAX_FD=&quot;maximum&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+warn ( ) {</span>
+<span class="gi">+    echo &quot;$*&quot;</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gi">+die ( ) {</span>
+<span class="gi">+    echo</span>
+<span class="gi">+    echo &quot;$*&quot;</span>
+<span class="gi">+    echo</span>
+<span class="gi">+    exit 1</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gi">+# OS specific support (must be &#39;true&#39; or &#39;false&#39;).</span>
+<span class="gi">+cygwin=false</span>
+<span class="gi">+msys=false</span>
+<span class="gi">+darwin=false</span>
+<span class="gi">+nonstop=false</span>
+<span class="gi">+case &quot;`uname`&quot; in</span>
+<span class="gi">+  CYGWIN* )</span>
+<span class="gi">+    cygwin=true</span>
+<span class="gi">+    ;;</span>
+<span class="gi">+  Darwin* )</span>
+<span class="gi">+    darwin=true</span>
+<span class="gi">+    ;;</span>
+<span class="gi">+  MINGW* )</span>
+<span class="gi">+    msys=true</span>
+<span class="gi">+    ;;</span>
+<span class="gi">+  NONSTOP* )</span>
+<span class="gi">+    nonstop=true</span>
+<span class="gi">+    ;;</span>
+<span class="gi">+esac</span>
+<span class="gi">+</span>
+<span class="gi">+CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar</span>
+<span class="gi">+</span>
+<span class="gi">+# Determine the Java command to use to start the JVM.</span>
+<span class="gi">+if [ -n &quot;$JAVA_HOME&quot; ] ; then</span>
+<span class="gi">+    if [ -x &quot;$JAVA_HOME/jre/sh/java&quot; ] ; then</span>
+<span class="gi">+        # IBM&#39;s JDK on AIX uses strange locations for the executables</span>
+<span class="gi">+        JAVACMD=&quot;$JAVA_HOME/jre/sh/java&quot;</span>
+<span class="gi">+    else</span>
+<span class="gi">+        JAVACMD=&quot;$JAVA_HOME/bin/java&quot;</span>
+<span class="gi">+    fi</span>
+<span class="gi">+    if [ ! -x &quot;$JAVACMD&quot; ] ; then</span>
+<span class="gi">+        die &quot;ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME</span>
+<span class="gi">+</span>
+<span class="gi">+Please set the JAVA_HOME variable in your environment to match the</span>
+<span class="gi">+location of your Java installation.&quot;</span>
+<span class="gi">+    fi</span>
+<span class="gi">+else</span>
+<span class="gi">+    JAVACMD=&quot;java&quot;</span>
+<span class="gi">+    which java &gt;/dev/null 2&gt;&amp;1 || die &quot;ERROR: JAVA_HOME is not set and no &#39;java&#39; command could be found in your PATH.</span>
+<span class="gi">+</span>
+<span class="gi">+Please set the JAVA_HOME variable in your environment to match the</span>
+<span class="gi">+location of your Java installation.&quot;</span>
+<span class="gi">+fi</span>
+<span class="gi">+</span>
+<span class="gi">+# Increase the maximum file descriptors if we can.</span>
+<span class="gi">+if [ &quot;$cygwin&quot; = &quot;false&quot; -a &quot;$darwin&quot; = &quot;false&quot; -a &quot;$nonstop&quot; = &quot;false&quot; ] ; then</span>
+<span class="gi">+    MAX_FD_LIMIT=`ulimit -H -n`</span>
+<span class="gi">+    if [ $? -eq 0 ] ; then</span>
+<span class="gi">+        if [ &quot;$MAX_FD&quot; = &quot;maximum&quot; -o &quot;$MAX_FD&quot; = &quot;max&quot; ] ; then</span>
+<span class="gi">+            MAX_FD=&quot;$MAX_FD_LIMIT&quot;</span>
+<span class="gi">+        fi</span>
+<span class="gi">+        ulimit -n $MAX_FD</span>
+<span class="gi">+        if [ $? -ne 0 ] ; then</span>
+<span class="gi">+            warn &quot;Could not set maximum file descriptor limit: $MAX_FD&quot;</span>
+<span class="gi">+        fi</span>
+<span class="gi">+    else</span>
+<span class="gi">+        warn &quot;Could not query maximum file descriptor limit: $MAX_FD_LIMIT&quot;</span>
+<span class="gi">+    fi</span>
+<span class="gi">+fi</span>
+<span class="gi">+</span>
+<span class="gi">+# For Darwin, add options to specify how the application appears in the dock</span>
+<span class="gi">+if $darwin; then</span>
+<span class="gi">+    GRADLE_OPTS=&quot;$GRADLE_OPTS \&quot;-Xdock:name=$APP_NAME\&quot; \&quot;-Xdock:icon=$APP_HOME/media/gradle.icns\&quot;&quot;</span>
+<span class="gi">+fi</span>
+<span class="gi">+</span>
+<span class="gi">+# For Cygwin, switch paths to Windows format before running java</span>
+<span class="gi">+if $cygwin ; then</span>
+<span class="gi">+    APP_HOME=`cygpath --path --mixed &quot;$APP_HOME&quot;`</span>
+<span class="gi">+    CLASSPATH=`cygpath --path --mixed &quot;$CLASSPATH&quot;`</span>
+<span class="gi">+    JAVACMD=`cygpath --unix &quot;$JAVACMD&quot;`</span>
+<span class="gi">+</span>
+<span class="gi">+    # We build the pattern for arguments to be converted via cygpath</span>
+<span class="gi">+    ROOTDIRSRAW=`find -L / -maxdepth 1 -mindepth 1 -type d 2&gt;/dev/null`</span>
+<span class="gi">+    SEP=&quot;&quot;</span>
+<span class="gi">+    for dir in $ROOTDIRSRAW ; do</span>
+<span class="gi">+        ROOTDIRS=&quot;$ROOTDIRS$SEP$dir&quot;</span>
+<span class="gi">+        SEP=&quot;|&quot;</span>
+<span class="gi">+    done</span>
+<span class="gi">+    OURCYGPATTERN=&quot;(^($ROOTDIRS))&quot;</span>
+<span class="gi">+    # Add a user-defined pattern to the cygpath arguments</span>
+<span class="gi">+    if [ &quot;$GRADLE_CYGPATTERN&quot; != &quot;&quot; ] ; then</span>
+<span class="gi">+        OURCYGPATTERN=&quot;$OURCYGPATTERN|($GRADLE_CYGPATTERN)&quot;</span>
+<span class="gi">+    fi</span>
+<span class="gi">+    # Now convert the arguments - kludge to limit ourselves to /bin/sh</span>
+<span class="gi">+    i=0</span>
+<span class="gi">+    for arg in &quot;$@&quot; ; do</span>
+<span class="gi">+        CHECK=`echo &quot;$arg&quot;|egrep -c &quot;$OURCYGPATTERN&quot; -`</span>
+<span class="gi">+        CHECK2=`echo &quot;$arg&quot;|egrep -c &quot;^-&quot;`                                 ### Determine if an option</span>
+<span class="gi">+</span>
+<span class="gi">+        if [ $CHECK -ne 0 ] &amp;&amp; [ $CHECK2 -eq 0 ] ; then                    ### Added a condition</span>
+<span class="gi">+            eval `echo args$i`=`cygpath --path --ignore --mixed &quot;$arg&quot;`</span>
+<span class="gi">+        else</span>
+<span class="gi">+            eval `echo args$i`=&quot;\&quot;$arg\&quot;&quot;</span>
+<span class="gi">+        fi</span>
+<span class="gi">+        i=$((i+1))</span>
+<span class="gi">+    done</span>
+<span class="gi">+    case $i in</span>
+<span class="gi">+        (0) set -- ;;</span>
+<span class="gi">+        (1) set -- &quot;$args0&quot; ;;</span>
+<span class="gi">+        (2) set -- &quot;$args0&quot; &quot;$args1&quot; ;;</span>
+<span class="gi">+        (3) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; ;;</span>
+<span class="gi">+        (4) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; ;;</span>
+<span class="gi">+        (5) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; ;;</span>
+<span class="gi">+        (6) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; ;;</span>
+<span class="gi">+        (7) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; &quot;$args6&quot; ;;</span>
+<span class="gi">+        (8) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; &quot;$args6&quot; &quot;$args7&quot; ;;</span>
+<span class="gi">+        (9) set -- &quot;$args0&quot; &quot;$args1&quot; &quot;$args2&quot; &quot;$args3&quot; &quot;$args4&quot; &quot;$args5&quot; &quot;$args6&quot; &quot;$args7&quot; &quot;$args8&quot; ;;</span>
+<span class="gi">+    esac</span>
+<span class="gi">+fi</span>
+<span class="gi">+</span>
+<span class="gi">+# Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules</span>
+<span class="gi">+function splitJvmOpts() {</span>
+<span class="gi">+    JVM_OPTS=(&quot;$@&quot;)</span>
+<span class="gi">+}</span>
+<span class="gi">+eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS</span>
+<span class="gi">+JVM_OPTS[${#JVM_OPTS[*]}]=&quot;-Dorg.gradle.appname=$APP_BASE_NAME&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+# by default we should be in the correct project dir, but when run from Finder on Mac, the cwd is wrong</span>
+<span class="gi">+if [[ &quot;$(uname)&quot; == &quot;Darwin&quot; ]] &amp;&amp; [[ &quot;$HOME&quot; == &quot;$PWD&quot; ]]; then</span>
+<span class="gi">+  cd &quot;$(dirname &quot;$0&quot;)&quot;</span>
+<span class="gi">+fi</span>
+<span class="gi">+</span>
+<span class="gi">+exec &quot;$JAVACMD&quot; &quot;${JVM_OPTS[@]}&quot; -classpath &quot;$CLASSPATH&quot; org.gradle.wrapper.GradleWrapperMain &quot;$@&quot;</span>
+<span class="gh">diff --git a/gradlew.bat b/gradlew.bat</span>
+new file mode 100644
+<span class="gh">index 0000000..e95643d</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/gradlew.bat</span>
+<span class="gu">@@ -0,0 +1,84 @@</span>
+<span class="gi">+@if &quot;%DEBUG%&quot; == &quot;&quot; @echo off</span>
+<span class="gi">+@rem ##########################################################################</span>
+<span class="gi">+@rem</span>
+<span class="gi">+@rem  Gradle startup script for Windows</span>
+<span class="gi">+@rem</span>
+<span class="gi">+@rem ##########################################################################</span>
+<span class="gi">+</span>
+<span class="gi">+@rem Set local scope for the variables with windows NT shell</span>
+<span class="gi">+if &quot;%OS%&quot;==&quot;Windows_NT&quot; setlocal</span>
+<span class="gi">+</span>
+<span class="gi">+set DIRNAME=%~dp0</span>
+<span class="gi">+if &quot;%DIRNAME%&quot; == &quot;&quot; set DIRNAME=.</span>
+<span class="gi">+set APP_BASE_NAME=%~n0</span>
+<span class="gi">+set APP_HOME=%DIRNAME%</span>
+<span class="gi">+</span>
+<span class="gi">+@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.</span>
+<span class="gi">+set DEFAULT_JVM_OPTS=</span>
+<span class="gi">+</span>
+<span class="gi">+@rem Find java.exe</span>
+<span class="gi">+if defined JAVA_HOME goto findJavaFromJavaHome</span>
+<span class="gi">+</span>
+<span class="gi">+set JAVA_EXE=java.exe</span>
+<span class="gi">+%JAVA_EXE% -version &gt;NUL 2&gt;&amp;1</span>
+<span class="gi">+if &quot;%ERRORLEVEL%&quot; == &quot;0&quot; goto init</span>
+<span class="gi">+</span>
+<span class="gi">+echo.</span>
+<span class="gi">+echo ERROR: JAVA_HOME is not set and no &#39;java&#39; command could be found in your PATH.</span>
+<span class="gi">+echo.</span>
+<span class="gi">+echo Please set the JAVA_HOME variable in your environment to match the</span>
+<span class="gi">+echo location of your Java installation.</span>
+<span class="gi">+</span>
+<span class="gi">+goto fail</span>
+<span class="gi">+</span>
+<span class="gi">+:findJavaFromJavaHome</span>
+<span class="gi">+set JAVA_HOME=%JAVA_HOME:&quot;=%</span>
+<span class="gi">+set JAVA_EXE=%JAVA_HOME%/bin/java.exe</span>
+<span class="gi">+</span>
+<span class="gi">+if exist &quot;%JAVA_EXE%&quot; goto init</span>
+<span class="gi">+</span>
+<span class="gi">+echo.</span>
+<span class="gi">+echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%</span>
+<span class="gi">+echo.</span>
+<span class="gi">+echo Please set the JAVA_HOME variable in your environment to match the</span>
+<span class="gi">+echo location of your Java installation.</span>
+<span class="gi">+</span>
+<span class="gi">+goto fail</span>
+<span class="gi">+</span>
+<span class="gi">+:init</span>
+<span class="gi">+@rem Get command-line arguments, handling Windows variants</span>
+<span class="gi">+</span>
+<span class="gi">+if not &quot;%OS%&quot; == &quot;Windows_NT&quot; goto win9xME_args</span>
+<span class="gi">+</span>
+<span class="gi">+:win9xME_args</span>
+<span class="gi">+@rem Slurp the command line arguments.</span>
+<span class="gi">+set CMD_LINE_ARGS=</span>
+<span class="gi">+set _SKIP=2</span>
+<span class="gi">+</span>
+<span class="gi">+:win9xME_args_slurp</span>
+<span class="gi">+if &quot;x%~1&quot; == &quot;x&quot; goto execute</span>
+<span class="gi">+</span>
+<span class="gi">+set CMD_LINE_ARGS=%*</span>
+<span class="gi">+</span>
+<span class="gi">+:execute</span>
+<span class="gi">+@rem Setup the command line</span>
+<span class="gi">+</span>
+<span class="gi">+set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar</span>
+<span class="gi">+</span>
+<span class="gi">+@rem Execute Gradle</span>
+<span class="gi">+&quot;%JAVA_EXE%&quot; %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% &quot;-Dorg.gradle.appname=%APP_BASE_NAME%&quot; -classpath &quot;%CLASSPATH%&quot; org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%</span>
+<span class="gi">+</span>
+<span class="gi">+:end</span>
+<span class="gi">+@rem End local scope for the variables with windows NT shell</span>
+<span class="gi">+if &quot;%ERRORLEVEL%&quot;==&quot;0&quot; goto mainEnd</span>
+<span class="gi">+</span>
+<span class="gi">+:fail</span>
+<span class="gi">+rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of</span>
+<span class="gi">+rem the _cmd.exe /c_ return code!</span>
+<span class="gi">+if  not &quot;&quot; == &quot;%GRADLE_EXIT_CONSOLE%&quot; exit 1</span>
+<span class="gi">+exit /b 1</span>
+<span class="gi">+</span>
+<span class="gi">+:mainEnd</span>
+<span class="gi">+if &quot;%OS%&quot;==&quot;Windows_NT&quot; endlocal</span>
+<span class="gi">+</span>
+<span class="gi">+:omega</span>
+<span class="gh">diff --git a/settings.gradle b/settings.gradle</span>
+new file mode 100644
+<span class="gh">index 0000000..bb7f543</span>
+<span class="gd">--- /dev/null</span>
+<span class="gi">+++ b/settings.gradle</span>
+<span class="gu">@@ -0,0 +1,2 @@</span>
+<span class="gi">+rootProject.name = &#39;etude-op10-no8&#39;</span>
+<span class="gi">+</span>
+<span class="gh">diff --git a/src/main/java/.keep b/src/main/java/.keep</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+<span class="gh">diff --git a/src/main/resources/.keep b/src/main/resources/.keep</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+<span class="gh">diff --git a/src/test/java/.keep b/src/test/java/.keep</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+<span class="gh">diff --git a/src/test/resources/.keep b/src/test/resources/.keep</span>
+new file mode 100644
+<span class="gh">index 0000000..e69de29</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/k2works/case-study-payroll" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../docs/assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>
